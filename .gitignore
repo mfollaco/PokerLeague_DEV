@@ -8,3 +8,4 @@ __pycache__/
 
 # Generated outputs
 output/
+backend/data_processed/

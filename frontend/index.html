@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chip &amp; A Chair Poker League – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Custom Vegas Theme -->
+  <link rel="stylesheet" href="css/vegas.css">
+</head>
+
+<body class="bg-vegas text-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-vegas-dark border-bottom border-gold">
+    <div class="container">
+      <a class="navbar-brand neon-gold" href="index.html">♠ Home ♣</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="vegas-hero d-flex align-items-center">
+    <div class="container text-center">
+      
+      <p class="lead hero-tagline-vegas mb-4">
+        Crushed Dreams. Real bragging rights. Minor yelling.
+      </p>
+      <h1 class="display-3 neon-title mb-3">Chip &amp; A Chair Poker League</h1>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <span class="badge badge-vegas-gold fs-6">Spring Season 2026</span>
+        <span class="badge badge-vegas-outline fs-6">No rake • Deep stacks • Great times</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Next Event -->
+        <div class="col-md-4">
+          <div class="card card-vegas h-100">
+            <div class="card-header border-gold-bottom">
+              <h5 class="mb-0"><i class="bi bi-calendar-event me-2 text-gold"></i>Next Event</h5>
+            </div>
+            <div class="card-body" id="next-event">
+              <p class="text-muted mb-0">Loading next event…</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest Winner -->
+        <div class="col-md-4">
+          <div class="card card-vegas h-100">
+            <div class="card-header border-gold-bottom">
+              <h5 class="mb-0"><i class="bi bi-trophy-fill me-2 text-gold"></i>Latest Winner</h5>
+            </div>
+            <div class="card-body" id="latest-winner">
+              <p class="text-muted mb-0">Loading latest winner…</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Leaders -->
+        <div class="col-md-4">
+          <div class="card card-vegas h-100">
+            <div class="card-header border-gold-bottom">
+              <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill me-2 text-gold"></i>Current Leaders</h5>
+            </div>
+            <div class="card-body" id="current-leaders">
+              <p class="text-muted mb-0">Loading leaderboard…</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <section class="mt-5">
+        <h2 class="neon-subtitle mb-3">Season Overview</h2>
+        <p class="text-muted-vegas">
+          This site tracks every event, finish, and chip swing of the seasons.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-top border-gold mt-auto bg-vegas-dark">
+    <div class="container text-center small text-muted-vegas">
+      ♠ ♥ ♦ ♣ Chip &amp; A Chair Poker League • Rochester, NY • Spring Season 2026 ♣ ♦ ♥ ♠
+    </div>
+  </footer>
+
+  <!-- DATA LOADER -->
+  <script>
+    async function loadSeasonData() {
+      try {
+        const res = await fetch("spring_2026.json")
+
+        const data = await res.json();
+
+        // Next event
+        const upcoming = (data.schedule || [])
+          .filter(e => !e.completed)
+          .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+
+        const nextEventEl = document.getElementById('next-event');
+        if (upcoming) {
+          nextEventEl.innerHTML = `
+            <h6 class="text-gold">${upcoming.name}</h6>
+            <p class="mb-1">${new Date(upcoming.date).toLocaleString()}</p>
+            <p class="mb-1"><strong>Buy-in:</strong> ${upcoming.buy_in}</p>
+            <p class="mb-0"><strong>Location:</strong> ${upcoming.location}</p>
+          `;
+        }
+
+        // Latest winner
+        const latest = data.latest_winner;
+        const latestEl = document.getElementById('latest-winner');
+        if (latest) {
+          latestEl.innerHTML = `
+            <h6 class="text-gold">${latest.player}</h6>
+            <p class="mb-1">${latest.event_name}</p>
+            <p class="mb-0"><strong>Cash:</strong> ${latest.cash}</p>
+          `;
+        }
+
+        // Current leaders
+        const leadersEl = document.getElementById('current-leaders');
+        const leaders = (data.leaderboard || []).slice(0, 5);
+        if (leaders.length) {
+          leadersEl.innerHTML = `
+            <ol class="mb-0 ps-3">
+              ${leaders.map(p => `
+                <li class="mb-1">
+                  <span class="text-gold">${p.name}</span>
+                  <span class="text-muted-vegas"> – ${p.points} pts</span>
+                </li>
+              `).join('')}
+            </ol>
+          `;
+        }
+
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    loadSeasonData();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

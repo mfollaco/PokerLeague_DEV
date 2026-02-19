@@ -1,33 +1,63 @@
-from curses import raw
-from importlib.resources import files
 from pathlib import Path
-import pandas as pd
 from datetime import datetime
-from source_files import latest_log_filename
+from zoneinfo import ZoneInfo
+import json
 import math
 
+import pandas as pd
+
+from source_files import latest_log_filename
+
+
 def payouts_multiple_of_20(pot: float, percents: list[float], increment: int = 20) -> list[int]:
-    raw = [pot * p for p in percents]
-    rounded = [math.floor(x / increment) * increment for x in raw]
+    raw_amounts = [pot * p for p in percents]
+    rounded = [math.floor(x / increment) * increment for x in raw_amounts]
     remainder = int(round(pot - sum(rounded)))
+
     i = 0
     while remainder >= increment:
         rounded[i] += increment
         remainder -= increment
         i = (i + 1) % len(rounded)
+
     return rounded
 
-DATA_DIR = Path("data")
-OUT_DIR = Path("output")
-TABLES_DIR = OUT_DIR / "tables"
+
+    return rounded
 
 
-from datetime import datetime
+def parse_dt_series(s: pd.Series) -> pd.Series:
+    """
+    Warning-free datetime parsing for strings that may:
+    - have or not have seconds
+    - have AM/PM attached (e.g., '7:05PM')
+    """
+    s = (
+        s.astype("string")
+         .str.strip()
+         .str.replace(r"\s+", " ", regex=True)
+         .str.replace(r"(?i)(\d)(am|pm)$", r"\1 \2", regex=True)
+         .str.upper()
+    )
 
-from zoneinfo import ZoneInfo
+    dt_no_sec = pd.to_datetime(s, format="%m/%d/%y %I:%M %p", errors="coerce")
+    dt_with_sec = pd.to_datetime(s, format="%m/%d/%y %I:%M:%S %p", errors="coerce")
+
+    return dt_no_sec.fillna(dt_with_sec)
+
+
+# --- project paths ---
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+DATA_DIR = PROJECT_ROOT / "backend" / "data_raw"
+PROCESSED_DIR = PROJECT_ROOT / "backend" / "data_processed"
+TABLES_DIR = PROCESSED_DIR / "tables"
+
+FRONTEND_DATA_DIR = PROJECT_ROOT / "frontend" / "data"
+FRONTEND_DATA_DIR.mkdir(parents=True, exist_ok=True)
+JSON_OUTPUT_PATH = FRONTEND_DATA_DIR / "spring_2026.json"
 
 BUILD_TS_EST = datetime.now(ZoneInfo("America/New_York")).strftime("%b %d, %Y %I:%M %p %Z")
-
 def format_int_cols_for_html(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame:
     """
     For HTML rendering only: format specified columns as whole numbers with thousands separators.
@@ -171,10 +201,7 @@ def build_tables(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
         )
 
         # build a sortable datetime for elimination order
-        elims["EliminationDT"] = pd.to_datetime(
-            elims["TournamentDate"].astype(str) + " " + elims["EliminationTime"].astype(str),
-            errors="coerce",
-        )
+        elims["EliminationDT"] = parse_dt_series(elims["TournamentDate"].astype(str) + " " + elims["EliminationTime"].astype(str))
 
         elims = elims[["SourceFile", "TournamentDate", "EliminationTime", "EliminationDT",
                     "EliminatedPlayer", "EliminatorPlayer"]]
@@ -425,16 +452,11 @@ def build_tables(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
     # We can only compute if TOURNAMENT start/end exists
     wt = weekly_tournaments.copy()
     if ("StartTime" in wt.columns) and ("EndTime" in wt.columns) and (not wt.empty):
-        wt["TournamentDate"] = pd.to_datetime(wt["TournamentDate"]).dt.date
-        wt["StartDT"] = pd.to_datetime(
-            wt["TournamentDate"].astype(str) + " " + wt["StartTime"].astype(str),
-            errors="coerce",
-        )
+        wt["TournamentDate"] = parse_dt_series(wt["TournamentDate"]).dt.date
+        wt["StartDT"] = parse_dt_series(wt["TournamentDate"].astype(str) + " " + wt["StartTime"].astype(str))
 
-        wt["EndDT"] = pd.to_datetime(
-            wt["TournamentDate"].astype(str) + " " + wt["EndTime"].astype(str),
-            errors="coerce",
-        )
+
+        wt["EndDT"] = parse_dt_series(wt["TournamentDate"].astype(str) + " " + wt["EndTime"].astype(str))
 
         # If the tournament crosses midnight, EndDT will parse earlier than StartDT
         mask = wt["EndDT"].notna() & wt["StartDT"].notna() & (wt["EndDT"] < wt["StartDT"])
@@ -445,11 +467,10 @@ def build_tables(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
         elim_surv = pd.DataFrame(columns=["TournamentDate", "Player", "MinutesSurvived", "TournamentMinutes"])
         if not elims.empty:
             e = elims.copy()
-            e["TournamentDate"] = pd.to_datetime(e["TournamentDate"]).dt.date
-            e["EliminationDT"] = pd.to_datetime(
-                e["TournamentDate"].astype(str) + " " + e["EliminationTime"].astype(str),
-                errors="coerce",
-            )
+            e["TournamentDate"] = parse_dt_series(e["TournamentDate"]).dt.date
+            e["EliminationDT"] = parse_dt_series(
+                e["TournamentDate"].astype(str) + " " + e["EliminationTime"].astype(str))
+            
             e = e.merge(wt[["SourceFile", "TournamentDate", "StartDT", "TournamentMinutes"]], on=["SourceFile", "TournamentDate"], how="left")
             e["MinutesSurvived"] = (e["EliminationDT"] - e["StartDT"]).dt.total_seconds() / 60.0
             e["Player"] = e["EliminatedPlayer"]
@@ -458,7 +479,7 @@ def build_tables(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
         win_surv = pd.DataFrame(columns=["TournamentDate", "Player", "MinutesSurvived", "TournamentMinutes"])
         if not winners.empty:
             w = winners.copy()
-            w["TournamentDate"] = pd.to_datetime(w["TournamentDate"]).dt.date
+            w["TournamentDate"] = parse_dt_series(w["TournamentDate"]).dt.date
             w = w.merge(wt[["SourceFile", "TournamentDate", "TournamentMinutes"]], on=["SourceFile", "TournamentDate"], how="left")
             w["MinutesSurvived"] = w["TournamentMinutes"]
             win_surv = w[["TournamentDate", "Player", "MinutesSurvived", "TournamentMinutes"]].copy()
@@ -466,6 +487,10 @@ def build_tables(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
         surv_rows = pd.concat([elim_surv, win_surv], ignore_index=True)
         if not surv_rows.empty:
             surv_rows["SurvivalPercent"] = surv_rows["MinutesSurvived"] / surv_rows["TournamentMinutes"]
+            surv_rows["TournamentDate"] = pd.to_datetime(surv_rows["TournamentDate"], errors="coerce").dt.date
+            week_lookup["TournamentDate"] = pd.to_datetime(week_lookup["TournamentDate"], errors="coerce").dt.date
+            surv_rows = surv_rows.assign(TournamentDate=pd.to_datetime(surv_rows["TournamentDate"], errors="coerce").dt.normalize())
+            week_lookup = week_lookup.assign(TournamentDate=pd.to_datetime(week_lookup["TournamentDate"], errors="coerce").dt.normalize())
             surv_rows = surv_rows.merge(week_lookup, on="TournamentDate", how="left")
 
             survival = (
@@ -695,6 +720,120 @@ def build_chip_and_chair(
 
     return out
 
+def write_season_json(tables: dict, out_path: Path):
+    """
+    Convert the full league state into a single JSON file
+    that your new website can consume.
+    """
+
+    # --- Extract tables from build_tables() ---
+    raw = tables["Raw_LogEvents"]
+    season_totals = tables["SeasonTotals"]
+    chip_and_chair = tables["ChipAndChair"]
+    weekly_points = tables["WeeklyPoints"]
+    finish_positions = tables["FinishPositions"]
+    eliminations = tables["Eliminations"]
+    weekly_summary = tables["WeeklySummary"]
+    weekly_tournaments = tables["WeeklyTournaments"]
+
+    # --- Build events array ---
+    events = []
+    for (sf, dt), grp in finish_positions.groupby(["SourceFile", "TournamentDate"]):
+        dt_str = str(dt)
+
+        # players in this event
+        players = sorted(grp["Player"].unique())
+
+        # finish order
+        results = (
+            grp.sort_values("Place")
+               .assign(Points=lambda df: df["Points"])
+               [["Place", "Player", "Points"]]
+               .to_dict(orient="records")
+        )
+
+        # eliminations
+        elim_rows = eliminations[
+            (eliminations["SourceFile"] == sf) &
+            (eliminations["TournamentDate"] == dt)
+        ].sort_values("EliminationDT")
+
+        elim_list = elim_rows.assign(
+            order=lambda df: range(1, len(df) + 1)
+        )[["order", "EliminatedPlayer", "EliminatorPlayer", "EliminationTime"]] \
+         .rename(columns={
+             "EliminatedPlayer": "player",
+             "EliminatorPlayer": "eliminated_by",
+             "EliminationTime": "time"
+         }).to_dict(orient="records")
+
+        # payouts
+        payouts = (
+            weekly_points[(weekly_points["SourceFile"] == sf) &
+                          (weekly_points["TournamentDate"] == dt)]
+            .sort_values("Finish Place")
+            .head(3)[["Finish Place", "Player", "Payout"]]
+            .rename(columns={"Finish Place": "place", "Player": "player", "Payout": "amount"})
+            .to_dict(orient="records")
+        )
+
+        events.append({
+            "source_file": sf,
+            "date": dt_str,
+            "total_players": len(players),
+            "players": players,
+            "results": results,
+            "eliminations": elim_list,
+            "payouts": payouts,
+            "winner": results[0]["Player"] if results else None
+        })
+
+    # --- Season Totals ---
+    season_totals_json = season_totals.rename(columns={
+        "Season Rank": "rank",
+        "Player": "player",
+        "Total Points": "total_points",
+        "Total Points (bottom 2 dropped)": "total_points_drop2",
+        "Total Weeks Played": "weeks_played",
+        "MoneyWon": "money_won"
+    }).to_dict(orient="records")
+
+    # --- Chip & Chair ---
+    chip_json = chip_and_chair.rename(columns={
+        "Player": "player",
+        "Total Stack": "total_stack",
+        "Base Stack": "base_stack",
+        "Chips From Season Points": "chips_from_season_points",
+        "Total Eliminations": "total_eliminations",
+        "Chips From Total Elims": "chips_from_total_elims",
+        "Repeat Elim Count": "repeat_elim_count",
+        "Chips From Repeat Elims": "chips_from_repeat_elims",
+        "High Value Elim Count": "high_value_elim_count",
+        "Chips From High Value Elims": "chips_from_high_value_elims"
+    }).to_dict(orient="records")
+
+    # --- Analytics placeholder ---
+    analytics = {
+        "most_points": season_totals_json[0]["player"] if season_totals_json else None,
+        "events_played": len(events),
+        "average_field_size": float(weekly_summary["PlayersCount"].mean())
+    }
+
+    # --- Final JSON structure ---
+    out = {
+        "season_id": "spring_2026",
+        "season_name": "Spring Season 2026",
+        "last_updated": BUILD_TS_EST,
+        "latest_source_file": LAST_SOURCE_FILE,
+        "events": events,
+        "weekly_points": events,
+        "season_totals": season_totals_json,
+        "chip_and_chair": chip_json,
+        "analytics": analytics
+    }
+
+    out_path.write_text(json.dumps(out, indent=2))
+
 def build_weekly_section(weekly: pd.DataFrame) -> str:
     """Return HTML for clickable week sections (no SourceFile)."""
     if weekly is None or weekly.empty:
@@ -799,228 +938,33 @@ def build_weekly_section(weekly: pd.DataFrame) -> str:
         )
 
     return nav_html + "\n" + "\n".join(sections)
+
+
 def write_outputs(tables: dict, last_source_file: str) -> None:
-    OUT_DIR.mkdir(exist_ok=True)
+    """
+    Backend responsibility:
+      - write processed CSV tables for debugging / analytics
+      - DO NOT generate HTML (frontend owns UI)
+    """
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Write CSVs (keep this — it's useful for debugging + future plots)
     for name, df in tables.items():
-        df.to_csv(TABLES_DIR / f"{name}.csv", index=False)
+        try:
+            df.to_csv(TABLES_DIR / f"{name}.csv", index=False)
+        except Exception as e:
+            print(f"⚠️ Skipped CSV for {name}: {e}")
 
-    # Build a simple static site (multi-page)
-    SITE_DIR = OUT_DIR / "site"
-    SITE_DIR.mkdir(parents=True, exist_ok=True)
+    print(f"✅ Wrote CSV tables to: {TABLES_DIR}")
+    print(f"Latest source file: {last_source_file}")
 
-    print("TABLE KEYS IN write_outputs:", sorted(tables.keys()))
-
-    season = tables.get("SeasonTotals")
-    weekly = tables.get("WeeklyPoints")
-    survival = tables.get("Survival")
-    winners = tables.get("Winners")
-    chip_and_chair = tables.get("ChipAndChair")
-
-    if chip_and_chair is not None:
-            cols_to_format = [
-                "Season Points Chips",
-                "Total Eliminations",
-                "Chips From Total Elims",
-                "Repeat Elim Count",
-                "Repeat Elim Chips",
-                "High Value Elim Count",
-                "Chips From HV Elims",
-                "Base Stack",
-                "Total Stack",
-            ]
-
-    chip_and_chair = format_int_cols_for_html(chip_and_chair.copy(), cols_to_format)
-    chip_and_chair = chip_and_chair.rename(columns={"SeasonRank": "Season Rank"})
-
-    if season is None:
-        raise SystemExit("SeasonTotals missing from tables. Fix build_tables() return dict.")
-    if weekly is None:
-        raise SystemExit("WeeklyPoints missing from tables. Fix build_tables() return dict.")
-
-    # ---------- shared helpers ----------
-    def _df_html(df: pd.DataFrame | None) -> str:
-        if df is None or df.empty:
-            return "<p class='note'>No data yet.</p>"
-        return df.to_html(index=False, escape=False)
-
-    def _css() -> str:
-        return """
-  <style>
-    body { font-family: -apple-system, system-ui, Arial; margin: 16px; }
-    h1,h2 { margin: 10px 0; }
-    .note { color:#666; font-size: 13px; margin: 8px 0 14px; }
-    .nav { display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 18px; }
-    .nav a { text-decoration:none; padding:8px 10px; border:1px solid #ddd; border-radius:10px; }
-    .nav a:hover { background:#f7f7f7; }
-    table { border-collapse: collapse; width: 100%; margin: 10px 0 24px; }
-    th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: center; }
-    th { position: sticky; top: 0; background: #f7f7f7; }
-    details { margin: 12px 0; }
-    summary { cursor: pointer; font-weight: bold; }
-    code { background:#f5f5f5; padding:2px 6px; border-radius:6px; }
-  </style>
-"""
-
-    def _nav() -> str:
-        return """
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="season-totals.html">Season Totals</a>
-    <a href="weekly-points.html">Weekly Points</a>
-    <a href="survival.html">Survival</a>
-    <a href="winners.html">Winners</a>
-    <a href="chip-and-chair.html">Chip &amp; Chair</a>
-  </div>
-"""
-
-    def _page(title: str, h2: str, body_html: str) -> str:
-        return f"""<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{title}</title>
-{_css()}
-</head>
-<body>
-  <h1>PokerLeague Stats</h1>
-  <p style="margin: 6px 0 6px; color: #666; font-size: 13px;">
-  Updated: <strong>{BUILD_TS_EST}</strong>
-</p>
-
-<p style="margin: 0px 0 14px; color: #666; font-size: 13px;">
-  Latest file: <strong>{last_source_file}</strong>
-</p>
-
-{_nav()}
-
-<h2>{h2}</h2>
-{body_html}
-</body>
-</html>
-"""
-
-    # ---------- write pages ----------
-    # Home page: simple landing + links
-    index_html = _page(
-        title="PokerLeague Stats",
-        h2="Dashboard",
-        body_html=f"""
-  <p class="note">Pick a page:</p>
-  <ul>
-    <li><a href="season-totals.html">Season Totals</a></li>
-    <li><a href="weekly-points.html">Weekly Points</a></li>
-    <li><a href="survival.html">Survival</a></li>
-    <li><a href="winners.html">Winners</a></li>
-    <li><a href="chip-and-chair.html">Chip &amp; Chair</a></li>
-  </ul>
-"""
-    )
-    (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
-
-   # --- Season Totals display formatting (money as $ and blanks for 0) ---
-    season_display = season.copy()
-
-    season_display = season.copy()
-
-    if "MoneyWon" in season_display.columns:
-        season_display["MoneyWon"] = season_display["MoneyWon"].apply(
-            lambda x: "" if pd.isna(x) or float(x) == 0 else f"${int(x):,}"
-        )
-        season_display = season_display.rename(columns={"MoneyWon": "Money Won"})
-
-    # Season Totals
-    (SITE_DIR / "season-totals.html").write_text(
-        _page("Season Totals", "Season Totals", _df_html(season_display)),
-        encoding="utf-8",
-    )
-
-    # Weekly Points (keep your nice expandable week sections)
-    (SITE_DIR / "weekly-points.html").write_text(
-        _page("Weekly Points", "Weekly Points", build_weekly_section(weekly.copy())),
-        encoding="utf-8",
-    )
-
-    # ---- Survival display formatting ----
-    survival_display = survival.copy()
-
-    # Rename columns
-    survival_display = survival_display.rename(columns={
-        "Player": "Player",
-        "WeeksPlayed": "Weeks Played",
-        "AvgMinutesSurvived": "Avg Minutes Survived",
-        "AvgSurvivalPercent": "Avg Survival Percent",
-    })
-
-    # Round minutes to whole number
-    if "Avg Minutes Survived" in survival_display.columns:
-        survival_display["Avg Minutes Survived"] = (
-            survival_display["Avg Minutes Survived"]
-            .round(0)
-            .astype("Int64")
-        )
-
-    # Convert percent from decimal to %
-    if "Avg Survival Percent" in survival_display.columns:
-        survival_display["Avg Survival Percent"] = survival_display["Avg Survival Percent"].apply(
-            lambda x: "" if pd.isna(x) else f"{x * 100:.1f}%"
-        )
-
-    # Write Survival page
-    (SITE_DIR / "survival.html").write_text(
-        _page("Survival", "Survival", _df_html(survival_display)),
-        encoding="utf-8",
-    )
-
-    # --- Winners cleanup (Week #, rename column, drop extras) ---
-    winners_display = winners.copy()
-
-    if not winners_display.empty:
-        winners_display["TournamentDate"] = pd.to_datetime(winners_display["TournamentDate"]).dt.date
-        dates = sorted(winners_display["TournamentDate"].dropna().unique())
-        week_map = {d: i + 1 for i, d in enumerate(dates)}
-        winners_display["Week"] = winners_display["TournamentDate"].map(week_map)
-
-        # Keep only the columns we want
-        keep = ["Week", "Player", "PlayersCount"]
-        winners_display = winners_display[[c for c in keep if c in winners_display.columns]]
-
-        # Rename PlayersCount -> "Number of Players That Week"
-        winners_display = winners_display.rename(columns={
-            "PlayersCount": "Players That Week"
-        })
-
-    # Winners
-    (SITE_DIR / "winners.html").write_text(
-        _page("Winners", "Winners", _df_html(winners_display)),
-        encoding="utf-8",
-    )
-
-    # Chip & Chair
-    (SITE_DIR / "chip-and-chair.html").write_text(
-        _page("Chip & Chair", "Chip & Chair", _df_html(chip_and_chair)),
-        encoding="utf-8",
-    )
-
-    # Optional: keep the old single-file dashboard.html as a redirect to the site home
-    redirect = """<!doctype html><html><head>
-    <meta http-equiv="refresh" content="0; url=site/index.html">
-    </head><body>Redirecting…</body></html>"""
-    (OUT_DIR / "dashboard.html").write_text(redirect, encoding="utf-8")
-
-    print("✅ Built site:", SITE_DIR)
 
 def main():
     raw, last_source_file = load_raw_events(DATA_DIR)
     tables = build_tables(raw)
-    print("TABLE KEYS:", sorted(tables.keys()))
+
+    write_season_json(tables, JSON_OUTPUT_PATH)
     write_outputs(tables, last_source_file)
-    print("✅ Built outputs:")
-    print(f"   - {TABLES_DIR.resolve()}")
-    print(f"   - {(OUT_DIR / 'dashboard.html').resolve()}")
+
 
 if __name__ == "__main__":
     main()
