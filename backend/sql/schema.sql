@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS raw_log_events (
   player_name TEXT,
   eliminated_player_name TEXT,
   eliminator_player_name TEXT,
+  position INTEGER,
   notes TEXT,
   FOREIGN KEY (tournament_id) REFERENCES tournaments(tournament_id)
 );
