@@ -36,6 +36,28 @@ ON weekly_points(season_id, week_num);
 CREATE INDEX IF NOT EXISTS idx_weekly_points_season_player
 ON weekly_points(season_id, player_id);
 
+CREATE TABLE IF NOT EXISTS season_totals (
+  season_totals_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  season_id TEXT NOT NULL,
+  player_id INTEGER NOT NULL,
+
+  weeks_played INTEGER NOT NULL,
+  total_points REAL NOT NULL,
+  dropped_points REAL NOT NULL,
+  net_points REAL NOT NULL,
+
+  avg_finish REAL,
+  wins INTEGER DEFAULT 0,
+
+  created_at TEXT DEFAULT (datetime('now')),
+
+  FOREIGN KEY (season_id) REFERENCES seasons(season_id),
+  FOREIGN KEY (player_id) REFERENCES players(player_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_season_totals_season_player
+ON season_totals(season_id, player_id);
+
 CREATE TABLE IF NOT EXISTS raw_log_events (
   raw_event_id INTEGER PRIMARY KEY,
   tournament_id INTEGER NOT NULL,
