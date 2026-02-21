@@ -47,14 +47,14 @@ jobs:
           POKERLEAGUE_DB: backend/db/pokerleague.sqlite
         run: |
           make
-      
-            - name: Configure Pages
-              uses: actions/configure-pages@v5
-      
-            - name: Upload Pages artifact (frontend)
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: frontend
+            
+                  - name: Configure Pages
+                    uses: actions/configure-pages@v5
+            
+                  - name: Upload Pages artifact (frontend)
+                    uses: actions/upload-pages-artifact@v3
+                    with:
+                      path: frontend
 
   deploy:
     needs: build
