@@ -1,12 +1,14 @@
+import os
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path("backend/db/pokerleague.sqlite")
+DB_PATH = Path(os.environ.get("POKERLEAGUE_DB", "backend/db/pokerleague.sqlite"))
+DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 SEASON_ID = "spring_2026"
 DROPS = 2
 
 def main():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cur = conn.cursor()
 
     # Weeks in season

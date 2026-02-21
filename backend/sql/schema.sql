@@ -41,19 +41,19 @@ CREATE TABLE IF NOT EXISTS season_totals (
   season_id TEXT NOT NULL,
   player_id INTEGER NOT NULL,
 
+  season_points_total REAL NOT NULL,
+  season_points_drop2 REAL NOT NULL,
+  weeks_in_season INTEGER NOT NULL,
   weeks_played INTEGER NOT NULL,
-  total_points REAL NOT NULL,
-  dropped_points REAL NOT NULL,
-  net_points REAL NOT NULL,
-
-  avg_finish REAL,
-  wins INTEGER DEFAULT 0,
 
   created_at TEXT DEFAULT (datetime('now')),
 
   FOREIGN KEY (season_id) REFERENCES seasons(season_id),
   FOREIGN KEY (player_id) REFERENCES players(player_id)
 );
+
+CREATE INDEX IF NOT EXISTS idx_season_totals_season_player
+ON season_totals(season_id, player_id);
 
 CREATE INDEX IF NOT EXISTS idx_season_totals_season_player
 ON season_totals(season_id, player_id);
