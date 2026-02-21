@@ -22,11 +22,15 @@ CREATE TABLE IF NOT EXISTS tournaments (
 CREATE TABLE IF NOT EXISTS weekly_points (
   weekly_points_id INTEGER PRIMARY KEY AUTOINCREMENT,
   season_id TEXT NOT NULL,
+  tournament_id INTEGER NOT NULL,
   week_num INTEGER NOT NULL,
+  tournament_date TEXT,
   player_id INTEGER NOT NULL,
   finish_place INTEGER,
-  points REAL NOT NULL,
+  points REAL,
+  payout REAL,
   created_at TEXT DEFAULT (datetime('now')),
+  FOREIGN KEY (tournament_id) REFERENCES tournaments(tournament_id),
   FOREIGN KEY (player_id) REFERENCES players(player_id)
 );
 
@@ -35,6 +39,10 @@ ON weekly_points(season_id, week_num);
 
 CREATE INDEX IF NOT EXISTS idx_weekly_points_season_player
 ON weekly_points(season_id, player_id);
+
+CREATE INDEX IF NOT EXISTS idx_weekly_points_season_tournament
+ON weekly_points(season_id, tournament_id);
+
 
 CREATE TABLE IF NOT EXISTS season_totals (
   season_totals_id INTEGER PRIMARY KEY AUTOINCREMENT,
