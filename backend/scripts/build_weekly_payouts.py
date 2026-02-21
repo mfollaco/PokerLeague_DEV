@@ -4,9 +4,11 @@
 import math
 import sqlite3
 import os
+import sqlite3
 from pathlib import Path
 
 DB_PATH = Path(os.environ.get("POKERLEAGUE_DB", "backend/db/pokerleague.sqlite"))
+DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Ensure the directory exists (SQLite cannot create folders)
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -38,7 +40,7 @@ def payouts_multiple_of_20(pot: float, percents: list[float], increment: int = 2
 
 
 def main():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cur = conn.cursor()
 
     # 1) Pull weekly results (one row per player per week)
