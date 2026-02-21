@@ -66,7 +66,7 @@ def main():
         )
 
     # 2) Wipe existing payouts for this season (rebuild-from-truth)
-    cur.execute("DELETE FROM weekly_payouts WHERE season_key = ?", (SEASON_ID,))
+    cur.execute("DELETE FROM weekly_payouts WHERE season_id = ?", (SEASON_ID,))
 
     # 3) Compute + insert payouts per week
     for week_num in sorted(by_week.keys()):
@@ -90,9 +90,8 @@ def main():
             cur.execute(
                 """
                 INSERT INTO weekly_payouts
-                  (season_key, week_num, player_id, amount, payout_type, note)
-                VALUES
-                  (?, ?, ?, ?, ?, ?)
+                    (season_id, week_num, player_id, amount, payout_type, note)
+                VALUES (?, ?, ?, ?, ?, ?)
                 """,
                 (
                     SEASON_ID,
