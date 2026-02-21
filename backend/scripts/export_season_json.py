@@ -37,7 +37,7 @@ def main():
     payout_by_player = cur.execute("""
         SELECT player_id, SUM(amount) AS money_total
         FROM weekly_payouts
-        WHERE season_key = ?
+        WHERE season_id = ?
         GROUP BY player_id
     """, (SEASON_ID,)).fetchall()
 
@@ -60,10 +60,10 @@ def main():
 
         # Weekly payouts (sum per week per player)
     payout_totals = cur.execute("""
-        SELECT season_key, week_num, player_id, SUM(amount) AS payout_total
+        SELECT season_id, week_num, player_id, SUM(amount) AS payout_total
         FROM weekly_payouts
-        WHERE season_key = ?
-        GROUP BY season_key, week_num, player_id
+        WHERE season_id = ?
+        GROUP BY season_id, week_num, player_id
     """, (SEASON_ID,)).fetchall()
 
     payout_map = {
