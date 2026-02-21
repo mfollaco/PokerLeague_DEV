@@ -3,9 +3,13 @@
 
 import math
 import sqlite3
+import os
 from pathlib import Path
 
-DB_PATH = Path("backend/db/pokerleague.sqlite")
+DB_PATH = Path(os.environ.get("POKERLEAGUE_DB", "backend/db/pokerleague.sqlite"))
+
+# Ensure the directory exists (SQLite cannot create folders)
+DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 SEASON_ID = "spring_2026"
 
 # Match your build_all.py PAYOUT_SPLIT.
