@@ -46,7 +46,7 @@ jobs:
         env:
           POKERLEAGUE_DB: backend/db/pokerleague.sqlite
         run: |
-          make
+          make build
             
                   - name: Configure Pages
                     uses: actions/configure-pages@v5
