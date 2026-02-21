@@ -57,13 +57,17 @@ def main():
     # Group by week_num
     by_week = {}
     for week_num, player_id, finish_place, points in rows:
-        by_week.setdefault(int(week_num), []).append(
-            {
-                "player_id": int(player_id),
-                "finish_place": int(finish_place),
-                "points": float(points or 0),
-            }
-        )
+    # If weekly_points hasn't been fully computed yet, skip incomplete rows
+    if finish_place is None:
+        continue
+
+    by_week.setdefault(int(week_num), []).append(
+        {
+            "player_id": int(player_id),
+            "finish_place": int(finish_place),
+            "points": float(points or 0),
+        }
+    )
 
     # 2) Wipe existing payouts for this season (rebuild-from-truth)
     cur.execute("DELETE FROM weekly_payouts WHERE season_id = ?", (SEASON_ID,))
