@@ -29,7 +29,7 @@ def main():
         FROM raw_log_events r
         JOIN tournaments t ON t.tournament_id = r.tournament_id
         WHERE t.season_id = ?
-          AND r.event_type = 'BuyIn'
+          AND LOWER(TRIM(r.event_type)) IN ('buyin', 'buy-in', 'buy in')
           AND r.player_name IS NOT NULL
           AND TRIM(r.player_name) <> ''
         ORDER BY r.tournament_id, player_name
@@ -39,10 +39,27 @@ def main():
     inserted = 0
     for tournament_id, player_name in buyins:
         # lookup player_id
-        cur.execute("SELECT player_id FROM players WHERE player_name = ?", (player_name,))
+        cur.execute(
+            "SELECT player_id FROM players WHERE TRIM(player_name) = TRIM(?)",
+            (player_name,),
+        )
         row = cur.fetchone()
+
+        if not row:
+            # Auto-create player (safe because player_name is UNIQUE)
+            cur.execute(
+                "INSERT OR IGNORE INTO players (player_name) VALUES (?)",
+                (player_name,),
+            )
+            cur.execute(
+                "SELECT player_id FROM players WHERE TRIM(player_name) = TRIM(?)",
+                (player_name,),
+            )
+            row = cur.fetchone()
+
         if not row:
             continue
+
         player_id = int(row[0])
 
         cur.execute("""
