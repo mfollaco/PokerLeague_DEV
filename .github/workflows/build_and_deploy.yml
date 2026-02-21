@@ -1,0 +1,67 @@
+name: Build and Deploy on weekly CSV upload
+
+on:
+  push:
+    paths:
+      - "data/incoming/*.csv"
+      - "backend/**"
+      - "frontend/**"
+      - "Makefile"
+      - "requirements.txt"
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Confirm at least one CSV exists
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files = list(Path("data/incoming").glob("*.csv"))
+          if not files:
+              raise SystemExit("No CSV files found in data/incoming")
+          print(f"Found {len(files)} CSV file(s) in data/incoming")
+          PY
+
+      - name: Run build
+        run: |
+          make
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact (frontend)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
