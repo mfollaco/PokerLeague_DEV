@@ -76,13 +76,14 @@ def main():
 
     # Weekly points
     weekly = cur.execute("""
-        SELECT wp.week_num, wp.tournament_date, p.player_name, wp.player_id,
-               wp.finish_place, wp.points
-        FROM weekly_points wp
-        JOIN players p ON p.player_id = wp.player_id
-        WHERE wp.season_id = ?
-        ORDER BY wp.week_num ASC, wp.finish_place ASC, p.player_name ASC
-    """, (SEASON_ID,)).fetchall()
+    SELECT wp.week_num, t.tournament_date, p.player_name, wp.player_id,
+           wp.finish_place, wp.points
+    FROM weekly_points wp
+    JOIN tournaments t ON t.tournament_id = wp.tournament_id
+    JOIN players p ON p.player_id = wp.player_id
+    WHERE wp.season_id = ?
+    ORDER BY wp.week_num ASC, wp.finish_place ASC, p.player_name ASC
+""", (SEASON_ID,)).fetchall()
 
     weekly_rows = [
         {
