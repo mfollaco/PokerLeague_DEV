@@ -52,7 +52,7 @@ def main():
             "WeeksPlayed": int(played or 0),
             "WeeksInSeason": int(wks or 0),
             "Wins": int(wins or 0),
-            "AvgFinish": float(None if avg_finish is None else float(avg_finish)),
+            "AvgFinish": (None if avg_finish is None else float(avg_finish)),
             "MoneyWonTotal": float(money_map.get(int(player_id), 0)),
         }
         for (name, player_id, total, drop2, played, wks, wins, avg_finish) in season_totals
