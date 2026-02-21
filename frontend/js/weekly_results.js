@@ -1,38 +1,48 @@
 console.log("Weekly Points JS Loaded");
 
+function formatMoney(x) {
+  const n = Number(x || 0);
+  return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+}
+
 // Load JSON
 fetch("data/spring_2026.json")
   .then(response => response.json())
   .then(data => {
-    console.log("DATA LOADED:", data);
+  console.log("DATA LOADED:", data);
 
-    const weeklyRows = data.WeeklyPoints;
-    const weekly = groupWeeklyPoints(weeklyRows);
+  // 👇 ADD THIS
+  console.log("Week 1 rows from JSON:",
+    data.WeeklyPoints.filter(r => r.Week === 1)
+  );
 
-    renderWeeklyPoints(weekly);
-  })
-  .catch(error => {
-    console.error("JSON LOAD ERROR:", error);
-  });
+  const weeklyRows = data.WeeklyPoints;
+  const weekly = groupWeeklyPoints(weeklyRows);
+
+  renderWeeklyPoints(weekly);
+})
 
 
 function groupWeeklyPoints(rows) {
-  // rows: [{Week, TournamentDate, Player, FinishPlace, Points}, ...]
   const map = new Map();
 
   rows.forEach(r => {
-    const key = r.TournamentDate; // "YYYY-MM-DD"
-    if (!map.has(key)) {
-      map.set(key, { date: key, results: [] });
+    const weekNum = Number(r.Week);
+    if (!map.has(weekNum)) {
+      map.set(weekNum, { week: weekNum, date: r.TournamentDate, results: [] });
     }
-    map.get(key).results.push({
+
+    map.get(weekNum).results.push({
       Place: r.FinishPlace,
       Player: r.Player,
-      Points: r.Points
+      Points: r.Points,
+      Payout: r.Payout || 0,
+      PlayerID: r.PlayerID
     });
   });
 
-  return Array.from(map.values());
+  // week 1..N
+  return Array.from(map.values()).sort((a, b) => a.week - b.week);
 }
 
 
@@ -40,26 +50,24 @@ function groupWeeklyPoints(rows) {
 // RENDER WEEKLY POINTS (Vegas‑styled accordion)
 // ------------------------------------------------------------
 function renderWeeklyPoints(weekly) {
-  const container = document.getElementById("weeklyPointsTable");
+  const container = document.getElementById("weeklyResultsTable");
   container.innerHTML = ""; // clear loading text
 
-  // Sort newest week first
-  weekly
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .forEach((week, index) => {
+  // weekly is already sorted by week number in groupWeeklyResults()
+  weekly.forEach((week) => {
 
       // Format date
       const weekLabel = new Date(week.date).toLocaleDateString();
 
       // Create <details> wrapper
       const section = document.createElement("details");
-      section.id = `week${index + 1}`;
+      section.id = `week${week.week}`;
       section.classList.add("vegas-week-card");
 
       // Vegas styling applied via CSS classes
       section.innerHTML = `
         <summary class="vegas-week-summary">
-          <span class="neon-gold">Week ${index + 1}</span>
+          <span class="neon-gold">Week ${week.week}</span>
           <span class="text-muted-vegas ms-2">(${weekLabel})</span>
         </summary>
 
@@ -70,6 +78,7 @@ function renderWeeklyPoints(weekly) {
                 <th>Finish Place</th>
                 <th>Player</th>
                 <th>Points</th>
+                <th>Payout</th>
               </tr>
             </thead>
             <tbody>
@@ -80,6 +89,7 @@ function renderWeeklyPoints(weekly) {
                     <td>${r.Place}</td>
                     <td>${r.Player}</td>
                     <td>${r.Points}</td>
+                    <td>${formatMoney(r.Payout  || 0)}</td>
                   </tr>
                 `).join("")}
             </tbody>

@@ -27,10 +27,27 @@
 
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="leaderboard.html">Leaderboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
-          <li class="nav-item"><a class="nav-link" href="weekly-points.html">Weekly Points</a></li>
+          <ul class="navbar-nav ms-auto">
+          <a class="nav-link cac-link"
+            href="leaderboard.html">
+            Leaderboard
+          </a>
+          <a class="nav-link cac-link"
+            href="chip-and-chair.html">
+            Chip & A Chair
+          </a>
+          <a class="nav-link cac-link"
+            href="weekly-results.html">
+            Weekly Results
+          </a>
+          <a class="nav-link cac-link"
+            href="schedule.html">
+            Schedule
+          </a>
+          <a class="nav-link cac-link"
+            href="analytics.html">
+            Analytics
+          </a>
         </ul>
       </div>
     </div>
@@ -42,21 +59,22 @@
       <h1 class="neon-subtitle mb-4">Spring Season 2026 Leaderboard</h1>
 
       <div class="table-responsive card card-vegas p-3">
-        <table class="table table-dark table-hover align-middle mb-0">
+        <table id="leaderboardTable" class="table table-dark table-hover align-middle mb-0">
           <thead class="table-gold">
             <tr>
-              <th>Rank</th>
-              <th>Player</th>
-              <th>Points</th>
-              <th>Events</th>
-              <th>Wins</th>
-              <th>Average Finish</th>
+              <th data-sort="Rank" class="sortable">Rank</th>
+              <th data-sort="Trend" class="sortable">Trend</th>
+              <th data-sort="Player" class="sortable">Player</th>
+              <th data-sort="Drop2" class="sortable">Points (Drop 2)</th>
+              <th data-sort="Total" class="sortable">Total Points</th>
+              <th data-sort="MoneyWonTotal" class="sortable">Total $ Won</th>
+              <th data-sort="weeks" class="sortable">Weeks Played</th>
+              <th data-sort="wins" class="sortable">Wins</th>
+              <th data-sort="avg" class="sortable">Average Finish</th>
+              </th>
             </tr>
           </thead>
-          <tbody id="leaderboard-body">
-            <tr>
-              <td colspan="6" class="text-center text-muted">Loading leaderboard…</td>
-            </tr>
+          <tbody>
           </tbody>
         </table>
       </div>
@@ -70,42 +88,14 @@
     </div>
   </footer>
 
-  <!-- DATA LOADER -->
-  <script>
-    async function loadLeaderboard() {
-      try {
-        const res = await fetch("spring_2026.json")
-        const data = await res.json();
+ 
 
-        const tbody = document.getElementById('leaderboard-body');
-        const players = (data.leaderboard || []).slice().sort((a, b) => b.points - a.points);
-
-        if (!players.length) {
-          tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted">No leaderboard data yet.</td></tr>';
-          return;
-        }
-
-        tbody.innerHTML = players.map((p, idx) => `
-          <tr>
-            <td>${idx + 1}</td>
-            <td class="text-gold">${p.name}</td>
-            <td>${p.points}</td>
-            <td>${p.events_played ?? '-'}</td>
-            <td>${p.wins ?? 0}</td>
-            <td>${p.avg_finish ?? '-'}</td>
-          </tr>
-        `).join('');
-
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
-    loadLeaderboard();
-  </script>
+  <!-- Leaderboard Logic -->
+  <script src="js/leaderboard.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 
 </body>
 </html>

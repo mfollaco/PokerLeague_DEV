@@ -9,3 +9,19 @@ __pycache__/
 # Generated outputs
 output/
 backend/data_processed/
+
+# Mac junk
+.DS_Store
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Generated outputs
+output/
+
+*.sqlite
+*.sqlite3
+*.db
+backend/db/

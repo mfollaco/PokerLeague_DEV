@@ -19,7 +19,11 @@ body.bg-vegas {
 }
 
 .border-gold {
-  border-color: var(--vegas-gold) !important;
+  border: 1px solid var(--vegas-gold) !important;
+}
+
+.card.border-gold {
+  box-shadow: 0 0 14px rgba(230, 180, 34, 0.08);
 }
 
 .border-gold-bottom {
@@ -181,4 +185,119 @@ body.bg-vegas {
   padding: 0.5rem 0.75rem;
   border-radius: 0.4rem;
   text-shadow: 0 0 4px rgba(255, 216, 107, 0.5);
+}
+
+/* Gold leaderboard headers */
+#leaderboardTable thead th,
+#cacTable thead th {
+  color: #d4af37;
+  font-weight: 600;
+  border-bottom: 2px solid #d4af37;
+  letter-spacing: 0.5px;
+}
+
+#cac-kpis .kpi-value {
+  color: var(--vegas-gold);
+  font-weight: 700;
+}
+
+#cac-kpis .kpi-label {
+  color: var(--vegas-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
+
+#leaderboardTable thead th.sortable:hover,
+#cacTable thead th.sortable:hover {
+  color: #ffd700;
+  cursor: pointer;
+}
+
+#cac-kpis .card .small {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+
+.nav-link.cac-link {
+  color: #ffd86b !important;
+  font-weight: 600;
+}
+
+.nav-link.cac-link:hover {
+  color: #fff3b0 !important;
+}
+
+.kpi-label {
+  color: #f8f9fa;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.kpi-value {
+  color: #d4af37;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.kpi-sub {
+  color: #f8f9fa;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.page-title {
+  color: var(--vegas-gold);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  text-shadow:
+    0 0 6px rgba(230, 180, 34, 0.35),
+    0 0 18px rgba(230, 180, 34, 0.15);
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--vegas-text-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.page-title{
+  color:#f5f5f5;
+  font-weight:800;          /* not 900 */
+  letter-spacing:1px;
+  text-transform:uppercase;
+
+  font-size:2.3rem;         /* smaller base */
+  line-height:1.1;
+
+  text-shadow:
+    0 0 8px rgba(230,180,34,.35),
+    0 0 18px rgba(230,180,34,.18);
+
+  margin-bottom:.25rem;
+}
+
+@media (min-width: 992px){
+  .page-title{
+    font-size:2.8rem;       /* not 3.4rem */
+  }
+}
+
+/* Optional: consistent subtitle under titles */
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.70);
+  margin-bottom: 1rem;
+}
+
+/* Optional: make the title feel like the Leaderboard size */
+@media (min-width: 992px) {
+  .page-title { font-size: 3rem; }
 }

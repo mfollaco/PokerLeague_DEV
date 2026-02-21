@@ -1,2441 +1,1203 @@
 {
   "season_id": "spring_2026",
-  "season_name": "Spring Season 2026",
-  "last_updated": "Feb 18, 2026 08:01 PM EST",
-  "latest_source_file": "02.10.26 log.csv",
-  "events": [
+  "build_ts": "Feb 21, 2026 08:43 AM EST",
+  "SeasonTotals": [
     {
-      "source_file": "01.13.26 log.csv",
-      "date": "2026-01-13",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Bill B",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Steve C",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Mike F",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Dan T",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Todd L",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Phil Z",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Joe Ferrigno",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Gerry I",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Joe Fitz",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Josh T",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Chris",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Dave B",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Dan P",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Josh H",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Russ T",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Russ T",
-          "eliminated_by": "Josh T",
-          "time": "7:38pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Dan T",
-          "time": "7:47pm"
-        },
-        {
-          "order": 3,
-          "player": "Josh H",
-          "eliminated_by": "Steve C",
-          "time": "8:22pm"
-        },
-        {
-          "order": 4,
-          "player": "Dan P",
-          "eliminated_by": "Phil Z",
-          "time": "8:37pm"
-        },
-        {
-          "order": 5,
-          "player": "Dave B",
-          "eliminated_by": "Mike F",
-          "time": "8:38pm"
-        },
-        {
-          "order": 6,
-          "player": "Chris",
-          "eliminated_by": "Todd L",
-          "time": "8:58pm"
-        },
-        {
-          "order": 7,
-          "player": "Josh T",
-          "eliminated_by": "Dan T",
-          "time": "9:52pm"
-        },
-        {
-          "order": 8,
-          "player": "Joe Fitz",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 9,
-          "player": "Gerry I",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Dan T",
-          "time": "9:53pm"
-        },
-        {
-          "order": 11,
-          "player": "Phil Z",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 12,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 13,
-          "player": "Dan T",
-          "eliminated_by": "Steve C",
-          "time": "9:54pm"
-        },
-        {
-          "order": 14,
-          "player": "Mike F",
-          "eliminated_by": "Bill B",
-          "time": "9:58pm"
-        },
-        {
-          "order": 15,
-          "player": "Steve C",
-          "eliminated_by": "Bill B",
-          "time": "10:26pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Bill B",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Steve C",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Mike F",
-          "amount": 60
-        }
-      ],
-      "winner": "Bill B"
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "SeasonPointsTotal": 34.5,
+      "SeasonPointsDrop2": 23.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 2,
+      "AvgFinish": 2.8,
+      "MoneyWonTotal": 460.0
     },
     {
-      "source_file": "01.20.26 log.csv",
-      "date": "2026-01-20",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Josh H",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Bill B",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Steve C",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Mike F",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Joe Ferrigno",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Dan P",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Dave B",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Russ T",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Josh T",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Gerry I",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Dan T",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Joe Fitz",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Phil Z",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Todd L",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Chris",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Chris",
-          "eliminated_by": "Josh T",
-          "time": "7:43pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Josh H",
-          "time": "7:50pm"
-        },
-        {
-          "order": 3,
-          "player": "Todd L",
-          "eliminated_by": "Dan P",
-          "time": "8:09pm"
-        },
-        {
-          "order": 4,
-          "player": "Phil Z",
-          "eliminated_by": "Dan P",
-          "time": "8:12pm"
-        },
-        {
-          "order": 5,
-          "player": "Joe Fitz",
-          "eliminated_by": "Josh H",
-          "time": "8:18pm"
-        },
-        {
-          "order": 6,
-          "player": "Dan T",
-          "eliminated_by": "Bill B",
-          "time": "8:38pm"
-        },
-        {
-          "order": 7,
-          "player": "Gerry I",
-          "eliminated_by": "Mike F",
-          "time": "8:48pm"
-        },
-        {
-          "order": 8,
-          "player": "Josh T",
-          "eliminated_by": "Mike F",
-          "time": "9:15pm"
-        },
-        {
-          "order": 9,
-          "player": "Russ T",
-          "eliminated_by": "Mike F",
-          "time": "9:15pm"
-        },
-        {
-          "order": 10,
-          "player": "Dave B",
-          "eliminated_by": "Mike F",
-          "time": "9:21pm"
-        },
-        {
-          "order": 11,
-          "player": "Dan P",
-          "eliminated_by": "Mike F",
-          "time": "9:25pm"
-        },
-        {
-          "order": 12,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Josh H",
-          "time": "9:32pm"
-        },
-        {
-          "order": 13,
-          "player": "Mike F",
-          "eliminated_by": "Bill B",
-          "time": "9:48pm"
-        },
-        {
-          "order": 14,
-          "player": "Steve C",
-          "eliminated_by": "Josh H",
-          "time": "10:01pm"
-        },
-        {
-          "order": 15,
-          "player": "Bill B",
-          "eliminated_by": "Josh H",
-          "time": "10:01pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Josh H",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Bill B",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Steve C",
-          "amount": 60
-        }
-      ],
-      "winner": "Josh H"
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "SeasonPointsTotal": 31.5,
+      "SeasonPointsDrop2": 23.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 1,
+      "AvgFinish": 4.0,
+      "MoneyWonTotal": 360.0
     },
     {
-      "source_file": "01.27.26 log.csv",
-      "date": "2026-01-27",
-      "total_players": 15,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Steve C",
-          "Points": 7.5
-        },
-        {
-          "Place": 2,
-          "Player": "Greg",
-          "Points": 7.0
-        },
-        {
-          "Place": 3,
-          "Player": "Todd L",
-          "Points": 6.5
-        },
-        {
-          "Place": 4,
-          "Player": "Bill B",
-          "Points": 6.0
-        },
-        {
-          "Place": 5,
-          "Player": "Josh T",
-          "Points": 5.5
-        },
-        {
-          "Place": 6,
-          "Player": "Dan P",
-          "Points": 5.0
-        },
-        {
-          "Place": 7,
-          "Player": "Gerry I",
-          "Points": 4.5
-        },
-        {
-          "Place": 8,
-          "Player": "Dave B",
-          "Points": 4.0
-        },
-        {
-          "Place": 9,
-          "Player": "Joe Fitz",
-          "Points": 3.5
-        },
-        {
-          "Place": 10,
-          "Player": "Josh H",
-          "Points": 3.0
-        },
-        {
-          "Place": 11,
-          "Player": "Russ T",
-          "Points": 2.5
-        },
-        {
-          "Place": 12,
-          "Player": "Phil Z",
-          "Points": 2.0
-        },
-        {
-          "Place": 13,
-          "Player": "Joe Ferrigno",
-          "Points": 1.5
-        },
-        {
-          "Place": 14,
-          "Player": "Chris",
-          "Points": 1.0
-        },
-        {
-          "Place": 15,
-          "Player": "Dan T",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Dan T",
-          "eliminated_by": "Dave B",
-          "time": "7:40pm"
-        },
-        {
-          "order": 2,
-          "player": "Chris",
-          "eliminated_by": "Greg",
-          "time": "7:56pm"
-        },
-        {
-          "order": 3,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Greg",
-          "time": "8:21pm"
-        },
-        {
-          "order": 4,
-          "player": "Phil Z",
-          "eliminated_by": "Josh T",
-          "time": "8:28pm"
-        },
-        {
-          "order": 5,
-          "player": "Russ T",
-          "eliminated_by": "Dan P",
-          "time": "8:36pm"
-        },
-        {
-          "order": 6,
-          "player": "Josh H",
-          "eliminated_by": "Bill B",
-          "time": "8:45pm"
-        },
-        {
-          "order": 7,
-          "player": "Joe Fitz",
-          "eliminated_by": "Bill B",
-          "time": "8:45pm"
-        },
-        {
-          "order": 8,
-          "player": "Dave B",
-          "eliminated_by": "Greg",
-          "time": "8:53pm"
-        },
-        {
-          "order": 9,
-          "player": "Gerry I",
-          "eliminated_by": "Greg",
-          "time": "8:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Dan P",
-          "eliminated_by": "Josh T",
-          "time": "9:02pm"
-        },
-        {
-          "order": 11,
-          "player": "Josh T",
-          "eliminated_by": "Steve C",
-          "time": "9:07pm"
-        },
-        {
-          "order": 12,
-          "player": "Bill B",
-          "eliminated_by": "Greg",
-          "time": "9:18pm"
-        },
-        {
-          "order": 13,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "9:41pm"
-        },
-        {
-          "order": 14,
-          "player": "Greg",
-          "eliminated_by": "Steve C",
-          "time": "9:47pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Steve C",
-          "amount": 140
-        },
-        {
-          "place": 2,
-          "player": "Greg",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Todd L",
-          "amount": 60
-        }
-      ],
-      "winner": "Steve C"
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "SeasonPointsTotal": 26.0,
+      "SeasonPointsDrop2": 20.5,
+      "WeeksPlayed": 4,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 3.75,
+      "MoneyWonTotal": 160.0
     },
     {
-      "source_file": "02.03.26 log.csv",
-      "date": "2026-02-03",
-      "total_players": 15,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Phil Z",
-          "Points": 7.5
-        },
-        {
-          "Place": 2,
-          "Player": "Mike F",
-          "Points": 7.0
-        },
-        {
-          "Place": 3,
-          "Player": "Gerry I",
-          "Points": 6.5
-        },
-        {
-          "Place": 4,
-          "Player": "Russ T",
-          "Points": 6.0
-        },
-        {
-          "Place": 5,
-          "Player": "Joe Fitz",
-          "Points": 5.5
-        },
-        {
-          "Place": 6,
-          "Player": "Chris",
-          "Points": 5.0
-        },
-        {
-          "Place": 7,
-          "Player": "Steve C",
-          "Points": 4.5
-        },
-        {
-          "Place": 8,
-          "Player": "Greg",
-          "Points": 4.0
-        },
-        {
-          "Place": 9,
-          "Player": "Todd L",
-          "Points": 3.5
-        },
-        {
-          "Place": 10,
-          "Player": "Josh T",
-          "Points": 3.0
-        },
-        {
-          "Place": 11,
-          "Player": "Bill B",
-          "Points": 2.5
-        },
-        {
-          "Place": 12,
-          "Player": "Dan T",
-          "Points": 2.0
-        },
-        {
-          "Place": 13,
-          "Player": "Dan P",
-          "Points": 1.5
-        },
-        {
-          "Place": 14,
-          "Player": "Dave B",
-          "Points": 1.0
-        },
-        {
-          "Place": 15,
-          "Player": "Josh H",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Josh H",
-          "eliminated_by": "Mike F",
-          "time": "7:33pm"
-        },
-        {
-          "order": 2,
-          "player": "Dave B",
-          "eliminated_by": "Phil Z",
-          "time": "8:00pm"
-        },
-        {
-          "order": 3,
-          "player": "Dan P",
-          "eliminated_by": "Greg",
-          "time": "8:17pm"
-        },
-        {
-          "order": 4,
-          "player": "Dan T",
-          "eliminated_by": "Gerry I",
-          "time": "8:17pm"
-        },
-        {
-          "order": 5,
-          "player": "Bill B",
-          "eliminated_by": "Phil Z",
-          "time": "8:19pm"
-        },
-        {
-          "order": 6,
-          "player": "Josh T",
-          "eliminated_by": "Greg",
-          "time": "8:43pm"
-        },
-        {
-          "order": 7,
-          "player": "Todd L",
-          "eliminated_by": "Phil Z",
-          "time": "9:01pm"
-        },
-        {
-          "order": 8,
-          "player": "Greg",
-          "eliminated_by": "Phil Z",
-          "time": "9:01pm"
-        },
-        {
-          "order": 9,
-          "player": "Steve C",
-          "eliminated_by": "Phil Z",
-          "time": "9:07pm"
-        },
-        {
-          "order": 10,
-          "player": "Chris",
-          "eliminated_by": "Russ T",
-          "time": "9:21pm"
-        },
-        {
-          "order": 11,
-          "player": "Joe Fitz",
-          "eliminated_by": "Phil Z",
-          "time": "9:29pm"
-        },
-        {
-          "order": 12,
-          "player": "Russ T",
-          "eliminated_by": "Mike F",
-          "time": "9:48pm"
-        },
-        {
-          "order": 13,
-          "player": "Gerry I",
-          "eliminated_by": "Phil Z",
-          "time": "9:50pm"
-        },
-        {
-          "order": 14,
-          "player": "Mike F",
-          "eliminated_by": "Phil Z",
-          "time": "10:07pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Phil Z",
-          "amount": 140
-        },
-        {
-          "place": 2,
-          "player": "Mike F",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Gerry I",
-          "amount": 60
-        }
-      ],
-      "winner": "Phil Z"
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "SeasonPointsTotal": 23.5,
+      "SeasonPointsDrop2": 18.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 7.2,
+      "MoneyWonTotal": 60.0
     },
     {
-      "source_file": "02.10.26 log.csv",
-      "date": "2026-02-10",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Steve C",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Bill B",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Joe Fitz",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Joe Ferrigno",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Todd L",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Mike F",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Dan T",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Chris",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Josh H",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Russ T",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Phil Z",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Dave B",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Gerry I",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Josh T",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Dan P",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Dan P",
-          "eliminated_by": "Mike F",
-          "time": "8:15pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Joe Fitz",
-          "time": "8:19pm"
-        },
-        {
-          "order": 3,
-          "player": "Josh T",
-          "eliminated_by": "Phil Z",
-          "time": "8:46pm"
-        },
-        {
-          "order": 4,
-          "player": "Gerry I",
-          "eliminated_by": "Mike F",
-          "time": "8:57pm"
-        },
-        {
-          "order": 5,
-          "player": "Dave B",
-          "eliminated_by": "Steve C",
-          "time": "9:18pm"
-        },
-        {
-          "order": 6,
-          "player": "Phil Z",
-          "eliminated_by": "Joe Fitz",
-          "time": "9:19pm"
-        },
-        {
-          "order": 7,
-          "player": "Russ T",
-          "eliminated_by": "Steve C",
-          "time": "9:44pm"
-        },
-        {
-          "order": 8,
-          "player": "Josh H",
-          "eliminated_by": "Joe Fitz",
-          "time": "9:50pm"
-        },
-        {
-          "order": 9,
-          "player": "Chris",
-          "eliminated_by": "Joe Ferrigno",
-          "time": "9:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Dan T",
-          "eliminated_by": "Joe Fitz",
-          "time": "10:00pm"
-        },
-        {
-          "order": 11,
-          "player": "Mike F",
-          "eliminated_by": "Steve C",
-          "time": "10:02pm"
-        },
-        {
-          "order": 12,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "10:02pm"
-        },
-        {
-          "order": 13,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Bill B",
-          "time": "10:18pm"
-        },
-        {
-          "order": 14,
-          "player": "Joe Fitz",
-          "eliminated_by": "Steve C",
-          "time": "10:31pm"
-        },
-        {
-          "order": 15,
-          "player": "Bill B",
-          "eliminated_by": "Steve C",
-          "time": "10:41pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Steve C",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Bill B",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Joe Fitz",
-          "amount": 60
-        }
-      ],
-      "winner": "Steve C"
+      "Player": "Joe Ferrigno",
+      "PlayerID": 11,
+      "SeasonPointsTotal": 19.0,
+      "SeasonPointsDrop2": 17.5,
+      "WeeksPlayed": 4,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 7.25,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "SeasonPointsTotal": 22.5,
+      "SeasonPointsDrop2": 16.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 7.6,
+      "MoneyWonTotal": 60.0
+    },
+    {
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "SeasonPointsTotal": 20.0,
+      "SeasonPointsDrop2": 16.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 1,
+      "AvgFinish": 8.6,
+      "MoneyWonTotal": 140.0
+    },
+    {
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "SeasonPointsTotal": 21.0,
+      "SeasonPointsDrop2": 15.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 8.2,
+      "MoneyWonTotal": 60.0
+    },
+    {
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "SeasonPointsTotal": 17.0,
+      "SeasonPointsDrop2": 15.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 1,
+      "AvgFinish": 9.8,
+      "MoneyWonTotal": 160.0
+    },
+    {
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "SeasonPointsTotal": 17.0,
+      "SeasonPointsDrop2": 14.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 9.8,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "SeasonPointsTotal": 17.0,
+      "SeasonPointsDrop2": 14.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 9.8,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "SeasonPointsTotal": 17.5,
+      "SeasonPointsDrop2": 13.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 9.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "SeasonPointsTotal": 14.5,
+      "SeasonPointsDrop2": 12.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 10.8,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Chris",
+      "PlayerID": 14,
+      "SeasonPointsTotal": 14.0,
+      "SeasonPointsDrop2": 12.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 11.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Greg",
+      "PlayerID": 9,
+      "SeasonPointsTotal": 14.0,
+      "SeasonPointsDrop2": 12.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 11.0,
+      "MoneyWonTotal": 100.0
+    },
+    {
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "SeasonPointsTotal": 15.0,
+      "SeasonPointsDrop2": 11.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 10.6,
+      "MoneyWonTotal": 0.0
     }
   ],
-  "weekly_points": [
+  "WeeklyPoints": [
     {
-      "source_file": "01.13.26 log.csv",
-      "date": "2026-01-13",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Bill B",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Steve C",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Mike F",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Dan T",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Todd L",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Phil Z",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Joe Ferrigno",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Gerry I",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Joe Fitz",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Josh T",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Chris",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Dave B",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Dan P",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Josh H",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Russ T",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Russ T",
-          "eliminated_by": "Josh T",
-          "time": "7:38pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Dan T",
-          "time": "7:47pm"
-        },
-        {
-          "order": 3,
-          "player": "Josh H",
-          "eliminated_by": "Steve C",
-          "time": "8:22pm"
-        },
-        {
-          "order": 4,
-          "player": "Dan P",
-          "eliminated_by": "Phil Z",
-          "time": "8:37pm"
-        },
-        {
-          "order": 5,
-          "player": "Dave B",
-          "eliminated_by": "Mike F",
-          "time": "8:38pm"
-        },
-        {
-          "order": 6,
-          "player": "Chris",
-          "eliminated_by": "Todd L",
-          "time": "8:58pm"
-        },
-        {
-          "order": 7,
-          "player": "Josh T",
-          "eliminated_by": "Dan T",
-          "time": "9:52pm"
-        },
-        {
-          "order": 8,
-          "player": "Joe Fitz",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 9,
-          "player": "Gerry I",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Dan T",
-          "time": "9:53pm"
-        },
-        {
-          "order": 11,
-          "player": "Phil Z",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 12,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "9:53pm"
-        },
-        {
-          "order": 13,
-          "player": "Dan T",
-          "eliminated_by": "Steve C",
-          "time": "9:54pm"
-        },
-        {
-          "order": 14,
-          "player": "Mike F",
-          "eliminated_by": "Bill B",
-          "time": "9:58pm"
-        },
-        {
-          "order": 15,
-          "player": "Steve C",
-          "eliminated_by": "Bill B",
-          "time": "10:26pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Bill B",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Steve C",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Mike F",
-          "amount": 60
-        }
-      ],
-      "winner": "Bill B"
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "FinishPlace": 1,
+      "Points": 8.0,
+      "Payout": 160.0
     },
     {
-      "source_file": "01.20.26 log.csv",
-      "date": "2026-01-20",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Josh H",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Bill B",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Steve C",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Mike F",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Joe Ferrigno",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Dan P",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Dave B",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Russ T",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Josh T",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Gerry I",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Dan T",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Joe Fitz",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Phil Z",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Todd L",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Chris",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Chris",
-          "eliminated_by": "Josh T",
-          "time": "7:43pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Josh H",
-          "time": "7:50pm"
-        },
-        {
-          "order": 3,
-          "player": "Todd L",
-          "eliminated_by": "Dan P",
-          "time": "8:09pm"
-        },
-        {
-          "order": 4,
-          "player": "Phil Z",
-          "eliminated_by": "Dan P",
-          "time": "8:12pm"
-        },
-        {
-          "order": 5,
-          "player": "Joe Fitz",
-          "eliminated_by": "Josh H",
-          "time": "8:18pm"
-        },
-        {
-          "order": 6,
-          "player": "Dan T",
-          "eliminated_by": "Bill B",
-          "time": "8:38pm"
-        },
-        {
-          "order": 7,
-          "player": "Gerry I",
-          "eliminated_by": "Mike F",
-          "time": "8:48pm"
-        },
-        {
-          "order": 8,
-          "player": "Josh T",
-          "eliminated_by": "Mike F",
-          "time": "9:15pm"
-        },
-        {
-          "order": 9,
-          "player": "Russ T",
-          "eliminated_by": "Mike F",
-          "time": "9:15pm"
-        },
-        {
-          "order": 10,
-          "player": "Dave B",
-          "eliminated_by": "Mike F",
-          "time": "9:21pm"
-        },
-        {
-          "order": 11,
-          "player": "Dan P",
-          "eliminated_by": "Mike F",
-          "time": "9:25pm"
-        },
-        {
-          "order": 12,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Josh H",
-          "time": "9:32pm"
-        },
-        {
-          "order": 13,
-          "player": "Mike F",
-          "eliminated_by": "Bill B",
-          "time": "9:48pm"
-        },
-        {
-          "order": 14,
-          "player": "Steve C",
-          "eliminated_by": "Josh H",
-          "time": "10:01pm"
-        },
-        {
-          "order": 15,
-          "player": "Bill B",
-          "eliminated_by": "Josh H",
-          "time": "10:01pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Josh H",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Bill B",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Steve C",
-          "amount": 60
-        }
-      ],
-      "winner": "Josh H"
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "FinishPlace": 2,
+      "Points": 7.5,
+      "Payout": 100.0
     },
     {
-      "source_file": "01.27.26 log.csv",
-      "date": "2026-01-27",
-      "total_players": 15,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Steve C",
-          "Points": 7.5
-        },
-        {
-          "Place": 2,
-          "Player": "Greg",
-          "Points": 7.0
-        },
-        {
-          "Place": 3,
-          "Player": "Todd L",
-          "Points": 6.5
-        },
-        {
-          "Place": 4,
-          "Player": "Bill B",
-          "Points": 6.0
-        },
-        {
-          "Place": 5,
-          "Player": "Josh T",
-          "Points": 5.5
-        },
-        {
-          "Place": 6,
-          "Player": "Dan P",
-          "Points": 5.0
-        },
-        {
-          "Place": 7,
-          "Player": "Gerry I",
-          "Points": 4.5
-        },
-        {
-          "Place": 8,
-          "Player": "Dave B",
-          "Points": 4.0
-        },
-        {
-          "Place": 9,
-          "Player": "Joe Fitz",
-          "Points": 3.5
-        },
-        {
-          "Place": 10,
-          "Player": "Josh H",
-          "Points": 3.0
-        },
-        {
-          "Place": 11,
-          "Player": "Russ T",
-          "Points": 2.5
-        },
-        {
-          "Place": 12,
-          "Player": "Phil Z",
-          "Points": 2.0
-        },
-        {
-          "Place": 13,
-          "Player": "Joe Ferrigno",
-          "Points": 1.5
-        },
-        {
-          "Place": 14,
-          "Player": "Chris",
-          "Points": 1.0
-        },
-        {
-          "Place": 15,
-          "Player": "Dan T",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Dan T",
-          "eliminated_by": "Dave B",
-          "time": "7:40pm"
-        },
-        {
-          "order": 2,
-          "player": "Chris",
-          "eliminated_by": "Greg",
-          "time": "7:56pm"
-        },
-        {
-          "order": 3,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Greg",
-          "time": "8:21pm"
-        },
-        {
-          "order": 4,
-          "player": "Phil Z",
-          "eliminated_by": "Josh T",
-          "time": "8:28pm"
-        },
-        {
-          "order": 5,
-          "player": "Russ T",
-          "eliminated_by": "Dan P",
-          "time": "8:36pm"
-        },
-        {
-          "order": 6,
-          "player": "Josh H",
-          "eliminated_by": "Bill B",
-          "time": "8:45pm"
-        },
-        {
-          "order": 7,
-          "player": "Joe Fitz",
-          "eliminated_by": "Bill B",
-          "time": "8:45pm"
-        },
-        {
-          "order": 8,
-          "player": "Dave B",
-          "eliminated_by": "Greg",
-          "time": "8:53pm"
-        },
-        {
-          "order": 9,
-          "player": "Gerry I",
-          "eliminated_by": "Greg",
-          "time": "8:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Dan P",
-          "eliminated_by": "Josh T",
-          "time": "9:02pm"
-        },
-        {
-          "order": 11,
-          "player": "Josh T",
-          "eliminated_by": "Steve C",
-          "time": "9:07pm"
-        },
-        {
-          "order": 12,
-          "player": "Bill B",
-          "eliminated_by": "Greg",
-          "time": "9:18pm"
-        },
-        {
-          "order": 13,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "9:41pm"
-        },
-        {
-          "order": 14,
-          "player": "Greg",
-          "eliminated_by": "Steve C",
-          "time": "9:47pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Steve C",
-          "amount": 140
-        },
-        {
-          "place": 2,
-          "player": "Greg",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Todd L",
-          "amount": 60
-        }
-      ],
-      "winner": "Steve C"
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "FinishPlace": 3,
+      "Points": 7.0,
+      "Payout": 60.0
     },
     {
-      "source_file": "02.03.26 log.csv",
-      "date": "2026-02-03",
-      "total_players": 15,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Phil Z",
-          "Points": 7.5
-        },
-        {
-          "Place": 2,
-          "Player": "Mike F",
-          "Points": 7.0
-        },
-        {
-          "Place": 3,
-          "Player": "Gerry I",
-          "Points": 6.5
-        },
-        {
-          "Place": 4,
-          "Player": "Russ T",
-          "Points": 6.0
-        },
-        {
-          "Place": 5,
-          "Player": "Joe Fitz",
-          "Points": 5.5
-        },
-        {
-          "Place": 6,
-          "Player": "Chris",
-          "Points": 5.0
-        },
-        {
-          "Place": 7,
-          "Player": "Steve C",
-          "Points": 4.5
-        },
-        {
-          "Place": 8,
-          "Player": "Greg",
-          "Points": 4.0
-        },
-        {
-          "Place": 9,
-          "Player": "Todd L",
-          "Points": 3.5
-        },
-        {
-          "Place": 10,
-          "Player": "Josh T",
-          "Points": 3.0
-        },
-        {
-          "Place": 11,
-          "Player": "Bill B",
-          "Points": 2.5
-        },
-        {
-          "Place": 12,
-          "Player": "Dan T",
-          "Points": 2.0
-        },
-        {
-          "Place": 13,
-          "Player": "Dan P",
-          "Points": 1.5
-        },
-        {
-          "Place": 14,
-          "Player": "Dave B",
-          "Points": 1.0
-        },
-        {
-          "Place": 15,
-          "Player": "Josh H",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Josh H",
-          "eliminated_by": "Mike F",
-          "time": "7:33pm"
-        },
-        {
-          "order": 2,
-          "player": "Dave B",
-          "eliminated_by": "Phil Z",
-          "time": "8:00pm"
-        },
-        {
-          "order": 3,
-          "player": "Dan P",
-          "eliminated_by": "Greg",
-          "time": "8:17pm"
-        },
-        {
-          "order": 4,
-          "player": "Dan T",
-          "eliminated_by": "Gerry I",
-          "time": "8:17pm"
-        },
-        {
-          "order": 5,
-          "player": "Bill B",
-          "eliminated_by": "Phil Z",
-          "time": "8:19pm"
-        },
-        {
-          "order": 6,
-          "player": "Josh T",
-          "eliminated_by": "Greg",
-          "time": "8:43pm"
-        },
-        {
-          "order": 7,
-          "player": "Todd L",
-          "eliminated_by": "Phil Z",
-          "time": "9:01pm"
-        },
-        {
-          "order": 8,
-          "player": "Greg",
-          "eliminated_by": "Phil Z",
-          "time": "9:01pm"
-        },
-        {
-          "order": 9,
-          "player": "Steve C",
-          "eliminated_by": "Phil Z",
-          "time": "9:07pm"
-        },
-        {
-          "order": 10,
-          "player": "Chris",
-          "eliminated_by": "Russ T",
-          "time": "9:21pm"
-        },
-        {
-          "order": 11,
-          "player": "Joe Fitz",
-          "eliminated_by": "Phil Z",
-          "time": "9:29pm"
-        },
-        {
-          "order": 12,
-          "player": "Russ T",
-          "eliminated_by": "Mike F",
-          "time": "9:48pm"
-        },
-        {
-          "order": 13,
-          "player": "Gerry I",
-          "eliminated_by": "Phil Z",
-          "time": "9:50pm"
-        },
-        {
-          "order": 14,
-          "player": "Mike F",
-          "eliminated_by": "Phil Z",
-          "time": "10:07pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Phil Z",
-          "amount": 140
-        },
-        {
-          "place": 2,
-          "player": "Mike F",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Gerry I",
-          "amount": 60
-        }
-      ],
-      "winner": "Phil Z"
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "FinishPlace": 4,
+      "Points": 6.5,
+      "Payout": 0.0
     },
     {
-      "source_file": "02.10.26 log.csv",
-      "date": "2026-02-10",
-      "total_players": 16,
-      "players": [
-        "Bill B",
-        "Chris",
-        "Dan P",
-        "Dan T",
-        "Dave B",
-        "Gerry I",
-        "Greg",
-        "Joe Ferrigno",
-        "Joe Fitz",
-        "Josh H",
-        "Josh T",
-        "Mike F",
-        "Phil Z",
-        "Russ T",
-        "Steve C",
-        "Todd L"
-      ],
-      "results": [
-        {
-          "Place": 1,
-          "Player": "Steve C",
-          "Points": 8.0
-        },
-        {
-          "Place": 2,
-          "Player": "Bill B",
-          "Points": 7.5
-        },
-        {
-          "Place": 3,
-          "Player": "Joe Fitz",
-          "Points": 7.0
-        },
-        {
-          "Place": 4,
-          "Player": "Joe Ferrigno",
-          "Points": 6.5
-        },
-        {
-          "Place": 5,
-          "Player": "Todd L",
-          "Points": 6.0
-        },
-        {
-          "Place": 6,
-          "Player": "Mike F",
-          "Points": 5.5
-        },
-        {
-          "Place": 7,
-          "Player": "Dan T",
-          "Points": 5.0
-        },
-        {
-          "Place": 8,
-          "Player": "Chris",
-          "Points": 4.5
-        },
-        {
-          "Place": 9,
-          "Player": "Josh H",
-          "Points": 4.0
-        },
-        {
-          "Place": 10,
-          "Player": "Russ T",
-          "Points": 3.5
-        },
-        {
-          "Place": 11,
-          "Player": "Phil Z",
-          "Points": 3.0
-        },
-        {
-          "Place": 12,
-          "Player": "Dave B",
-          "Points": 2.5
-        },
-        {
-          "Place": 13,
-          "Player": "Gerry I",
-          "Points": 2.0
-        },
-        {
-          "Place": 14,
-          "Player": "Josh T",
-          "Points": 1.5
-        },
-        {
-          "Place": 15,
-          "Player": "Greg",
-          "Points": 1.0
-        },
-        {
-          "Place": 16,
-          "Player": "Dan P",
-          "Points": 0.5
-        }
-      ],
-      "eliminations": [
-        {
-          "order": 1,
-          "player": "Dan P",
-          "eliminated_by": "Mike F",
-          "time": "8:15pm"
-        },
-        {
-          "order": 2,
-          "player": "Greg",
-          "eliminated_by": "Joe Fitz",
-          "time": "8:19pm"
-        },
-        {
-          "order": 3,
-          "player": "Josh T",
-          "eliminated_by": "Phil Z",
-          "time": "8:46pm"
-        },
-        {
-          "order": 4,
-          "player": "Gerry I",
-          "eliminated_by": "Mike F",
-          "time": "8:57pm"
-        },
-        {
-          "order": 5,
-          "player": "Dave B",
-          "eliminated_by": "Steve C",
-          "time": "9:18pm"
-        },
-        {
-          "order": 6,
-          "player": "Phil Z",
-          "eliminated_by": "Joe Fitz",
-          "time": "9:19pm"
-        },
-        {
-          "order": 7,
-          "player": "Russ T",
-          "eliminated_by": "Steve C",
-          "time": "9:44pm"
-        },
-        {
-          "order": 8,
-          "player": "Josh H",
-          "eliminated_by": "Joe Fitz",
-          "time": "9:50pm"
-        },
-        {
-          "order": 9,
-          "player": "Chris",
-          "eliminated_by": "Joe Ferrigno",
-          "time": "9:53pm"
-        },
-        {
-          "order": 10,
-          "player": "Dan T",
-          "eliminated_by": "Joe Fitz",
-          "time": "10:00pm"
-        },
-        {
-          "order": 11,
-          "player": "Mike F",
-          "eliminated_by": "Steve C",
-          "time": "10:02pm"
-        },
-        {
-          "order": 12,
-          "player": "Todd L",
-          "eliminated_by": "Steve C",
-          "time": "10:02pm"
-        },
-        {
-          "order": 13,
-          "player": "Joe Ferrigno",
-          "eliminated_by": "Bill B",
-          "time": "10:18pm"
-        },
-        {
-          "order": 14,
-          "player": "Joe Fitz",
-          "eliminated_by": "Steve C",
-          "time": "10:31pm"
-        },
-        {
-          "order": 15,
-          "player": "Bill B",
-          "eliminated_by": "Steve C",
-          "time": "10:41pm"
-        }
-      ],
-      "payouts": [
-        {
-          "place": 1,
-          "player": "Steve C",
-          "amount": 160
-        },
-        {
-          "place": 2,
-          "player": "Bill B",
-          "amount": 100
-        },
-        {
-          "place": 3,
-          "player": "Joe Fitz",
-          "amount": 60
-        }
-      ],
-      "winner": "Steve C"
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "FinishPlace": 5,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "FinishPlace": 6,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Joe Ferrigno",
+      "PlayerID": 11,
+      "FinishPlace": 7,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "FinishPlace": 8,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "FinishPlace": 9,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "FinishPlace": 10,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Chris",
+      "PlayerID": 14,
+      "FinishPlace": 11,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "FinishPlace": 12,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "FinishPlace": 13,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "FinishPlace": 14,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Greg",
+      "PlayerID": 9,
+      "FinishPlace": 15,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 1,
+      "TournamentDate": "2026-01-13",
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "FinishPlace": 16,
+      "Points": 0.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "FinishPlace": 1,
+      "Points": 8.0,
+      "Payout": 160.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "FinishPlace": 2,
+      "Points": 7.5,
+      "Payout": 100.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "FinishPlace": 3,
+      "Points": 7.0,
+      "Payout": 60.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "FinishPlace": 4,
+      "Points": 6.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Joe Ferrigno",
+      "PlayerID": 11,
+      "FinishPlace": 5,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "FinishPlace": 6,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "FinishPlace": 7,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "FinishPlace": 8,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "FinishPlace": 9,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "FinishPlace": 10,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "FinishPlace": 11,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "FinishPlace": 12,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "FinishPlace": 13,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "FinishPlace": 14,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Greg",
+      "PlayerID": 9,
+      "FinishPlace": 15,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-01-20",
+      "Player": "Chris",
+      "PlayerID": 14,
+      "FinishPlace": 16,
+      "Points": 0.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "FinishPlace": 1,
+      "Points": 7.5,
+      "Payout": 140.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Greg",
+      "PlayerID": 9,
+      "FinishPlace": 2,
+      "Points": 7.0,
+      "Payout": 100.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "FinishPlace": 3,
+      "Points": 6.5,
+      "Payout": 60.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "FinishPlace": 4,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "FinishPlace": 5,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "FinishPlace": 6,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "FinishPlace": 7,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "FinishPlace": 8,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "FinishPlace": 9,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "FinishPlace": 10,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "FinishPlace": 11,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "FinishPlace": 12,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Joe Ferrigno",
+      "PlayerID": 11,
+      "FinishPlace": 13,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Chris",
+      "PlayerID": 14,
+      "FinishPlace": 14,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "FinishPlace": 15,
+      "Points": 0.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "FinishPlace": 1,
+      "Points": 7.5,
+      "Payout": 140.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "FinishPlace": 2,
+      "Points": 7.0,
+      "Payout": 100.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "FinishPlace": 3,
+      "Points": 6.5,
+      "Payout": 60.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "FinishPlace": 4,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "FinishPlace": 5,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Chris",
+      "PlayerID": 14,
+      "FinishPlace": 6,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "FinishPlace": 7,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Greg",
+      "PlayerID": 9,
+      "FinishPlace": 8,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "FinishPlace": 9,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "FinishPlace": 10,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "FinishPlace": 11,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "FinishPlace": 12,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "FinishPlace": 13,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "FinishPlace": 14,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 4,
+      "TournamentDate": "2026-02-03",
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "FinishPlace": 15,
+      "Points": 0.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Steve C",
+      "PlayerID": 13,
+      "FinishPlace": 1,
+      "Points": 8.0,
+      "Payout": 160.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Bill B",
+      "PlayerID": 7,
+      "FinishPlace": 2,
+      "Points": 7.5,
+      "Payout": 100.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Joe Fitz",
+      "PlayerID": 1,
+      "FinishPlace": 3,
+      "Points": 7.0,
+      "Payout": 60.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Joe Ferrigno",
+      "PlayerID": 11,
+      "FinishPlace": 4,
+      "Points": 6.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Todd L",
+      "PlayerID": 8,
+      "FinishPlace": 5,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "FinishPlace": 6,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Dan T",
+      "PlayerID": 12,
+      "FinishPlace": 7,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Chris",
+      "PlayerID": 14,
+      "FinishPlace": 8,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Josh H",
+      "PlayerID": 3,
+      "FinishPlace": 9,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Russ T",
+      "PlayerID": 15,
+      "FinishPlace": 10,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Phil Z",
+      "PlayerID": 2,
+      "FinishPlace": 11,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "FinishPlace": 12,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Gerry I",
+      "PlayerID": 16,
+      "FinishPlace": 13,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Josh T",
+      "PlayerID": 10,
+      "FinishPlace": 14,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Greg",
+      "PlayerID": 9,
+      "FinishPlace": 15,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 5,
+      "TournamentDate": "2026-02-10",
+      "Player": "Dan P",
+      "PlayerID": 6,
+      "FinishPlace": 16,
+      "Points": 0.5,
+      "Payout": 0.0
     }
   ],
-  "season_totals": [
+  "Survival": [
     {
-      "rank": 1,
-      "player": "Steve C",
-      "total_points": 34.5,
-      "total_points_drop2": 23.0,
-      "weeks_played": 5,
-      "money_won": 460
+      "Player": "Steve C",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 172.8,
+      "AvgSurvivalPercent": 0.933,
+      "TotalMinutesSurvived": 864.0
     },
     {
-      "rank": 2,
-      "player": "Bill B",
-      "total_points": 31.5,
-      "total_points_drop2": 23.0,
-      "weeks_played": 5,
-      "money_won": 360
+      "Player": "Mike F",
+      "WeeksPlayed": 4,
+      "AvgMinutesSurvived": 170.5,
+      "AvgSurvivalPercent": 0.9,
+      "TotalMinutesSurvived": 682.0
     },
     {
-      "rank": 3,
-      "player": "Mike F",
-      "total_points": 26.0,
-      "total_points_drop2": 20.5,
-      "weeks_played": 4,
-      "money_won": 160
+      "Player": "Bill B",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 157.4,
+      "AvgSurvivalPercent": 0.844,
+      "TotalMinutesSurvived": 787.0
     },
     {
-      "rank": 4,
-      "player": "Todd L",
-      "total_points": 23.5,
-      "total_points_drop2": 18.5,
-      "weeks_played": 5,
-      "money_won": 60
+      "Player": "Joe Ferrigno",
+      "WeeksPlayed": 4,
+      "AvgMinutesSurvived": 143.5,
+      "AvgSurvivalPercent": 0.756,
+      "TotalMinutesSurvived": 574.0
     },
     {
-      "rank": 5,
-      "player": "Joe Ferrigno",
-      "total_points": 19.0,
-      "total_points_drop2": 17.5,
-      "weeks_played": 4,
-      "money_won": 0
+      "Player": "Joe Fitz",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 135.6,
+      "AvgSurvivalPercent": 0.721,
+      "TotalMinutesSurvived": 678.0
     },
     {
-      "rank": 6,
-      "player": "Joe Fitz",
-      "total_points": 22.5,
-      "total_points_drop2": 16.5,
-      "weeks_played": 5,
-      "money_won": 60
+      "Player": "Todd L",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 133.6,
+      "AvgSurvivalPercent": 0.721,
+      "TotalMinutesSurvived": 668.0
     },
     {
-      "rank": 7,
-      "player": "Phil Z",
-      "total_points": 20.0,
-      "total_points_drop2": 16.0,
-      "weeks_played": 5,
-      "money_won": 140
+      "Player": "Gerry I",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 128.6,
+      "AvgSurvivalPercent": 0.7,
+      "TotalMinutesSurvived": 643.0
     },
     {
-      "rank": 8,
-      "player": "Gerry I",
-      "total_points": 21.0,
-      "total_points_drop2": 15.5,
-      "weeks_played": 5,
-      "money_won": 60
+      "Player": "Phil Z",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 124.2,
+      "AvgSurvivalPercent": 0.668,
+      "TotalMinutesSurvived": 621.0
     },
     {
-      "rank": 9,
-      "player": "Josh H",
-      "total_points": 17.0,
-      "total_points_drop2": 15.0,
-      "weeks_played": 5,
-      "money_won": 160
+      "Player": "Josh T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 121.0,
+      "AvgSurvivalPercent": 0.662,
+      "TotalMinutesSurvived": 605.0
     },
     {
-      "rank": 10,
-      "player": "Dan T",
-      "total_points": 17.0,
-      "total_points_drop2": 14.5,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Russ T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 112.6,
+      "AvgSurvivalPercent": 0.612,
+      "TotalMinutesSurvived": 563.0
     },
     {
-      "rank": 11,
-      "player": "Russ T",
-      "total_points": 17.0,
-      "total_points_drop2": 14.0,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Josh H",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 106.6,
+      "AvgSurvivalPercent": 0.575,
+      "TotalMinutesSurvived": 533.0
     },
     {
-      "rank": 12,
-      "player": "Josh T",
-      "total_points": 17.5,
-      "total_points_drop2": 13.0,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Dan T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 106.2,
+      "AvgSurvivalPercent": 0.555,
+      "TotalMinutesSurvived": 531.0
     },
     {
-      "rank": 13,
-      "player": "Dan P",
-      "total_points": 14.5,
-      "total_points_drop2": 12.5,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Dave B",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 102.4,
+      "AvgSurvivalPercent": 0.556,
+      "TotalMinutesSurvived": 512.0
     },
     {
-      "rank": 14,
-      "player": "Chris",
-      "total_points": 14.0,
-      "total_points_drop2": 12.5,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Chris",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 98.6,
+      "AvgSurvivalPercent": 0.519,
+      "TotalMinutesSurvived": 493.0
     },
     {
-      "rank": 15,
-      "player": "Greg",
-      "total_points": 14.0,
-      "total_points_drop2": 12.0,
-      "weeks_played": 5,
-      "money_won": 100
+      "Player": "Dan P",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 95.6,
+      "AvgSurvivalPercent": 0.531,
+      "TotalMinutesSurvived": 478.0
     },
     {
-      "rank": 16,
-      "player": "Dave B",
-      "total_points": 15.0,
-      "total_points_drop2": 11.5,
-      "weeks_played": 5,
-      "money_won": 0
+      "Player": "Greg",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 85.2,
+      "AvgSurvivalPercent": 0.48,
+      "TotalMinutesSurvived": 426.0
     }
   ],
-  "chip_and_chair": [
+  "ChipAndChairRules": {
+    "base_stack": 6500,
+    "season_points_chip_multiplier": 150,
+    "chip_per_total_elim": 50,
+    "chip_per_repeat_elim": 100,
+    "chip_per_hv_elim": 250,
+    "hv_victim_rank_max": 3,
+    "hv_eliminator_rank_min": 4
+  },
+  "ChipAndChair": [
     {
-      "player": "Steve C",
-      "total_stack": "11,000",
-      "base_stack": 6500,
-      "chips_from_season_points": "3,450",
-      "total_eliminations": 15.0,
-      "chips_from_total_elims": "750",
-      "repeat_elim_count": 3.0,
-      "chips_from_repeat_elims": "300",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Steve C",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 3450,
+      "TotalEliminations": 15,
+      "ChipsFromTotalElims": 750,
+      "RepeatElimCount": 3,
+      "ChipsFromRepeatElims": 300,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 11000
     },
     {
-      "player": "Mike F",
-      "total_stack": "10,475",
-      "base_stack": 6500,
-      "chips_from_season_points": "3,075",
-      "total_eliminations": 10.0,
-      "chips_from_total_elims": "500",
-      "repeat_elim_count": 4.0,
-      "chips_from_repeat_elims": "400",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Mike F",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 3075,
+      "TotalEliminations": 10,
+      "ChipsFromTotalElims": 500,
+      "RepeatElimCount": 4,
+      "ChipsFromRepeatElims": 400,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10475
     },
     {
-      "player": "Bill B",
-      "total_stack": "10,400",
-      "base_stack": 6500,
-      "chips_from_season_points": "3,450",
-      "total_eliminations": 7.0,
-      "chips_from_total_elims": "350",
-      "repeat_elim_count": 1.0,
-      "chips_from_repeat_elims": "100",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Bill B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 3450,
+      "TotalEliminations": 7,
+      "ChipsFromTotalElims": 350,
+      "RepeatElimCount": 1,
+      "ChipsFromRepeatElims": 100,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10400
     },
     {
-      "player": "Phil Z",
-      "total_stack": "10,400",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,400",
-      "total_eliminations": 10.0,
-      "chips_from_total_elims": "500",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 4.0,
-      "chips_from_high_value_elims": "1,000"
+      "Player": "Phil Z",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2400,
+      "TotalEliminations": 10,
+      "ChipsFromTotalElims": 500,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 4,
+      "ChipsFromHighValueElims": 1000,
+      "TotalStack": 10400
     },
     {
-      "player": "Josh H",
-      "total_stack": "9,500",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,250",
-      "total_eliminations": 5.0,
-      "chips_from_total_elims": "250",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 2.0,
-      "chips_from_high_value_elims": "500"
+      "Player": "Josh H",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2250,
+      "TotalEliminations": 5,
+      "ChipsFromTotalElims": 250,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 2,
+      "ChipsFromHighValueElims": 500,
+      "TotalStack": 9500
     },
     {
-      "player": "Todd L",
-      "total_stack": "9,325",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,775",
-      "total_eliminations": 1.0,
-      "chips_from_total_elims": "50",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Todd L",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2775,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9325
     },
     {
-      "player": "Joe Ferrigno",
-      "total_stack": "9,175",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,625",
-      "total_eliminations": 1.0,
-      "chips_from_total_elims": "50",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Joe Ferrigno",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2625,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9175
     },
     {
-      "player": "Joe Fitz",
-      "total_stack": "9,175",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,475",
-      "total_eliminations": 4.0,
-      "chips_from_total_elims": "200",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Joe Fitz",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2475,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9175
     },
     {
-      "player": "Greg",
-      "total_stack": "8,900",
-      "base_stack": 6500,
-      "chips_from_season_points": "1,800",
-      "total_eliminations": 7.0,
-      "chips_from_total_elims": "350",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 1.0,
-      "chips_from_high_value_elims": "250"
+      "Player": "Greg",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1800,
+      "TotalEliminations": 7,
+      "ChipsFromTotalElims": 350,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 1,
+      "ChipsFromHighValueElims": 250,
+      "TotalStack": 8900
     },
     {
-      "player": "Gerry I",
-      "total_stack": "8,875",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,325",
-      "total_eliminations": 1.0,
-      "chips_from_total_elims": "50",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Gerry I",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2325,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8875
     },
     {
-      "player": "Dan T",
-      "total_stack": "8,825",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,175",
-      "total_eliminations": 3.0,
-      "chips_from_total_elims": "150",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Dan T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2175,
+      "TotalEliminations": 3,
+      "ChipsFromTotalElims": 150,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8825
     },
     {
-      "player": "Dan P",
-      "total_stack": "8,775",
-      "base_stack": 6500,
-      "chips_from_season_points": "1,875",
-      "total_eliminations": 3.0,
-      "chips_from_total_elims": "150",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 1.0,
-      "chips_from_high_value_elims": "250"
+      "Player": "Dan P",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1875,
+      "TotalEliminations": 3,
+      "ChipsFromTotalElims": 150,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 1,
+      "ChipsFromHighValueElims": 250,
+      "TotalStack": 8775
     },
     {
-      "player": "Russ T",
-      "total_stack": "8,650",
-      "base_stack": 6500,
-      "chips_from_season_points": "2,100",
-      "total_eliminations": 1.0,
-      "chips_from_total_elims": "50",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Josh T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1950,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8650
     },
     {
-      "player": "Josh T",
-      "total_stack": "8,650",
-      "base_stack": 6500,
-      "chips_from_season_points": "1,950",
-      "total_eliminations": 4.0,
-      "chips_from_total_elims": "200",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Russ T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2100,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8650
     },
     {
-      "player": "Chris",
-      "total_stack": "8,375",
-      "base_stack": 6500,
-      "chips_from_season_points": "1,875",
-      "total_eliminations": 0.0,
-      "chips_from_total_elims": "0",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Chris",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1875,
+      "TotalEliminations": 0,
+      "ChipsFromTotalElims": 0,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8375
     },
     {
-      "player": "Dave B",
-      "total_stack": "8,275",
-      "base_stack": 6500,
-      "chips_from_season_points": "1,725",
-      "total_eliminations": 1.0,
-      "chips_from_total_elims": "50",
-      "repeat_elim_count": 0.0,
-      "chips_from_repeat_elims": "0",
-      "high_value_elim_count": 0.0,
-      "chips_from_high_value_elims": "0"
+      "Player": "Dave B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1725,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8275
     }
-  ],
-  "analytics": {
-    "most_points": "Steve C",
-    "events_played": 5,
-    "average_field_size": 15.6
-  }
+  ]
 }
