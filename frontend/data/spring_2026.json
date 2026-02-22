@@ -1,133 +1,111 @@
 {
   "season_id": "spring_2026",
-  "build_ts": "Feb 21, 2026 08:43 AM EST",
+  "build_ts": "Feb 22, 2026 01:01 PM EST",
   "SeasonTotals": [
     {
       "Player": "Steve C",
-      "PlayerID": 13,
-      "SeasonPointsTotal": 34.5,
-      "SeasonPointsDrop2": 23.0,
+      "PlayerID": 15,
+      "SeasonPointsTotal": 39.0,
+      "SeasonPointsDrop2": 24.0,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
-      "Wins": 2,
-      "AvgFinish": 2.8,
-      "MoneyWonTotal": 460.0
+      "Wins": 5,
+      "AvgFinish": 1.0,
+      "MoneyWonTotal": 680.0
     },
     {
       "Player": "Bill B",
-      "PlayerID": 7,
-      "SeasonPointsTotal": 31.5,
-      "SeasonPointsDrop2": 23.0,
+      "PlayerID": 1,
+      "SeasonPointsTotal": 37.5,
+      "SeasonPointsDrop2": 22.5,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
-      "Wins": 1,
-      "AvgFinish": 4.0,
-      "MoneyWonTotal": 360.0
+      "Wins": 2,
+      "AvgFinish": 1.6,
+      "MoneyWonTotal": 580.0
     },
     {
-      "Player": "Mike F",
-      "PlayerID": 5,
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
+      "SeasonPointsTotal": 35.0,
+      "SeasonPointsDrop2": 21.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 2.6,
+      "MoneyWonTotal": 300.0
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
       "SeasonPointsTotal": 26.0,
-      "SeasonPointsDrop2": 20.5,
+      "SeasonPointsDrop2": 19.5,
       "WeeksPlayed": 4,
       "WeeksInSeason": 5,
       "Wins": 0,
       "AvgFinish": 3.75,
-      "MoneyWonTotal": 160.0
-    },
-    {
-      "Player": "Todd L",
-      "PlayerID": 8,
-      "SeasonPointsTotal": 23.5,
-      "SeasonPointsDrop2": 18.5,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 7.2,
-      "MoneyWonTotal": 60.0
-    },
-    {
-      "Player": "Joe Ferrigno",
-      "PlayerID": 11,
-      "SeasonPointsTotal": 19.0,
-      "SeasonPointsDrop2": 17.5,
-      "WeeksPlayed": 4,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 7.25,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Joe Fitz",
-      "PlayerID": 1,
-      "SeasonPointsTotal": 22.5,
+      "Player": "Todd L",
+      "PlayerID": 16,
+      "SeasonPointsTotal": 30.0,
+      "SeasonPointsDrop2": 18.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 4.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Mike F",
+      "PlayerID": 12,
+      "SeasonPointsTotal": 22.0,
       "SeasonPointsDrop2": 16.5,
+      "WeeksPlayed": 4,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 5.75,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan T",
+      "PlayerID": 4,
+      "SeasonPointsTotal": 25.0,
+      "SeasonPointsDrop2": 15.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 6.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Chris",
+      "PlayerID": 2,
+      "SeasonPointsTotal": 22.5,
+      "SeasonPointsDrop2": 13.5,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
       "Wins": 0,
       "AvgFinish": 7.6,
-      "MoneyWonTotal": 60.0
-    },
-    {
-      "Player": "Phil Z",
-      "PlayerID": 2,
-      "SeasonPointsTotal": 20.0,
-      "SeasonPointsDrop2": 16.0,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 1,
-      "AvgFinish": 8.6,
-      "MoneyWonTotal": 140.0
-    },
-    {
-      "Player": "Gerry I",
-      "PlayerID": 16,
-      "SeasonPointsTotal": 21.0,
-      "SeasonPointsDrop2": 15.5,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 8.2,
-      "MoneyWonTotal": 60.0
+      "MoneyWonTotal": 0.0
     },
     {
       "Player": "Josh H",
-      "PlayerID": 3,
-      "SeasonPointsTotal": 17.0,
-      "SeasonPointsDrop2": 15.0,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 1,
-      "AvgFinish": 9.8,
-      "MoneyWonTotal": 160.0
-    },
-    {
-      "Player": "Dan T",
-      "PlayerID": 12,
-      "SeasonPointsTotal": 17.0,
-      "SeasonPointsDrop2": 14.5,
+      "PlayerID": 10,
+      "SeasonPointsTotal": 20.0,
+      "SeasonPointsDrop2": 12.0,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
       "Wins": 0,
-      "AvgFinish": 9.8,
+      "AvgFinish": 8.6,
       "MoneyWonTotal": 0.0
     },
     {
       "Player": "Russ T",
-      "PlayerID": 15,
-      "SeasonPointsTotal": 17.0,
-      "SeasonPointsDrop2": 14.0,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 9.8,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Josh T",
-      "PlayerID": 10,
+      "PlayerID": 14,
       "SeasonPointsTotal": 17.5,
-      "SeasonPointsDrop2": 13.0,
+      "SeasonPointsDrop2": 10.5,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
       "Wins": 0,
@@ -135,47 +113,69 @@
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Dan P",
-      "PlayerID": 6,
-      "SeasonPointsTotal": 14.5,
-      "SeasonPointsDrop2": 12.5,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 10.8,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Chris",
-      "PlayerID": 14,
-      "SeasonPointsTotal": 14.0,
-      "SeasonPointsDrop2": 12.5,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 11.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Greg",
-      "PlayerID": 9,
-      "SeasonPointsTotal": 14.0,
-      "SeasonPointsDrop2": 12.0,
-      "WeeksPlayed": 5,
-      "WeeksInSeason": 5,
-      "Wins": 0,
-      "AvgFinish": 11.0,
-      "MoneyWonTotal": 100.0
-    },
-    {
-      "Player": "Dave B",
-      "PlayerID": 4,
+      "Player": "Phil Z",
+      "PlayerID": 13,
       "SeasonPointsTotal": 15.0,
-      "SeasonPointsDrop2": 11.5,
+      "SeasonPointsDrop2": 9.0,
       "WeeksPlayed": 5,
       "WeeksInSeason": 5,
       "Wins": 0,
       "AvgFinish": 10.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dave B",
+      "PlayerID": 5,
+      "SeasonPointsTotal": 12.5,
+      "SeasonPointsDrop2": 7.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 11.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Gerry I",
+      "PlayerID": 6,
+      "SeasonPointsTotal": 10.0,
+      "SeasonPointsDrop2": 6.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 12.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Josh T",
+      "PlayerID": 11,
+      "SeasonPointsTotal": 7.5,
+      "SeasonPointsDrop2": 4.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 13.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Greg",
+      "PlayerID": 7,
+      "SeasonPointsTotal": 5.0,
+      "SeasonPointsDrop2": 3.0,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 14.6,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan P",
+      "PlayerID": 3,
+      "SeasonPointsTotal": 2.5,
+      "SeasonPointsDrop2": 1.5,
+      "WeeksPlayed": 5,
+      "WeeksInSeason": 5,
+      "Wins": 0,
+      "AvgFinish": 15.6,
       "MoneyWonTotal": 0.0
     }
   ],
@@ -183,8 +183,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Bill B",
-      "PlayerID": 7,
+      "Player": "Steve C",
+      "PlayerID": 15,
       "FinishPlace": 1,
       "Points": 8.0,
       "Payout": 160.0
@@ -192,8 +192,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Steve C",
-      "PlayerID": 13,
+      "Player": "Bill B",
+      "PlayerID": 1,
       "FinishPlace": 2,
       "Points": 7.5,
       "Payout": 100.0
@@ -201,8 +201,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Mike F",
-      "PlayerID": 5,
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
       "FinishPlace": 3,
       "Points": 7.0,
       "Payout": 60.0
@@ -210,8 +210,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Dan T",
-      "PlayerID": 12,
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
       "FinishPlace": 4,
       "Points": 6.5,
       "Payout": 0.0
@@ -220,7 +220,7 @@
       "Week": 1,
       "TournamentDate": "2026-01-13",
       "Player": "Todd L",
-      "PlayerID": 8,
+      "PlayerID": 16,
       "FinishPlace": 5,
       "Points": 6.0,
       "Payout": 0.0
@@ -228,8 +228,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Phil Z",
-      "PlayerID": 2,
+      "Player": "Mike F",
+      "PlayerID": 12,
       "FinishPlace": 6,
       "Points": 5.5,
       "Payout": 0.0
@@ -237,8 +237,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Joe Ferrigno",
-      "PlayerID": 11,
+      "Player": "Dan T",
+      "PlayerID": 4,
       "FinishPlace": 7,
       "Points": 5.0,
       "Payout": 0.0
@@ -246,8 +246,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Gerry I",
-      "PlayerID": 16,
+      "Player": "Chris",
+      "PlayerID": 2,
       "FinishPlace": 8,
       "Points": 4.5,
       "Payout": 0.0
@@ -255,8 +255,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Joe Fitz",
-      "PlayerID": 1,
+      "Player": "Josh H",
+      "PlayerID": 10,
       "FinishPlace": 9,
       "Points": 4.0,
       "Payout": 0.0
@@ -264,8 +264,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Josh T",
-      "PlayerID": 10,
+      "Player": "Russ T",
+      "PlayerID": 14,
       "FinishPlace": 10,
       "Points": 3.5,
       "Payout": 0.0
@@ -273,8 +273,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Chris",
-      "PlayerID": 14,
+      "Player": "Phil Z",
+      "PlayerID": 13,
       "FinishPlace": 11,
       "Points": 3.0,
       "Payout": 0.0
@@ -283,7 +283,7 @@
       "Week": 1,
       "TournamentDate": "2026-01-13",
       "Player": "Dave B",
-      "PlayerID": 4,
+      "PlayerID": 5,
       "FinishPlace": 12,
       "Points": 2.5,
       "Payout": 0.0
@@ -291,7 +291,7 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Dan P",
+      "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 13,
       "Points": 2.0,
@@ -300,8 +300,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Josh H",
-      "PlayerID": 3,
+      "Player": "Josh T",
+      "PlayerID": 11,
       "FinishPlace": 14,
       "Points": 1.5,
       "Payout": 0.0
@@ -310,7 +310,7 @@
       "Week": 1,
       "TournamentDate": "2026-01-13",
       "Player": "Greg",
-      "PlayerID": 9,
+      "PlayerID": 7,
       "FinishPlace": 15,
       "Points": 1.0,
       "Payout": 0.0
@@ -318,8 +318,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-01-13",
-      "Player": "Russ T",
-      "PlayerID": 15,
+      "Player": "Dan P",
+      "PlayerID": 3,
       "FinishPlace": 16,
       "Points": 0.5,
       "Payout": 0.0
@@ -327,8 +327,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Josh H",
-      "PlayerID": 3,
+      "Player": "Steve C",
+      "PlayerID": 15,
       "FinishPlace": 1,
       "Points": 8.0,
       "Payout": 160.0
@@ -337,7 +337,7 @@
       "Week": 2,
       "TournamentDate": "2026-01-20",
       "Player": "Bill B",
-      "PlayerID": 7,
+      "PlayerID": 1,
       "FinishPlace": 2,
       "Points": 7.5,
       "Payout": 100.0
@@ -345,8 +345,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Steve C",
-      "PlayerID": 13,
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
       "FinishPlace": 3,
       "Points": 7.0,
       "Payout": 60.0
@@ -354,8 +354,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Mike F",
-      "PlayerID": 5,
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
       "FinishPlace": 4,
       "Points": 6.5,
       "Payout": 0.0
@@ -363,8 +363,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Joe Ferrigno",
-      "PlayerID": 11,
+      "Player": "Todd L",
+      "PlayerID": 16,
       "FinishPlace": 5,
       "Points": 6.0,
       "Payout": 0.0
@@ -372,8 +372,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Dan P",
-      "PlayerID": 6,
+      "Player": "Mike F",
+      "PlayerID": 12,
       "FinishPlace": 6,
       "Points": 5.5,
       "Payout": 0.0
@@ -381,7 +381,7 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Dave B",
+      "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 7,
       "Points": 5.0,
@@ -390,8 +390,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Russ T",
-      "PlayerID": 15,
+      "Player": "Chris",
+      "PlayerID": 2,
       "FinishPlace": 8,
       "Points": 4.5,
       "Payout": 0.0
@@ -399,7 +399,7 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Josh T",
+      "Player": "Josh H",
       "PlayerID": 10,
       "FinishPlace": 9,
       "Points": 4.0,
@@ -408,8 +408,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Gerry I",
-      "PlayerID": 16,
+      "Player": "Russ T",
+      "PlayerID": 14,
       "FinishPlace": 10,
       "Points": 3.5,
       "Payout": 0.0
@@ -417,8 +417,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Dan T",
-      "PlayerID": 12,
+      "Player": "Phil Z",
+      "PlayerID": 13,
       "FinishPlace": 11,
       "Points": 3.0,
       "Payout": 0.0
@@ -426,8 +426,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Joe Fitz",
-      "PlayerID": 1,
+      "Player": "Dave B",
+      "PlayerID": 5,
       "FinishPlace": 12,
       "Points": 2.5,
       "Payout": 0.0
@@ -435,8 +435,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Phil Z",
-      "PlayerID": 2,
+      "Player": "Gerry I",
+      "PlayerID": 6,
       "FinishPlace": 13,
       "Points": 2.0,
       "Payout": 0.0
@@ -444,8 +444,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Todd L",
-      "PlayerID": 8,
+      "Player": "Josh T",
+      "PlayerID": 11,
       "FinishPlace": 14,
       "Points": 1.5,
       "Payout": 0.0
@@ -454,7 +454,7 @@
       "Week": 2,
       "TournamentDate": "2026-01-20",
       "Player": "Greg",
-      "PlayerID": 9,
+      "PlayerID": 7,
       "FinishPlace": 15,
       "Points": 1.0,
       "Payout": 0.0
@@ -462,8 +462,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-01-20",
-      "Player": "Chris",
-      "PlayerID": 14,
+      "Player": "Dan P",
+      "PlayerID": 3,
       "FinishPlace": 16,
       "Points": 0.5,
       "Payout": 0.0
@@ -471,8 +471,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Steve C",
-      "PlayerID": 13,
+      "Player": "Bill B",
+      "PlayerID": 1,
       "FinishPlace": 1,
       "Points": 7.5,
       "Payout": 140.0
@@ -480,26 +480,35 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Greg",
-      "PlayerID": 9,
-      "FinishPlace": 2,
-      "Points": 7.0,
+      "Player": "Steve C",
+      "PlayerID": 15,
+      "FinishPlace": 1,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Todd L",
-      "PlayerID": 8,
-      "FinishPlace": 3,
-      "Points": 6.5,
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
+      "FinishPlace": 2,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Bill B",
-      "PlayerID": 7,
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
+      "FinishPlace": 3,
+      "Points": 6.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 3,
+      "TournamentDate": "2026-01-27",
+      "Player": "Todd L",
+      "PlayerID": 16,
       "FinishPlace": 4,
       "Points": 6.0,
       "Payout": 0.0
@@ -507,17 +516,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Josh T",
-      "PlayerID": 10,
-      "FinishPlace": 5,
-      "Points": 5.5,
-      "Payout": 0.0
-    },
-    {
-      "Week": 3,
-      "TournamentDate": "2026-01-27",
-      "Player": "Dan P",
-      "PlayerID": 6,
+      "Player": "Dan T",
+      "PlayerID": 4,
       "FinishPlace": 6,
       "Points": 5.0,
       "Payout": 0.0
@@ -525,8 +525,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Gerry I",
-      "PlayerID": 16,
+      "Player": "Chris",
+      "PlayerID": 2,
       "FinishPlace": 7,
       "Points": 4.5,
       "Payout": 0.0
@@ -534,8 +534,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Dave B",
-      "PlayerID": 4,
+      "Player": "Josh H",
+      "PlayerID": 10,
       "FinishPlace": 8,
       "Points": 4.0,
       "Payout": 0.0
@@ -543,8 +543,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Joe Fitz",
-      "PlayerID": 1,
+      "Player": "Russ T",
+      "PlayerID": 14,
       "FinishPlace": 9,
       "Points": 3.5,
       "Payout": 0.0
@@ -552,8 +552,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Josh H",
-      "PlayerID": 3,
+      "Player": "Phil Z",
+      "PlayerID": 13,
       "FinishPlace": 10,
       "Points": 3.0,
       "Payout": 0.0
@@ -561,8 +561,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Russ T",
-      "PlayerID": 15,
+      "Player": "Dave B",
+      "PlayerID": 5,
       "FinishPlace": 11,
       "Points": 2.5,
       "Payout": 0.0
@@ -570,8 +570,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Phil Z",
-      "PlayerID": 2,
+      "Player": "Gerry I",
+      "PlayerID": 6,
       "FinishPlace": 12,
       "Points": 2.0,
       "Payout": 0.0
@@ -579,7 +579,7 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Joe Ferrigno",
+      "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 13,
       "Points": 1.5,
@@ -588,8 +588,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Chris",
-      "PlayerID": 14,
+      "Player": "Greg",
+      "PlayerID": 7,
       "FinishPlace": 14,
       "Points": 1.0,
       "Payout": 0.0
@@ -597,8 +597,8 @@
     {
       "Week": 3,
       "TournamentDate": "2026-01-27",
-      "Player": "Dan T",
-      "PlayerID": 12,
+      "Player": "Dan P",
+      "PlayerID": 3,
       "FinishPlace": 15,
       "Points": 0.5,
       "Payout": 0.0
@@ -606,8 +606,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Phil Z",
-      "PlayerID": 2,
+      "Player": "Bill B",
+      "PlayerID": 1,
       "FinishPlace": 1,
       "Points": 7.5,
       "Payout": 140.0
@@ -615,26 +615,26 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Mike F",
-      "PlayerID": 5,
-      "FinishPlace": 2,
-      "Points": 7.0,
+      "Player": "Steve C",
+      "PlayerID": 15,
+      "FinishPlace": 1,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Gerry I",
-      "PlayerID": 16,
-      "FinishPlace": 3,
-      "Points": 6.5,
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
+      "FinishPlace": 2,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Russ T",
-      "PlayerID": 15,
+      "Player": "Todd L",
+      "PlayerID": 16,
       "FinishPlace": 4,
       "Points": 6.0,
       "Payout": 0.0
@@ -642,8 +642,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Joe Fitz",
-      "PlayerID": 1,
+      "Player": "Mike F",
+      "PlayerID": 12,
       "FinishPlace": 5,
       "Points": 5.5,
       "Payout": 0.0
@@ -651,8 +651,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Chris",
-      "PlayerID": 14,
+      "Player": "Dan T",
+      "PlayerID": 4,
       "FinishPlace": 6,
       "Points": 5.0,
       "Payout": 0.0
@@ -660,8 +660,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Steve C",
-      "PlayerID": 13,
+      "Player": "Chris",
+      "PlayerID": 2,
       "FinishPlace": 7,
       "Points": 4.5,
       "Payout": 0.0
@@ -669,8 +669,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Greg",
-      "PlayerID": 9,
+      "Player": "Josh H",
+      "PlayerID": 10,
       "FinishPlace": 8,
       "Points": 4.0,
       "Payout": 0.0
@@ -678,8 +678,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Todd L",
-      "PlayerID": 8,
+      "Player": "Russ T",
+      "PlayerID": 14,
       "FinishPlace": 9,
       "Points": 3.5,
       "Payout": 0.0
@@ -687,8 +687,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Josh T",
-      "PlayerID": 10,
+      "Player": "Phil Z",
+      "PlayerID": 13,
       "FinishPlace": 10,
       "Points": 3.0,
       "Payout": 0.0
@@ -696,8 +696,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Bill B",
-      "PlayerID": 7,
+      "Player": "Dave B",
+      "PlayerID": 5,
       "FinishPlace": 11,
       "Points": 2.5,
       "Payout": 0.0
@@ -705,8 +705,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Dan T",
-      "PlayerID": 12,
+      "Player": "Gerry I",
+      "PlayerID": 6,
       "FinishPlace": 12,
       "Points": 2.0,
       "Payout": 0.0
@@ -714,8 +714,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Dan P",
-      "PlayerID": 6,
+      "Player": "Josh T",
+      "PlayerID": 11,
       "FinishPlace": 13,
       "Points": 1.5,
       "Payout": 0.0
@@ -723,8 +723,8 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Dave B",
-      "PlayerID": 4,
+      "Player": "Greg",
+      "PlayerID": 7,
       "FinishPlace": 14,
       "Points": 1.0,
       "Payout": 0.0
@@ -732,7 +732,7 @@
     {
       "Week": 4,
       "TournamentDate": "2026-02-03",
-      "Player": "Josh H",
+      "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 15,
       "Points": 0.5,
@@ -742,7 +742,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Steve C",
-      "PlayerID": 13,
+      "PlayerID": 15,
       "FinishPlace": 1,
       "Points": 8.0,
       "Payout": 160.0
@@ -751,7 +751,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Bill B",
-      "PlayerID": 7,
+      "PlayerID": 1,
       "FinishPlace": 2,
       "Points": 7.5,
       "Payout": 100.0
@@ -760,7 +760,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Joe Fitz",
-      "PlayerID": 1,
+      "PlayerID": 9,
       "FinishPlace": 3,
       "Points": 7.0,
       "Payout": 60.0
@@ -769,7 +769,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Joe Ferrigno",
-      "PlayerID": 11,
+      "PlayerID": 8,
       "FinishPlace": 4,
       "Points": 6.5,
       "Payout": 0.0
@@ -778,7 +778,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Todd L",
-      "PlayerID": 8,
+      "PlayerID": 16,
       "FinishPlace": 5,
       "Points": 6.0,
       "Payout": 0.0
@@ -787,7 +787,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Mike F",
-      "PlayerID": 5,
+      "PlayerID": 12,
       "FinishPlace": 6,
       "Points": 5.5,
       "Payout": 0.0
@@ -796,7 +796,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Dan T",
-      "PlayerID": 12,
+      "PlayerID": 4,
       "FinishPlace": 7,
       "Points": 5.0,
       "Payout": 0.0
@@ -805,7 +805,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Chris",
-      "PlayerID": 14,
+      "PlayerID": 2,
       "FinishPlace": 8,
       "Points": 4.5,
       "Payout": 0.0
@@ -814,7 +814,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Josh H",
-      "PlayerID": 3,
+      "PlayerID": 10,
       "FinishPlace": 9,
       "Points": 4.0,
       "Payout": 0.0
@@ -823,7 +823,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Russ T",
-      "PlayerID": 15,
+      "PlayerID": 14,
       "FinishPlace": 10,
       "Points": 3.5,
       "Payout": 0.0
@@ -832,7 +832,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Phil Z",
-      "PlayerID": 2,
+      "PlayerID": 13,
       "FinishPlace": 11,
       "Points": 3.0,
       "Payout": 0.0
@@ -841,7 +841,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Dave B",
-      "PlayerID": 4,
+      "PlayerID": 5,
       "FinishPlace": 12,
       "Points": 2.5,
       "Payout": 0.0
@@ -850,7 +850,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Gerry I",
-      "PlayerID": 16,
+      "PlayerID": 6,
       "FinishPlace": 13,
       "Points": 2.0,
       "Payout": 0.0
@@ -859,7 +859,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Josh T",
-      "PlayerID": 10,
+      "PlayerID": 11,
       "FinishPlace": 14,
       "Points": 1.5,
       "Payout": 0.0
@@ -868,7 +868,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Greg",
-      "PlayerID": 9,
+      "PlayerID": 7,
       "FinishPlace": 15,
       "Points": 1.0,
       "Payout": 0.0
@@ -877,7 +877,7 @@
       "Week": 5,
       "TournamentDate": "2026-02-10",
       "Player": "Dan P",
-      "PlayerID": 6,
+      "PlayerID": 3,
       "FinishPlace": 16,
       "Points": 0.5,
       "Payout": 0.0
@@ -885,116 +885,116 @@
   ],
   "Survival": [
     {
-      "Player": "Steve C",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 172.8,
-      "AvgSurvivalPercent": 0.933,
-      "TotalMinutesSurvived": 864.0
-    },
-    {
       "Player": "Mike F",
       "WeeksPlayed": 4,
-      "AvgMinutesSurvived": 170.5,
-      "AvgSurvivalPercent": 0.9,
-      "TotalMinutesSurvived": 682.0
-    },
-    {
-      "Player": "Bill B",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 157.4,
-      "AvgSurvivalPercent": 0.844,
-      "TotalMinutesSurvived": 787.0
+      "AvgMinutesSurvived": 190.5,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 762.0
     },
     {
       "Player": "Joe Ferrigno",
       "WeeksPlayed": 4,
-      "AvgMinutesSurvived": 143.5,
-      "AvgSurvivalPercent": 0.756,
-      "TotalMinutesSurvived": 574.0
+      "AvgMinutesSurvived": 186.2,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 745.0
     },
     {
-      "Player": "Joe Fitz",
+      "Player": "Bill B",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 135.6,
-      "AvgSurvivalPercent": 0.721,
-      "TotalMinutesSurvived": 678.0
-    },
-    {
-      "Player": "Todd L",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 133.6,
-      "AvgSurvivalPercent": 0.721,
-      "TotalMinutesSurvived": 668.0
-    },
-    {
-      "Player": "Gerry I",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 128.6,
-      "AvgSurvivalPercent": 0.7,
-      "TotalMinutesSurvived": 643.0
-    },
-    {
-      "Player": "Phil Z",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 124.2,
-      "AvgSurvivalPercent": 0.668,
-      "TotalMinutesSurvived": 621.0
-    },
-    {
-      "Player": "Josh T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 121.0,
-      "AvgSurvivalPercent": 0.662,
-      "TotalMinutesSurvived": 605.0
-    },
-    {
-      "Player": "Russ T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 112.6,
-      "AvgSurvivalPercent": 0.612,
-      "TotalMinutesSurvived": 563.0
-    },
-    {
-      "Player": "Josh H",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 106.6,
-      "AvgSurvivalPercent": 0.575,
-      "TotalMinutesSurvived": 533.0
-    },
-    {
-      "Player": "Dan T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 106.2,
-      "AvgSurvivalPercent": 0.555,
-      "TotalMinutesSurvived": 531.0
-    },
-    {
-      "Player": "Dave B",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 102.4,
-      "AvgSurvivalPercent": 0.556,
-      "TotalMinutesSurvived": 512.0
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
     },
     {
       "Player": "Chris",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 98.6,
-      "AvgSurvivalPercent": 0.519,
-      "TotalMinutesSurvived": 493.0
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
     },
     {
       "Player": "Dan P",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 95.6,
-      "AvgSurvivalPercent": 0.531,
-      "TotalMinutesSurvived": 478.0
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Dan T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Dave B",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Gerry I",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
     },
     {
       "Player": "Greg",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 85.2,
-      "AvgSurvivalPercent": 0.48,
-      "TotalMinutesSurvived": 426.0
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Joe Fitz",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Josh H",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Josh T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Phil Z",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Russ T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Steve C",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
+    },
+    {
+      "Player": "Todd L",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 184.8,
+      "AvgSurvivalPercent": 1.0,
+      "TotalMinutesSurvived": 924.0
     }
   ],
   "ChipAndChairRules": {
@@ -1010,194 +1010,194 @@
     {
       "Player": "Steve C",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3450,
+      "ChipsFromSeasonPoints": 3600,
       "TotalEliminations": 15,
       "ChipsFromTotalElims": 750,
       "RepeatElimCount": 3,
       "ChipsFromRepeatElims": 300,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 11000
-    },
-    {
-      "Player": "Mike F",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3075,
-      "TotalEliminations": 10,
-      "ChipsFromTotalElims": 500,
-      "RepeatElimCount": 4,
-      "ChipsFromRepeatElims": 400,
-      "HighValueElimCount": 0,
-      "ChipsFromHighValueElims": 0,
-      "TotalStack": 10475
+      "TotalStack": 11150
     },
     {
       "Player": "Bill B",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3450,
+      "ChipsFromSeasonPoints": 3375,
       "TotalEliminations": 7,
       "ChipsFromTotalElims": 350,
       "RepeatElimCount": 1,
       "ChipsFromRepeatElims": 100,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 10400
+      "TotalStack": 10325
     },
     {
-      "Player": "Phil Z",
+      "Player": "Mike F",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2400,
+      "ChipsFromSeasonPoints": 2475,
       "TotalEliminations": 10,
       "ChipsFromTotalElims": 500,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 4,
-      "ChipsFromHighValueElims": 1000,
-      "TotalStack": 10400
-    },
-    {
-      "Player": "Josh H",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2250,
-      "TotalEliminations": 5,
-      "ChipsFromTotalElims": 250,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 2,
-      "ChipsFromHighValueElims": 500,
-      "TotalStack": 9500
-    },
-    {
-      "Player": "Todd L",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2775,
-      "TotalEliminations": 1,
-      "ChipsFromTotalElims": 50,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
+      "RepeatElimCount": 4,
+      "ChipsFromRepeatElims": 400,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 9325
-    },
-    {
-      "Player": "Joe Ferrigno",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2625,
-      "TotalEliminations": 1,
-      "ChipsFromTotalElims": 50,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 0,
-      "ChipsFromHighValueElims": 0,
-      "TotalStack": 9175
+      "TotalStack": 9875
     },
     {
       "Player": "Joe Fitz",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2475,
+      "ChipsFromSeasonPoints": 3150,
       "TotalEliminations": 4,
       "ChipsFromTotalElims": 200,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 0,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 9175
+      "TotalStack": 9850
     },
     {
-      "Player": "Greg",
+      "Player": "Joe Ferrigno",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 1800,
-      "TotalEliminations": 7,
-      "ChipsFromTotalElims": 350,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 1,
-      "ChipsFromHighValueElims": 250,
-      "TotalStack": 8900
-    },
-    {
-      "Player": "Gerry I",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2325,
+      "ChipsFromSeasonPoints": 2925,
       "TotalEliminations": 1,
       "ChipsFromTotalElims": 50,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 0,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 8875
+      "TotalStack": 9475
+    },
+    {
+      "Player": "Josh H",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1800,
+      "TotalEliminations": 5,
+      "ChipsFromTotalElims": 250,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 3,
+      "ChipsFromHighValueElims": 750,
+      "TotalStack": 9300
+    },
+    {
+      "Player": "Todd L",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2700,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9250
+    },
+    {
+      "Player": "Phil Z",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1350,
+      "TotalEliminations": 10,
+      "ChipsFromTotalElims": 500,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 3,
+      "ChipsFromHighValueElims": 750,
+      "TotalStack": 9100
     },
     {
       "Player": "Dan T",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2175,
+      "ChipsFromSeasonPoints": 2250,
       "TotalEliminations": 3,
       "ChipsFromTotalElims": 150,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 0,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 8825
-    },
-    {
-      "Player": "Dan P",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 1875,
-      "TotalEliminations": 3,
-      "ChipsFromTotalElims": 150,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 1,
-      "ChipsFromHighValueElims": 250,
-      "TotalStack": 8775
-    },
-    {
-      "Player": "Josh T",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 1950,
-      "TotalEliminations": 4,
-      "ChipsFromTotalElims": 200,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 0,
-      "ChipsFromHighValueElims": 0,
-      "TotalStack": 8650
-    },
-    {
-      "Player": "Russ T",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 2100,
-      "TotalEliminations": 1,
-      "ChipsFromTotalElims": 50,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 0,
-      "HighValueElimCount": 0,
-      "ChipsFromHighValueElims": 0,
-      "TotalStack": 8650
+      "TotalStack": 8900
     },
     {
       "Player": "Chris",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 1875,
+      "ChipsFromSeasonPoints": 2025,
       "TotalEliminations": 0,
       "ChipsFromTotalElims": 0,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 0,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 8375
+      "TotalStack": 8525
     },
     {
-      "Player": "Dave B",
+      "Player": "Russ T",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 1725,
+      "ChipsFromSeasonPoints": 1575,
       "TotalEliminations": 1,
       "ChipsFromTotalElims": 50,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 0,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 8275
+      "TotalStack": 8125
+    },
+    {
+      "Player": "Dave B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1125,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 7675
+    },
+    {
+      "Player": "Greg",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 450,
+      "TotalEliminations": 7,
+      "ChipsFromTotalElims": 350,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 1,
+      "ChipsFromHighValueElims": 250,
+      "TotalStack": 7550
+    },
+    {
+      "Player": "Gerry I",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 900,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 7450
+    },
+    {
+      "Player": "Josh T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 675,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 7375
+    },
+    {
+      "Player": "Dan P",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 225,
+      "TotalEliminations": 3,
+      "ChipsFromTotalElims": 150,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 6875
     }
   ]
 }
