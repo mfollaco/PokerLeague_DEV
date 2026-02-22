@@ -89,7 +89,7 @@ def main():
             "TournamentDate": tdate,
             "Player": name,
             "PlayerID": int(player_id),
-            "FinishPlace": int(fp),
+            "FinishPlace": (None if fp is None else int(fp)),
             "Points": float(pts or 0),
             "Payout": float(payout_map.get((int(week), int(player_id)), 0)),
         }
