@@ -71,7 +71,14 @@ def compute_survival_weekly(conn: sqlite3.Connection, cfg: SurvivalConfig) -> pd
         e.{cfg.col_event_ts} AS event_ts,
         e.{cfg.col_event_type} AS event_type,
         e.{cfg.col_player_name} AS player_name,
-        e.{cfg.col_eliminated_name} AS eliminated_player_name
+        CASE
+            WHEN e.{cfg.col_event_type} = 'Eliminated'
+                THEN COALESCE(
+                    NULLIF(TRIM(e.{cfg.col_eliminated_name}), ''),
+                    NULLIF(TRIM(e.{cfg.col_player_name}), '')
+                    )
+            ELSE NULL
+            END AS eliminated_player_name
     FROM {cfg.events_table} e
     JOIN {cfg.tournaments_table} t
       ON t.{cfg.col_tournament_id} = e.{cfg.col_tournament_id}

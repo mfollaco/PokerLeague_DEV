@@ -1,6 +1,6 @@
 {
   "season_id": "spring_2026",
-  "build_ts": "Feb 22, 2026 01:10 PM EST",
+  "build_ts": "Feb 22, 2026 02:19 PM EST",
   "SeasonTotals": [
     {
       "Player": "Steve C",
@@ -885,116 +885,116 @@
   ],
   "Survival": [
     {
-      "Player": "Mike F",
-      "WeeksPlayed": 4,
-      "AvgMinutesSurvived": 190.5,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 762.0
+      "Player": "Steve C",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 172.8,
+      "AvgSurvivalPercent": 0.933,
+      "TotalMinutesSurvived": 864.0
     },
     {
-      "Player": "Joe Ferrigno",
+      "Player": "Mike F",
       "WeeksPlayed": 4,
-      "AvgMinutesSurvived": 186.2,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 745.0
+      "AvgMinutesSurvived": 170.5,
+      "AvgSurvivalPercent": 0.9,
+      "TotalMinutesSurvived": 682.0
     },
     {
       "Player": "Bill B",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
+      "AvgMinutesSurvived": 157.4,
+      "AvgSurvivalPercent": 0.844,
+      "TotalMinutesSurvived": 787.0
     },
     {
-      "Player": "Chris",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Dan P",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Dan T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Dave B",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Gerry I",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Greg",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
+      "Player": "Joe Ferrigno",
+      "WeeksPlayed": 4,
+      "AvgMinutesSurvived": 143.5,
+      "AvgSurvivalPercent": 0.756,
+      "TotalMinutesSurvived": 574.0
     },
     {
       "Player": "Joe Fitz",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Josh H",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Josh T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Phil Z",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Russ T",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
-    },
-    {
-      "Player": "Steve C",
-      "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
+      "AvgMinutesSurvived": 135.6,
+      "AvgSurvivalPercent": 0.721,
+      "TotalMinutesSurvived": 678.0
     },
     {
       "Player": "Todd L",
       "WeeksPlayed": 5,
-      "AvgMinutesSurvived": 184.8,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 924.0
+      "AvgMinutesSurvived": 133.6,
+      "AvgSurvivalPercent": 0.721,
+      "TotalMinutesSurvived": 668.0
+    },
+    {
+      "Player": "Gerry I",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 128.6,
+      "AvgSurvivalPercent": 0.7,
+      "TotalMinutesSurvived": 643.0
+    },
+    {
+      "Player": "Phil Z",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 124.2,
+      "AvgSurvivalPercent": 0.668,
+      "TotalMinutesSurvived": 621.0
+    },
+    {
+      "Player": "Josh T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 121.0,
+      "AvgSurvivalPercent": 0.662,
+      "TotalMinutesSurvived": 605.0
+    },
+    {
+      "Player": "Russ T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 112.6,
+      "AvgSurvivalPercent": 0.612,
+      "TotalMinutesSurvived": 563.0
+    },
+    {
+      "Player": "Josh H",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 106.6,
+      "AvgSurvivalPercent": 0.575,
+      "TotalMinutesSurvived": 533.0
+    },
+    {
+      "Player": "Dan T",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 106.2,
+      "AvgSurvivalPercent": 0.555,
+      "TotalMinutesSurvived": 531.0
+    },
+    {
+      "Player": "Dave B",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 102.4,
+      "AvgSurvivalPercent": 0.556,
+      "TotalMinutesSurvived": 512.0
+    },
+    {
+      "Player": "Chris",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 98.6,
+      "AvgSurvivalPercent": 0.519,
+      "TotalMinutesSurvived": 493.0
+    },
+    {
+      "Player": "Dan P",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 95.6,
+      "AvgSurvivalPercent": 0.531,
+      "TotalMinutesSurvived": 478.0
+    },
+    {
+      "Player": "Greg",
+      "WeeksPlayed": 5,
+      "AvgMinutesSurvived": 85.2,
+      "AvgSurvivalPercent": 0.48,
+      "TotalMinutesSurvived": 426.0
     }
   ],
   "ChipAndChairRules": {
