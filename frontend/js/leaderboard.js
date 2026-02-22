@@ -138,6 +138,10 @@ function renderTable(rows) {
   const tbody = document.querySelector("#leaderboardTable tbody");
   tbody.innerHTML = "";
 
+  console.log("Leaderboard money check:",
+  rows.slice(0,5).map(r => [r.Player, r.MoneyWonTotal])
+  );
+
   rows.forEach((p) => {
     // CHANGE THESE IF YOUR FIELD NAMES DIFFER:
     const name = p.Player ?? p.player_name ?? p.name ?? "Unknown";
@@ -295,7 +299,7 @@ weeklyFlat.forEach(row => {
     WeeksInSeason: summary.WeeksInSeason ?? null,
     Wins: summary.Wins ?? null,
     AvgFinish: summary.AvgFinish ?? null,
-    MoneyWonTotal: summary.MoneyWonTotal ?? 0
+    MoneyWonTotal: (summary.MoneyWonTotal ?? 0),
     });
   }
 
