@@ -80,7 +80,7 @@
               <h5 class="mb-0"><i class="bi bi-calendar-event me-2 text-gold"></i>Next Event</h5>
             </div>
             <div class="card-body" id="next-event">
-              <p class="text-muted mb-0">Loading next event…</p>
+              <p class="text-muted mb-0">Coming Next Season</p>
             </div>
           </div>
         </div>
@@ -131,50 +131,80 @@
   <script>
     async function loadSeasonData() {
       try {
-        const res = await fetch("spring_2026.json")
+        // ✅ correct path (your JSON lives in /data/)
+        const SEASON_ID = "spring_2026";
+        const url = `data/${SEASON_ID}.json`;
+
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
 
         const data = await res.json();
 
-        // Next event
-        const upcoming = (data.schedule || [])
-          .filter(e => !e.completed)
-          .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+        // ----------------------------
+        // Latest winner (derive from WeeklyPoints)
+        // ----------------------------
+        const weekly = data.WeeklyPoints || [];
 
-        const nextEventEl = document.getElementById('next-event');
-        if (upcoming) {
-          nextEventEl.innerHTML = `
-            <h6 class="text-gold">${upcoming.name}</h6>
-            <p class="mb-1">${new Date(upcoming.date).toLocaleString()}</p>
-            <p class="mb-1"><strong>Buy-in:</strong> ${upcoming.buy_in}</p>
-            <p class="mb-0"><strong>Location:</strong> ${upcoming.location}</p>
-          `;
+        // find latest week number present
+        const latestWeek = weekly.reduce((m, r) => Math.max(m, Number(r.Week || 0)), 0);
+
+        // winner row = FinishPlace 1 in latest week
+        const winnerRow = weekly.find(
+          (r) => Number(r.Week) === latestWeek && Number(r.FinishPlace) === 1
+        );
+
+        const latestEl = document.getElementById("latest-winner");
+        if (latestEl) {
+          if (winnerRow) {
+            const cash = Number(winnerRow.Payout || 0);
+            latestEl.innerHTML = `
+              <h6 class="text-gold">${winnerRow.Player}</h6>
+              <p class="mb-1">Week ${latestWeek}</p>
+              <p class="mb-0"><strong>Cash:</strong> ${cash.toLocaleString(undefined, {
+                style: "currency",
+                currency: "USD",
+                maximumFractionDigits: 0
+              })}</p>
+            `;
+          } else {
+            latestEl.innerHTML = `<p class="mb-0 text-muted">No winner found yet.</p>`;
+          }
         }
 
-        // Latest winner
-        const latest = data.latest_winner;
-        const latestEl = document.getElementById('latest-winner');
-        if (latest) {
-          latestEl.innerHTML = `
-            <h6 class="text-gold">${latest.player}</h6>
-            <p class="mb-1">${latest.event_name}</p>
-            <p class="mb-0"><strong>Cash:</strong> ${latest.cash}</p>
-          `;
-        }
+        // ----------------------------
+        // Current leaders (derive from SeasonTotals)
+        // ----------------------------
+        const totals = data.SeasonTotals || [];
 
-        // Current leaders
-        const leadersEl = document.getElementById('current-leaders');
-        const leaders = (data.leaderboard || []).slice(0, 5);
-        if (leaders.length) {
-          leadersEl.innerHTML = `
-            <ol class="mb-0 ps-3">
-              ${leaders.map(p => `
-                <li class="mb-1">
-                  <span class="text-gold">${p.name}</span>
-                  <span class="text-muted-vegas"> – ${p.points} pts</span>
-                </li>
-              `).join('')}
-            </ol>
-          `;
+        // sort by Drop2 points desc
+        const leaders = [...totals]
+          .sort((a, b) => Number(b.SeasonPointsDrop2 || 0) - Number(a.SeasonPointsDrop2 || 0))
+          .slice(0, 5)
+          .map((r) => ({
+            name: r.Player,
+            points: Number(r.SeasonPointsDrop2 || 0),
+          }));
+
+        const leadersEl = document.getElementById("current-leaders");
+        if (leadersEl) {
+          if (leaders.length) {
+            leadersEl.innerHTML = `
+              <ol class="mb-0 ps-3">
+                ${leaders
+                  .map(
+                    (p) => `
+                      <li class="mb-1">
+                        <span class="text-gold">${p.name}</span>
+                        <span class="text-muted-vegas"> • ${p.points} pts</span>
+                      </li>
+                    `
+                  )
+                  .join("")}
+              </ol>
+            `;
+          } else {
+            leadersEl.innerHTML = `<p class="mb-0 text-muted">No standings yet.</p>`;
+          }
         }
 
       } catch (err) {
@@ -182,8 +212,8 @@
       }
     }
 
-    loadSeasonData();
-  </script>
+  loadSeasonData();
+</script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

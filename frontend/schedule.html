@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/vegas.css" />
 </head>
 
-<body class="bg-vegas text-light">
+<body class="bg-vegas text-light d-flex flex-column min-vh-100">
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-vegas-dark border-bottom border-gold">
@@ -27,54 +27,44 @@
 
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <ul class="navbar-nav ms-auto">
-          <a class="nav-link cac-link"
-            href="leaderboard.html">
-            Leaderboard
-          </a>
-          <a class="nav-link cac-link"
-            href="chip-and-chair.html">
-            Chip & A Chair
-          </a>
-          <a class="nav-link cac-link"
-            href="weekly-results.html">
-            Weekly Results
-          </a>
-          <a class="nav-link cac-link"
-            href="schedule.html">
-            Schedule
-          </a>
-          <a class="nav-link cac-link"
-            href="analytics.html">
-            Analytics
-          </a>
+          <a class="nav-link cac-link" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link cac-link" href="chip-and-chair.html">Chip & A Chair</a>
+          <a class="nav-link cac-link" href="weekly-results.html">Weekly Results</a>
+          <a class="nav-link cac-link active" href="schedule.html">Schedule</a>
+          <a class="nav-link cac-link" href="analytics.html">Analytics</a>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- MAIN -->
-  <main class="py-5">
+  <main class="py-5 flex-fill">
     <div class="container">
       <h1 class="neon-subtitle mb-4">Season Schedule</h1>
 
-      <!-- Vegas card wrapper -->
-      <div class="card card-vegas p-4">
-        <div id="scheduleTable">
-          <p class="text-center text-muted">Loading schedule…</p>
+      <div class="card card-vegas p-5 text-center">
+        <div class="mb-3">
+          <i class="bi bi-calendar-event text-gold" style="font-size: 2rem;"></i>
         </div>
+        <h3 class="text-gold mb-2">Coming Next Season</h3>
+        <p class="text-muted-vegas mb-0">
+          The full tournament schedule will be published when the next season is finalized.
+        </p>
       </div>
+
     </div>
   </main>
 
   <!-- FOOTER -->
-  <footer class="py-4 border-top border-gold mt-auto bg-vegas-dark">
+  <footer class="py-4 border-top border-gold bg-vegas-dark">
     <div class="container text-center small text-muted-vegas">
       ♠ ♥ ♦ ♣ PokerLeague Schedule • Season 2026 ♣ ♦ ♥ ♠
     </div>
   </footer>
 
+  <!-- Keep this so future schedule logic can plug back in -->
   <script src="js/schedule.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
