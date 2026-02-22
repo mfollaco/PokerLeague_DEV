@@ -9,150 +9,109 @@ def main():
     conn = sqlite3.connect(str(DB_PATH))
     cur = conn.cursor()
 
+    # tournaments in season (we use these to scope updates)
     tournament_ids = [
         r[0] for r in cur.execute(
-            "SELECT DISTINCT tournament_id FROM weekly_points WHERE season_id = ?",
-            (SEASON_ID,)
+            """
+            SELECT tournament_id
+            FROM tournaments
+            WHERE season_id = ?
+            ORDER BY tournament_date
+            """,
+            (SEASON_ID,),
         ).fetchall()
     ]
 
-    total_updated = 0
+    updated = 0
 
     for tid in tournament_ids:
-
-        # Field (BuyIn players already seeded into weekly_points)
-        field = [
-            r[0] for r in cur.execute(
-                "SELECT player_id FROM weekly_points WHERE season_id=? AND tournament_id=?",
-                (SEASON_ID, tid)
-            ).fetchall()
-        ]
-
-        field_size = len(field)
-        if field_size == 0:
-            continue
-
-        # Eliminations ordered by time
-        for tournament_id in tournament_ids:
-
-            elim_rows = cur.execute(
-                """
-                SELECT
-                COALESCE(
-                    NULLIF(TRIM(r.eliminated_player_name), ''),
-                    NULLIF(TRIM(r.player_name), '')
-                ) AS eliminated_name
-                FROM raw_log_events r
-                WHERE r.tournament_id = ?
-                AND r.event_type = 'Eliminated'
-                ORDER BY r.raw_event_id
-                """,
-                (tournament_id,)
-            ).fetchall()
-
-            elim_player_ids = []
-            for (name,) in elim_rows:
-                if not name:
-                    continue
-
-                row = cur.execute(
-                    "SELECT player_id FROM players WHERE TRIM(player_name) = TRIM(?)",
-                    (name,)
-                ).fetchone()
-
-                if row:
-                    elim_player_ids.append(int(row[0]))
-        
-        # Who played this tournament?
-        participants = cur.execute(
+        # Players who bought in / exist in weekly_points for this tournament
+        players = cur.execute(
             """
-            SELECT player_id
-            FROM weekly_points
-            WHERE season_id = ? AND tournament_id = ?
+            SELECT wp.player_id, p.player_name
+            FROM weekly_points wp
+            JOIN players p ON p.player_id = wp.player_id
+            WHERE wp.season_id = ? AND wp.tournament_id = ?
             """,
-            (SEASON_ID, tournament_id)
+            (SEASON_ID, tid),
         ).fetchall()
-        participant_ids = [int(r[0]) for r in participants]
 
-        # winner = someone who is NOT in eliminated list
-        eliminated_set = set(elim_player_ids)
-        winners = [pid for pid in participant_ids if pid not in eliminated_set]
-
-        if len(winners) != 1:
-            # Can't determine a single winner; skip this tournament
+        if not players:
             continue
 
-        winner_id = winners[0]
+        n = len(players)
+        name_to_pid = {name: int(pid) for pid, name in players}
 
-        # finish places: last eliminated gets 2nd, ..., first eliminated gets Nth
-        # Example: elim order = [A, B, C] means A out first => 4th, C out last => 2nd
-        n = len(participant_ids)
-        elim_count = len(elim_player_ids)
+        # Elimination order (player_name holds eliminated player in your logs)
+        elim_names = cur.execute(
+            """
+            SELECT TRIM(player_name) AS eliminated_name
+            FROM raw_log_events
+            WHERE tournament_id = ?
+              AND event_type = 'Eliminated'
+              AND player_name IS NOT NULL
+              AND TRIM(player_name) <> ''
+            ORDER BY raw_event_id ASC
+            """,
+            (tid,),
+        ).fetchall()
 
-        # Update eliminated players
-        for idx, pid in enumerate(elim_player_ids):
-            finish_place = n - idx  # first eliminated -> n, last eliminated -> 2
+        # De-dupe while preserving order (sometimes logs repeat)
+        seen = set()
+        elim_order = []
+        for (nm,) in elim_names:
+            if nm not in seen:
+                seen.add(nm)
+                elim_order.append(nm)
+
+        # Assign finish places:
+        # elim_order[0] => place N, elim_order[1] => N-1, ..., last elim => 2
+        for idx, nm in enumerate(elim_order):
+            pid = name_to_pid.get(nm)
+            if pid is None:
+                continue  # name mismatch; ignore
+            place = n - idx
             cur.execute(
                 """
                 UPDATE weekly_points
                 SET finish_place = ?
                 WHERE season_id = ? AND tournament_id = ? AND player_id = ?
                 """,
-                (finish_place, SEASON_ID, tournament_id, pid)
+                (place, SEASON_ID, tid, pid),
             )
+            updated += cur.rowcount
 
-        # Update winner
-        cur.execute(
-            """
-            UPDATE weekly_points
-            SET finish_place = 1
-            WHERE season_id = ? AND tournament_id = ? AND player_id = ?
-            """,
-            (SEASON_ID, tournament_id, winner_id)
-        )
+        # Winner is the one player NOT eliminated
+        eliminated_pids = {name_to_pid[nm] for nm in elim_order if nm in name_to_pid}
+        winner_pids = [pid for pid, _name in players if int(pid) not in eliminated_pids]
 
-    # (whatever your code does next to assign finish_place using elim_player_ids)
-
-        # Assign finish places
-        # First eliminated = last place (N)
-        current_place = field_size
-
-        for pid in elim_player_ids:
-            cur.execute(
-                """
-                UPDATE weekly_points
-                SET finish_place = ?
-                WHERE season_id=? AND tournament_id=? AND player_id=?
-                """,
-                (current_place, SEASON_ID, tid, pid)
-            )
-            current_place -= 1
-            total_updated += 1
-
-        # Remaining player (not eliminated) = winner
-        remaining = [pid for pid in field if pid not in elim_player_ids]
-        if len(remaining) == 1:
-            winner_pid = remaining[0]
+        # If we have exactly one winner, set them to 1st
+        if len(winner_pids) == 1:
+            winner_pid = int(winner_pids[0])
             cur.execute(
                 """
                 UPDATE weekly_points
                 SET finish_place = 1
-                WHERE season_id=? AND tournament_id=? AND player_id=?
+                WHERE season_id = ? AND tournament_id = ? AND player_id = ?
                 """,
-                (SEASON_ID, tid, winner_pid)
+                (SEASON_ID, tid, winner_pid),
             )
-            total_updated += 1
+            updated += cur.rowcount
 
     conn.commit()
 
-    nulls = cur.execute(
-        "SELECT COUNT(*) FROM weekly_points WHERE season_id=? AND finish_place IS NULL",
-        (SEASON_ID,)
+    finish_place_null = cur.execute(
+        """
+        SELECT COUNT(*)
+        FROM weekly_points
+        WHERE season_id = ? AND finish_place IS NULL
+        """,
+        (SEASON_ID,),
     ).fetchone()[0]
 
-    print(f"✅ fill_finish_place done. updated={total_updated} finish_place_null={nulls}")
-
+    print(f"✅ fill_finish_place done. updated={updated} finish_place_null={finish_place_null}")
     conn.close()
+
 
 if __name__ == "__main__":
     main()
