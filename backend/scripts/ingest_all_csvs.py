@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime
 
 DB_PATH = Path("backend/db/pokerleague.sqlite")
-DATA_DIR = Path("backend/data_raw")
+DATA_DIR = Path("data/incoming")
 SEASON_ID = "spring_2026"
 
 
