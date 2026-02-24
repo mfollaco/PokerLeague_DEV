@@ -50,21 +50,16 @@ function groupWeeklyPoints(rows) {
 // RENDER WEEKLY POINTS (Vegas‑styled accordion)
 // ------------------------------------------------------------
 function renderWeeklyPoints(weekly) {
-  const container = document.getElementById("weeklyResultsTable");
-  container.innerHTML = ""; // clear loading text
+    const container = document.getElementById("weeklyResultsTable");
+    container.innerHTML = ""; // clear loading text
 
-  // weekly is already sorted by week number in groupWeeklyResults()
-  weekly.forEach((week) => {
-
-      // Format date
+    weekly.forEach((week) => {
       const weekLabel = new Date(week.date).toLocaleDateString();
 
-      // Create <details> wrapper
       const section = document.createElement("details");
       section.id = `week${week.week}`;
       section.classList.add("vegas-week-card");
 
-      // Vegas styling applied via CSS classes
       section.innerHTML = `
         <summary class="vegas-week-summary">
           <span class="neon-gold">Week ${week.week}</span>
@@ -84,14 +79,17 @@ function renderWeeklyPoints(weekly) {
             <tbody>
               ${week.results
                 .sort((a, b) => a.Place - b.Place)
-                .map(r => `
-                  <tr>
-                    <td>${r.Place}</td>
-                    <td>${r.Player}</td>
-                    <td>${r.Points}</td>
-                    <td>${formatMoney(r.Payout  || 0)}</td>
-                  </tr>
-                `).join("")}
+                .map(
+                  (r) => `
+                    <tr>
+                      <td>${r.Place}</td>
+                      <td>${r.Player}</td>
+                      <td>${r.Points}</td>
+                      <td>${formatMoney(r.Payout || 0)}</td>
+                    </tr>
+                  `
+                )
+                .join("")}
             </tbody>
           </table>
         </div>
@@ -99,4 +97,56 @@ function renderWeeklyPoints(weekly) {
 
       container.appendChild(section);
     });
+
+    // When a week accordion opens, load notes for that week (and close others)
+    container.querySelectorAll("details.vegas-week-card").forEach((detailsEl) => {
+      detailsEl.addEventListener("toggle", () => {
+        if (!detailsEl.open) return;
+
+        // Close all other weeks
+        container.querySelectorAll("details.vegas-week-card").forEach((other) => {
+          if (other !== detailsEl) other.open = false;
+        });
+
+        // Load notes for this week
+        const weekNum = Number(detailsEl.id.replace("week", ""));
+        loadWeekNotes(weekNum);
+
+        // Scroll to notes card
+        document.getElementById("week-notes")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+
+    // Default message before any week is opened
+    loadWeekNotes(null);
+}
+
+async function loadWeekNotes(weekNumber) {
+  const el = document.getElementById("week-notes");
+  if (!el) return;
+
+  if (!weekNumber) {
+    el.innerHTML = `<p class="text-muted mb-0">Select a week to view notes.</p>`;
+    return;
+  }
+
+  const weekStr = String(weekNumber).padStart(2, "0");
+  const url = `/data/notes/week-${weekStr}.md`;
+
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+
+    const md = await res.text();
+    if (!md.trim()) throw new Error("Empty notes file");
+    if (typeof marked === "undefined") throw new Error("Marked not loaded");
+
+    el.innerHTML = `<div class="notes-markdown">${marked.parse(md)}</div>`;
+  } catch (err) {
+    el.innerHTML = `<p class="text-muted mb-0">No notes posted for Week ${weekNumber}.</p>`;
+    console.warn("[WeekNotes]", err);
+  }
 }

@@ -61,7 +61,8 @@ body.bg-vegas {
 
 /* Hero */
 .vegas-hero {
-  min-height: 50vh;
+  min-height: 40vh;
+  padding: 2.5rem 0;
   background:
     radial-gradient(circle at top, rgba(230, 180, 34, 0.15), transparent 55%),
     url('https://images.pexels.com/photos/1871508/pexels-photo-1871508.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
@@ -300,4 +301,23 @@ body.bg-vegas {
 /* Optional: make the title feel like the Leaderboard size */
 @media (min-width: 992px) {
   .page-title { font-size: 3rem; }
+}
+
+/* Home page: center the 3 summary cards */
+.home-draft #next-event,
+.home-draft #latest-winner,
+.home-draft #current-leaders {
+  text-align: center;
+}
+
+/* If the header row of those cards isn't centered */
+.home-draft .card-header {
+  text-align: center;
+}
+
+#current-leaders ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
 }

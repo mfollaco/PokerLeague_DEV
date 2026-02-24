@@ -56,12 +56,29 @@
   <!-- MAIN -->
   <main class="py-5">
     <div class="container">
+
       <h1 class="neon-subtitle mb-4">Weekly Results</h1>
 
-      <!-- Vegas card wrapper -->
-      <div id="weeklyResultsTable" class="card card-vegas p-4">
+      <!-- Weekly Results Card -->
+      <div id="weeklyResultsTable" class="card card-vegas p-4 mb-4">
         <p class="text-center text-muted">Loading weekly results…</p>
       </div>
+
+      <!-- Week Notes Card -->
+      <section>
+        <div class="card card-vegas">
+          <div class="card-header border-gold-bottom text-center">
+            <h5 class="mb-0">
+              <i class="bi bi-journal-text me-2 text-gold"></i>Week Notes
+            </h5>
+          </div>
+
+          <div class="card-body" id="week-notes">
+            <p class="text-muted mb-0">No notes posted for this week.</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -71,6 +88,9 @@
       ♠ ♥ ♦ ♣ PokerLeague Weekly Results • Season 2026 ♣ ♦ ♥ ♠
     </div>
   </footer>
+
+  <!-- Markdown parser (Marked) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <script src="js/weekly_results.js"></script>
 
