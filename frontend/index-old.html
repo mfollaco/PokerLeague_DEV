@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/vegas.css">
 </head>
 
-<body class="bg-vegas text-light home-draft">
+<body class="bg-vegas text-light">
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-vegas-dark border-bottom border-gold">
@@ -69,10 +69,9 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="py-3">
-    <div class="container-lg">
-      <div class="mx-auto home-tiles-wrap">
-        <div class="row g-3 home-tiles-row justify-content-center tiles-centered">
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
 
         <!-- Next Event -->
         <div class="col-md-4">
@@ -80,7 +79,7 @@
             <div class="card-header border-gold-bottom">
               <h5 class="mb-0"><i class="bi bi-calendar-event me-2 text-gold"></i>Next Event</h5>
             </div>
-            <div class="card-body text-center" id="next-event">
+            <div class="card-body" id="next-event">
               <p class="text-muted mb-0">Coming Next Season</p>
             </div>
           </div>
@@ -92,7 +91,7 @@
             <div class="card-header border-gold-bottom">
               <h5 class="mb-0"><i class="bi bi-trophy-fill me-2 text-gold"></i>Latest Winner</h5>
             </div>
-            <div class="card-body text-center" id="latest-winner">
+            <div class="card-body" id="latest-winner">
               <p class="text-muted mb-0">Loading latest winner…</p>
             </div>
           </div>
@@ -104,28 +103,20 @@
             <div class="card-header border-gold-bottom">
               <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill me-2 text-gold"></i>Current Leaders</h5>
             </div>
-            <div class="card-body text-center" id="current-leaders">
+            <div class="card-body" id="current-leaders">
               <p class="text-muted mb-0">Loading leaderboard…</p>
             </div>
           </div>
         </div>
 
       </div>
-    </div>
 
-      <section class="mt-4">
-        <div class="card card-vegas">
-          <div class="card-header border-gold-bottom text-center">
-            <h5 class="mb-0">
-              <i class="bi bi-journal-text me-2 text-gold"></i>Commissioner’s Notes
-            </h5>
-          </div>
-          <div class="card-body" id="commissioner-notes">
-            <p class="text-muted mb-0">Coming Next Season</p>
-          </div>
-        </div>
+      <section class="mt-5">
+        <h2 class="neon-subtitle mb-3">Season Overview</h2>
+        <p class="text-muted-vegas">
+          This site tracks every event, finish, and chip swing of the seasons.
+        </p>
       </section>
-
     </div>
   </main>
 
@@ -156,7 +147,6 @@
 
         // find latest week number present
         const latestWeek = weekly.reduce((m, r) => Math.max(m, Number(r.Week || 0)), 0);
-        loadCommissionerNotes(latestWeek);
 
         // winner row = FinishPlace 1 in latest week
         const winnerRow = weekly.find(
@@ -199,7 +189,7 @@
         if (leadersEl) {
           if (leaders.length) {
             leadersEl.innerHTML = `
-              <ol class="mb-0 list-unstyled">
+              <ol class="mb-0 ps-3">
                 ${leaders
                   .map(
                     (p) => `
@@ -222,45 +212,11 @@
       }
     }
 
+  loadSeasonData();
 </script>
 
-<!-- Markdown parser (Marked) -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<script>
-async function loadCommissionerNotes(latestWeek) {
-  const el = document.getElementById("commissioner-notes");
-  if (!el) return;
-
-  el.innerHTML = `<div class="text-muted">Loading Commissioner’s Notes…</div>`;
-
-  const url = `/data/notes/week-${String(latestWeek).padStart(2, "0")}.md`;
-
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(res.status);
-
-    const md = await res.text();
-    if (!md.trim()) throw new Error("Empty notes file");
-
-    const html = marked.parse(md);
-    el.innerHTML = `<div class="notes-markdown">${html}</div>`;
-  } catch (err) {
-    el.innerHTML = `
-      <div class="text-muted">
-        Commissioner’s Notes are not available yet.
-      </div>
-    `;
-    console.warn("[CommissionerNotes]", err);
-  }
-}
-
-// Run after your existing loadSeasonData() is defined above
-loadSeasonData();
-</script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
