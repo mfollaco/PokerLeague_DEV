@@ -134,6 +134,12 @@ function computeTrendsAndRanks(players) {
 // Rendering
 // -------------------------
 
+function formatAvg(n) {
+  const x = Number(n);
+  if (!Number.isFinite(x)) return "—";
+  return Number.isInteger(x) ? x.toString() : x.toFixed(1);
+}
+
 function renderTable(rows) {
   const tbody = document.querySelector("#leaderboardTable tbody");
   tbody.innerHTML = "";
@@ -149,7 +155,7 @@ function renderTable(rows) {
     const total = p.SeasonPointsTotal ?? "";
     const weeks = p.WeeksInSeason ?? "";
     const wins = p.Wins ?? "";
-    const avg = p.AvgFinish ?? "";
+    const avg = formatAvg(p.AvgFinish);
     const money = formatMoney(p.MoneyWonTotal ?? 0);
 
     let trendHtml = "—";
