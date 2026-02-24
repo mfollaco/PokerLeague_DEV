@@ -100,14 +100,42 @@ def build_chip_and_chair(
         by_player[elim_player]["TotalEliminations"] = cnt
         by_player[elim_player]["ChipsFromTotalElims"] = cnt * rules.chip_per_total_elim
 
-    # --- repeat elims ---
-    repeat_by_elim: Dict[str, int] = {}
-    for (elim_player, vict), cnt in pair_counts.items():
-        repeat = max(cnt - 1, 0)
-        if repeat:
-            repeat_by_elim[elim_player] = repeat_by_elim.get(elim_player, 0) + repeat
+    # --- repeat elims (tiered per pair; NOT cumulative tiers) ---
+    # Per (Eliminator, Victim) pair:
+    #   1x => 50
+    #   2x => 100
+    #   3+ => 250
+    #
+    # RepeatElimCount stays as "repeat occurrences" (cnt-1) for display.
+    # ChipsFromRepeatElims becomes sum of the capped bonus per pair.
 
-    for elim_player, repeat_cnt in repeat_by_elim.items():
+    repeat_count_by_elim: Dict[str, int] = {}
+    repeat_chips_by_elim: Dict[str, int] = {}
+
+    tier1 = rules.chip_per_total_elim      # 50
+    tier2 = rules.chip_per_repeat_elim     # 100
+    tier3 = rules.chip_per_hv_elim         # 250
+
+    for (elim_player, vict), cnt in pair_counts.items():
+        # count repeats for display
+        repeat_occurrences = max(cnt - 1, 0)
+        if repeat_occurrences:
+            repeat_count_by_elim[elim_player] = repeat_count_by_elim.get(elim_player, 0) + repeat_occurrences
+
+        # tiered capped chips per pair
+        if cnt <= 0:
+            pair_bonus = 0
+        elif cnt == 1:
+            pair_bonus = tier1
+        elif cnt == 2:
+            pair_bonus = tier2
+        else:
+            pair_bonus = tier3
+
+        repeat_chips_by_elim[elim_player] = repeat_chips_by_elim.get(elim_player, 0) + pair_bonus
+
+    # write into by_player
+    for elim_player in set(repeat_count_by_elim.keys()) | set(repeat_chips_by_elim.keys()):
         by_player.setdefault(elim_player, {
             "Player": elim_player,
             "BaseStack": rules.base_stack,
@@ -120,8 +148,8 @@ def build_chip_and_chair(
             "ChipsFromHighValueElims": 0,
             "TotalStack": 0,
         })
-        by_player[elim_player]["RepeatElimCount"] = repeat_cnt
-        by_player[elim_player]["ChipsFromRepeatElims"] = repeat_cnt * rules.chip_per_repeat_elim
+        by_player[elim_player]["RepeatElimCount"] = repeat_count_by_elim.get(elim_player, 0)
+        by_player[elim_player]["ChipsFromRepeatElims"] = repeat_chips_by_elim.get(elim_player, 0)
 
     # --- high value elims ---
     # victim rank <=3 and eliminator rank >3
