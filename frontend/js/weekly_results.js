@@ -22,6 +22,38 @@ fetch("data/spring_2026.json")
   renderWeeklyPoints(weekly);
 })
 
+async function loadWeekNotes(weekNumber) {
+  const el = document.getElementById("week-notes");
+  if (!el) return;
+
+  // If nothing selected yet (page load), show default message
+  if (!weekNumber) {
+    el.innerHTML = `<p class="text-muted mb-0">No notes posted for this week.</p>`;
+    return;
+  }
+
+  el.innerHTML = `<p class="text-muted mb-0">Loading Week ${weekNumber} notes…</p>`;
+
+  const file = `data/notes/week-${String(weekNumber).padStart(2, "0")}.md`;
+
+  try {
+    const res = await fetch(file, { cache: "no-store" });
+
+    // Missing file = strict “no notes”
+    if (!res.ok) throw new Error(`Missing: ${file} (${res.status})`);
+
+    const md = await res.text();
+    if (!md.trim()) throw new Error(`Empty: ${file}`);
+
+    // Render markdown -> HTML
+    const html = marked.parse(md);
+    el.innerHTML = `<div class="notes-markdown">${html}</div>`;
+  } catch (err) {
+    el.innerHTML = `<p class="text-muted mb-0">No notes posted for this week.</p>`;
+    console.warn("[WeekNotes]", err);
+  }
+}
+
 
 function groupWeeklyPoints(rows) {
   const map = new Map();
@@ -134,7 +166,7 @@ async function loadWeekNotes(weekNumber) {
   }
 
   const weekStr = String(weekNumber).padStart(2, "0");
-  const url = `/data/notes/week-${weekStr}.md`;
+  const url = `data/notes/week-${weekStr}.md`;
 
   try {
     const res = await fetch(url, { cache: "no-store" });

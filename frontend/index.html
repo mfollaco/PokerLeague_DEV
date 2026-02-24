@@ -234,25 +234,43 @@ async function loadCommissionerNotes(latestWeek) {
 
   el.innerHTML = `<div class="text-muted">Loading Commissioner’s Notes…</div>`;
 
-  const url = `/data/notes/week-${String(latestWeek).padStart(2, "0")}.md`;
-
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(res.status);
-
-    const md = await res.text();
-    if (!md.trim()) throw new Error("Empty notes file");
-
-    const html = marked.parse(md);
-    el.innerHTML = `<div class="notes-markdown">${html}</div>`;
-  } catch (err) {
-    el.innerHTML = `
-      <div class="text-muted">
-        Commissioner’s Notes are not available yet.
-      </div>
-    `;
-    console.warn("[CommissionerNotes]", err);
+  // Safety: if we don't have a week number yet
+  if (!latestWeek || Number(latestWeek) <= 0) {
+    el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
+    return;
   }
+
+  // Try latestWeek, then walk backward until we find a file
+  let weekToTry = Number(latestWeek);
+
+  while (weekToTry >= 1) {
+    const url = `/data/notes/week-${String(weekToTry).padStart(2, "0")}.md`;
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+
+      if (res.ok) {
+        const md = await res.text();
+        if (md.trim()) {
+          const html = marked.parse(md);
+          el.innerHTML = `
+            <div class="notes-markdown">
+              <div class="text-muted small mb-2">Showing Week ${weekToTry} notes</div>
+              ${html}
+            </div>
+          `;
+          return; // ✅ stop as soon as we find one
+        }
+      }
+    } catch (err) {
+      // ignore and keep walking back
+    }
+
+    weekToTry -= 1;
+  }
+
+  // Nothing found at all
+  el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
 }
 
 // Run after your existing loadSeasonData() is defined above
