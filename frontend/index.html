@@ -255,7 +255,7 @@ async function loadCommissionerNotes(latestWeek) {
           const html = marked.parse(md);
           el.innerHTML = `
             <div class="notes-markdown">
-              <div class="text-muted small mb-2">Showing Week ${weekToTry} notes</div>
+              <div class="notes-meta">Showing Week ${weekToTry} notes</div>
               ${html}
             </div>
           `;

@@ -321,3 +321,10 @@ body.bg-vegas {
   align-items: center;
   padding-left: 0;
 }
+
+/* Week notes "Showing Week X notes" label */
+.notes-meta {
+  font-size: 0.9rem;
+  color: rgba(255, 216, 107, 0.85); /* readable gold */
+  margin-bottom: 0.5rem;
+}
