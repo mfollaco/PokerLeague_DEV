@@ -93,12 +93,11 @@ body.bg-vegas {
 }
 
 .neon-subtitle {
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow:
-    0 0 6px rgba(230, 180, 34, 0.7),
-    0 0 14px rgba(230, 180, 34, 0.5);
+  color: var(--vegas-gold);
+  text-shadow: 0 0 6px rgba(196,106,46,0.35);
 }
 
 .neon-gold {
@@ -327,4 +326,392 @@ body.bg-vegas {
   font-size: 0.9rem;
   color: rgba(255, 216, 107, 0.85); /* readable gold */
   margin-bottom: 0.5rem;
+}
+
+/* ---------- Analytics: mobile-friendly defaults ---------- */
+
+/* Chart container: tall on desktop, tighter on phones */
+.chart-box {
+  height: 360px;
+}
+@media (max-width: 576px) {
+  .chart-box {
+    height: 260px;
+  }
+}
+
+/* Tighten card padding on small screens */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 0.85rem;
+  }
+}
+
+/* Tables: slightly smaller type on phones */
+@media (max-width: 576px) {
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hide Avg Minutes column on phones */
+@media (max-width: 576px) {
+  .col-minutes {
+    display: none !important;
+  }
+}
+
+/* Kill Matrix header labels */
+.heatmap-table thead th {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* Base table override */
+.heatmap-table {
+  background-color: #000;
+}
+
+/* Default cell background (dark) */
+.heatmap-table td {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 193, 7, 0.25) !important;
+}
+
+/* Kill Matrix: make header row match the site table vibe */
+.heatmap-table thead th {
+  background: rgba(20, 22, 24, 0.95) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+  border-color: rgba(255, 193, 7, 0.25) !important;
+}
+
+/* Keep sticky header behaving */
+.heatmap-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.km-cell{
+  text-align: center;
+  font-weight: 500;
+  color: rgba(255,255,255,.88);
+}
+
+/* Kill Matrix: prevent header name wrapping + keep columns readable */
+.kill-matrix th,
+.kill-matrix td {
+  white-space: nowrap;
+}
+
+.kill-matrix th:not(.sticky-col),
+.kill-matrix td:not(.sticky-col) {
+  min-width: 64px;   /* bump to 70px if you want more breathing room */
+  text-align: center;
+}
+
+.km-cell{
+  text-align: center;
+  font-weight: 500;
+  color: rgba(255,255,255,.88);
+}
+
+/* Zero cells */
+.hm-0 {
+  background: rgba(0, 0, 0, 0.45) !important;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Heat levels */
+.hm-1 { background: rgba(255, 193, 7, 0.12) !important; }
+.hm-2 { background: rgba(255, 193, 7, 0.22) !important; }
+.hm-3 { background: rgba(255, 193, 7, 0.35) !important; }
+.hm-4 {
+  background: rgba(255, 193, 7, 0.5) !important;
+  color: #111;
+  font-weight: 700;
+}
+
+/* Victim header cells: no wrapping + slightly tighter */
+.km-victim-head{
+  font-size: 0.85rem;
+  padding-left: .4rem !important;
+  padding-right: .4rem !important;
+}
+
+/* Kill Matrix header/axis unify */
+.km-axis-gold {
+  color: var(--vegas-gold) !important;
+  font-weight: 700;
+}
+
+.km-axis-blank {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* =========================
+   Eliminations — Kill Matrix (single source of truth)
+   ========================= */
+
+#killMatrixWrap{
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Make sure the matrix can be wider than the container (so scroll exists) */
+#killMatrixWrap table.km-matrix{
+  width: max-content;
+  table-layout: auto;
+  border-collapse: separate;
+}
+
+/* Force cells to have a minimum width so the table can exceed the wrapper on small screens */
+#killMatrixWrap td{
+  min-width: 44px;
+}
+
+/* No wrapping anywhere in the matrix (fix victim name wrap) */
+#killMatrixWrap th,
+#killMatrixWrap td{
+  white-space: nowrap;
+}
+
+/* Header band look */
+#killMatrixWrap .km-head{
+  background: rgba(255,255,255,0.06) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+
+#killMatrixWrap .km-gold{
+  color: var(--vegas-gold) !important;
+  font-weight: 700;
+}
+
+/* Vertical Killer axis */
+#killMatrixWrap .km-axis-label{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.06) !important;
+  border-right: 1px solid rgba(255,255,255,0.12) !important;
+  width: 34px;
+  min-width: 34px;
+  color: var(--vegas-gold) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Killer names gold (match theme) */
+#killMatrixWrap .km-killer-name{
+  color: var(--vegas-gold) !important;
+  font-weight: 700;
+}
+
+/* Totals NOT gold */
+#killMatrixWrap .km-row-total{
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 600;
+}
+
+/* Emphasis: 2 = caution yellow, 3+ = red */
+#killMatrixWrap td.km-2{ color: #f6c343 !important; font-weight: 800; }
+#killMatrixWrap td.km-3p{ color: #ff4d4d !important; font-weight: 900; }
+
+/* Empty cells keep spacing but don’t show text */
+#killMatrixWrap td.km-empty{ color: transparent; }
+
+/* --- Vegas Card (authoritative dark background) --- */
+.vegas-card {
+  background-color: #0b0f16 !important;
+  border: 1px solid rgba(196,106,46,0.35) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+}
+
+.vegas-card .card-body {
+  background-color: transparent !important;
+}
+
+/* Force dark header for tables inside Vegas cards */
+.vegas-card .table thead,
+.vegas-card .table thead th {
+  background-color: #11141a !important;
+  color: var(--vegas-gold) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* Keep body rows dark */
+.vegas-card .table tbody tr {
+  background-color: transparent !important;
+}
+
+.km-title{
+  color: var(--vegas-gold);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(212,175,55,0.35);
+}
+
+.analytics-tile {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.analytics-tile:hover {
+  transform: translateY(-2px);
+}
+
+/* Improve readability inside analytics tiles */
+.analytics-tile .text-muted,
+.card.vegas-card .text-muted {
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+
+.vegas-card .display-6 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- ANALYTICS CARD READABILITY FIX --- */
+
+/* Body text inside vegas cards */
+.card.vegas-card .text-muted {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Tile titles */
+.analytics-tile .card-title {
+  color: #ffffff;
+}
+
+/* KPI numbers */
+.vegas-card .display-6 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Analytics Hub tile text (don’t rely on Bootstrap text-muted) */
+.hub-tile-title {
+  color: rgba(255,255,255,0.92) !important;
+  font-weight: 600;
+}
+
+.hub-tile-desc {
+  color: rgba(255,255,255,0.78) !important;
+}
+
+/* Analytics Hub tile readability */
+.hub-tile-title{
+  color: rgba(255,255,255,0.95);
+  font-weight: 650;
+}
+
+.hub-tile-desc{
+  color: rgba(255,255,255,0.80);
+}
+
+.analytics-footer-note {
+  color: rgba(255,255,255,0.65);
+}
+
+/* =====================================
+   Analytics Hub — Production Styling
+   ===================================== */
+
+/* Tile base */
+.hub-tile {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.hub-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.65);
+}
+
+/* Disabled / Coming Soon tile */
+.hub-tile--disabled {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+  transform: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.hub-tile--disabled .neon-subtitle {
+  color: rgba(255,255,255,0.5) !important;
+  text-shadow: none !important;
+}
+
+/* KPI alignment polish */
+#kpi-weeks,
+#kpi-players {
+  letter-spacing: 1px;
+}
+
+/* Subtle uniform spacing under header */
+.analytics-hub-header {
+  margin-bottom: 1.25rem;
+}
+
+/* Tile footer action */
+.hub-tile .tile-action {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+/* Mobile spacing tweak */
+@media (max-width: 576px) {
+  .hub-tile {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* =========================================================
+   Vegas Theme: Global text token overrides (single source)
+   Applies whenever the site is in Vegas mode
+   ========================================================= */
+
+body.bg-vegas,
+body.bg-vegas-dark {
+  /* Core text */
+  --bs-body-color: rgba(255,255,255,0.90);
+  --bs-body-color-rgb: 255,255,255;
+
+  /* Muted/secondary/tertiary text tokens */
+  --bs-secondary-color: rgba(255,255,255,0.72);
+  --bs-tertiary-color: rgba(255,255,255,0.62);
+  --bs-emphasis-color: rgba(255,255,255,0.92);
+
+  /* Links */
+  --bs-link-color: #ffd86b;
+  --bs-link-hover-color: #fff3b0;
+}
+
+/* Hard-stop Bootstrap helper classes in Vegas mode */
+body.bg-vegas .text-muted,
+body.bg-vegas .text-body-secondary,
+body.bg-vegas .text-secondary,
+body.bg-vegas-dark .text-muted,
+body.bg-vegas-dark .text-body-secondary,
+body.bg-vegas-dark .text-secondary {
+  color: var(--bs-secondary-color) !important;
+}
+
+body.bg-vegas .text-body-tertiary,
+body.bg-vegas .text-tertiary,
+body.bg-vegas-dark .text-body-tertiary,
+body.bg-vegas-dark .text-tertiary {
+  color: var(--bs-tertiary-color) !important;
+}
+
+/* Keep small text readable inside vegas cards */
+body.bg-vegas .vegas-card .small,
+body.bg-vegas .vegas-card small,
+body.bg-vegas-dark .vegas-card .small,
+body.bg-vegas-dark .vegas-card small {
+  color: var(--bs-secondary-color) !important;
 }
