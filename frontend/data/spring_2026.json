@@ -1,6 +1,6 @@
 {
   "season_id": "spring_2026",
-  "build_ts": "Feb 23, 2026 07:05 PM EST",
+  "build_ts": "Feb 26, 2026 09:34 AM EST",
   "SeasonTotals": [
     {
       "Player": "Bill B",
@@ -1333,6 +1333,378 @@
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
       "TotalStack": 8525
+    }
+  ],
+  "EliminationsPairCounts": [
+    {
+      "Killer": "Bill B",
+      "Victim": "Dan T",
+      "Count": 2
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Joe Ferrigno",
+      "Count": 1
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Joe Fitz",
+      "Count": 1
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Josh H",
+      "Count": 1
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Mike F",
+      "Count": 2
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Bill B",
+      "Victim": "Steve C",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
+      "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
+      "Victim": "Todd L",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Dan P",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Gerry I",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Joe Ferrigno",
+      "Count": 2
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Joe Fitz",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Josh T",
+      "Count": 2
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Steve C",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan T",
+      "Victim": "Todd L",
+      "Count": 1
+    },
+    {
+      "Killer": "Dave B",
+      "Victim": "Dan T",
+      "Count": 1
+    },
+    {
+      "Killer": "Gerry I",
+      "Victim": "Dan T",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Bill B",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Chris",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Dan P",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Dave B",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Gerry I",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Joe Ferrigno",
+      "Count": 1
+    },
+    {
+      "Killer": "Greg",
+      "Victim": "Josh T",
+      "Count": 1
+    },
+    {
+      "Killer": "Joe Ferrigno",
+      "Victim": "Chris",
+      "Count": 1
+    },
+    {
+      "Killer": "Joe Fitz",
+      "Victim": "Dan T",
+      "Count": 1
+    },
+    {
+      "Killer": "Joe Fitz",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Joe Fitz",
+      "Victim": "Josh H",
+      "Count": 1
+    },
+    {
+      "Killer": "Joe Fitz",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh H",
+      "Victim": "Bill B",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh H",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh H",
+      "Victim": "Joe Ferrigno",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh H",
+      "Victim": "Joe Fitz",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh H",
+      "Victim": "Steve C",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh T",
+      "Victim": "Chris",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh T",
+      "Victim": "Dan P",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh T",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Josh T",
+      "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Dan P",
+      "Count": 2
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Dave B",
+      "Count": 2
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Gerry I",
+      "Count": 2
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Josh H",
+      "Count": 2
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Josh T",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Russ T",
+      "Count": 2
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Bill B",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Dan P",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Dave B",
+      "Count": 2
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Gerry I",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Joe Fitz",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Josh T",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Mike F",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Steve C",
+      "Count": 1
+    },
+    {
+      "Killer": "Phil Z",
+      "Victim": "Todd L",
+      "Count": 1
+    },
+    {
+      "Killer": "Russ T",
+      "Victim": "Chris",
+      "Count": 1
+    },
+    {
+      "Killer": "Russ T",
+      "Victim": "Mike F",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Bill B",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Dan T",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Dave B",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Gerry I",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Joe Fitz",
+      "Count": 2
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Josh H",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Josh T",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Mike F",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Steve C",
+      "Victim": "Todd L",
+      "Count": 3
+    },
+    {
+      "Killer": "Todd L",
+      "Victim": "Chris",
+      "Count": 1
     }
   ]
 }

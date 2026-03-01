@@ -2,7 +2,7 @@ PY ?= python3
 
 .PHONY: build init ingest points finish points_from_finish payouts totals stats export
 
-build: init ingest points finish points_from_finish payouts totals stats export
+build: init ingest points finish points_from_finish payouts totals stats export sync_analytics
 	@echo "Done: init + ingest + points + finish + points_from_finish + payouts + totals + stats + export"
 
 init:
@@ -31,3 +31,10 @@ stats:
 
 export:
 	$(PY) backend/scripts/export_season_json.py
+
+# ----------------------------
+# Sync JSON to Analytics Lab
+# ----------------------------
+sync_analytics:
+	cp frontend/data/spring_2026.json ../PokerLeague_ANALYTICS_LAB/frontend/data/
+	@echo "✅ Synced spring_2026.json to PokerLeague_ANALYTICS_LAB"

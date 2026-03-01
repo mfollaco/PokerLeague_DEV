@@ -187,6 +187,35 @@ def main():
             rules=rules,
         )
 
+
+    # ----------------------------
+    # Chip & A Chair (backend truth)
+    # ----------------------------
+
+        # ----------------------------
+    # Eliminations Pair Counts (for charts)
+    # ----------------------------
+    pair_counts = conn.execute("""
+        SELECT
+          e.eliminator_player_name AS killer,
+          e.eliminated_player_name AS victim,
+          COUNT(*) AS n
+        FROM eliminations e
+        JOIN tournaments t ON t.tournament_id = e.tournament_id
+        WHERE t.season_id = ?
+        GROUP BY killer, victim
+        ORDER BY killer ASC, victim ASC
+    """, (SEASON_ID,)).fetchall()
+
+    eliminations_pair_counts_rows = [
+        {
+            "Killer": killer,
+            "Victim": victim,
+            "Count": int(n)
+        }
+        for (killer, victim, n) in pair_counts
+    ]
+
     payload = {
         "season_id": SEASON_ID,
         "build_ts": build_ts,
@@ -195,6 +224,7 @@ def main():
         "Survival": survival_rows,
         "ChipAndChairRules": rules.__dict__,
         "ChipAndChair": chip_and_chair_rows,
+        "EliminationsPairCounts": eliminations_pair_counts_rows,
     }
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
