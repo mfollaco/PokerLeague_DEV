@@ -19,7 +19,7 @@ export function injectAnalyticsShell(options = {}) {
   const active = options.active ?? null; // "hub" | "survival" | "eliminations" | "nemesis"
   const isHub = active === "hub";
 
-  const homeHref = options.homeHref ?? "/index.html";
+  const homeHref = options.homeHref ?? "/";
   const hubHref = options.hubHref ?? "/analytics/analytics_index.html";
 
   const showSeasonControls = options.showSeasonControls ?? false;
@@ -53,7 +53,7 @@ export function injectAnalyticsShell(options = {}) {
     headerHost.innerHTML = [
       `<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-warning-subtle mb-4" style="background: rgba(0,0,0,0.35);">`,
       `  <div class="container">`,
-      `    <a class="navbar-brand text-warning fw-bold" href="${homeHref}">Home</a>`,
+      `    <a class="navbar-brand text-warning fw-bold" href="${withSeason(homeHref)}">Home</a>`,
       `    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#analyticsNav" aria-controls="analyticsNav" aria-expanded="false" aria-label="Toggle navigation">`,
       `      <span class="navbar-toggler-icon"></span>`,
       `    </button>`,
