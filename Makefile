@@ -1,4 +1,4 @@
-PY := venv/bin/python3
+PY ?= python3
 
 .PHONY: build init ingest elims points finish points_from_finish payouts totals stats export sync_analytics
 
