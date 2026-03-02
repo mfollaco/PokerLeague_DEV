@@ -1,294 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Chip & A Chair Poker League – Analytics</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics Hub – Chip &amp; A Chair Poker League (LAB)</title>
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Icons -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
   <!-- Vegas Theme -->
-  <link rel="stylesheet" href="css/vegas.css" />
+  <link rel="stylesheet" href="/css/vegas.css" />
 </head>
 
-<body class="bg-vegas text-light">
+<body class="bg-vegas"
+      data-title="Analytics Hub"
+      data-active="hub"
+      data-season-controls="false"
+      data-back-to-hub="false">
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-vegas-dark border-bottom border-gold">
+  <!-- Shell mounts -->
+  <div id="analytics-header"></div>
+
+  <!-- Page content -->
+  <main class="py-4">
     <div class="container">
-      <a class="navbar-brand neon-gold" href="index.html">♠ Home ♣</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto">
-          <a class="nav-link cac-link"
-            href="leaderboard.html">
-            Leaderboard
-          </a>
-          <a class="nav-link cac-link"
-            href="chip-and-chair.html">
-            Chip & A Chair
-          </a>
-          <a class="nav-link cac-link"
-            href="weekly-results.html">
-            Weekly Results
-          </a>
-          <a class="nav-link cac-link"
-            href="schedule.html">
-            Schedule
-          </a>
-          <a class="nav-link cac-link"
-            href="analytics.html">
-            Analytics
-          </a>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="py-5">
-    <div class="container">
-      <h1 class="neon-subtitle mb-4">Spring Season 2026 Analytics</h1>
-
-      <!-- Wins -->
-      <div class="card card-vegas mb-4 p-3">
-        <h4 class="text-gold mb-3">Wins by Player</h4>
-        <div id="wins-body" class="text-muted">Loading wins…</div>
-      </div>
-
-      <!-- Finish Distribution -->
-      <div class="card card-vegas mb-4 p-3">
-        <h4 class="text-gold mb-3">Finish Distribution</h4>
-        <div id="finish-body" class="text-muted">Loading finish distribution…</div>
-      </div>
-
-      <!-- Survival Stats -->
-      <div class="card card-vegas mb-4 p-3">
-        <h4 class="text-gold mb-3">Survival Stats</h4>
-        <div id="survival-body" class="text-muted">Loading survival stats…</div>
-      </div>
-
+      <div id="page-root"></div>
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="py-4 border-top border-gold mt-auto bg-vegas-dark">
-    <div class="container text-center small text-muted-vegas">
-      ♠ ♥ ♦ ♣ Chip & A Chair Analytics • Spring Season 2026 ♣ ♦ ♥ ♠
-    </div>
-  </footer>
+  <div id="analytics-footer"></div>
 
-  <!-- DATA LOADER -->
-  <script>
-    async function loadAnalytics() {
-      try {
-        const res = await fetch("data/spring_2026.json")
-        const data = await res.json();
-
-        // Wins (from new export: data.SeasonTotals)
-        const winsEl = document.getElementById('wins-body');
-
-        if (data.SeasonTotals && Array.isArray(data.SeasonTotals)) {
-          const rows = [...data.SeasonTotals]
-            .map(r => ({ player: r.Player, wins: Number(r.Wins || 0) }))
-            .filter(r => r.wins > 0)
-            .sort((a, b) => b.wins - a.wins || a.player.localeCompare(b.player));
-
-          if (rows.length === 0) {
-            winsEl.textContent = "No wins recorded yet.";
-          } else {
-            winsEl.innerHTML = `
-              <div class="table-responsive">
-                <table class="table table-dark table-hover align-middle mb-0">
-                  <thead>
-                    <tr>
-                      <th>Player</th>
-                      <th class="text-end">Wins</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${rows.map(r => `
-                      <tr>
-                        <td><span class="text-gold">${r.player}</span></td>
-                        <td class="text-end">${r.wins}</td>
-                      </tr>
-                    `).join('')}
-                  </tbody>
-                </table>
-              </div>
-            `;
-          }
-        } else {
-          winsEl.textContent = "SeasonTotals not found in JSON.";
-        }
-
-        // Finish Distribution (from new export: data.WeeklyPoints)
-        const finishEl = document.getElementById('finish-body');
-
-        if (data.WeeklyPoints && Array.isArray(data.WeeklyPoints)) {
-          // Build map: player -> array of finish places
-          const finishesByPlayer = new Map();
-
-          data.WeeklyPoints.forEach(r => {
-            const player = r.Player;
-            const place = Number(r.FinishPlace);
-
-            if (!player || Number.isNaN(place)) return;
-
-            if (!finishesByPlayer.has(player)) finishesByPlayer.set(player, []);
-            finishesByPlayer.get(player).push(place);
-          });
-
-          // Convert to rows
-          const rows = Array.from(finishesByPlayer.entries()).map(([player, finishes]) => {
-            finishes.sort((a, b) => a - b); // best (1) to worst
-            const avg = finishes.reduce((s, x) => s + x, 0) / finishes.length;
-
-            return {
-              player,
-              weeks: finishes.length,
-              avgFinish: avg,
-              finishes
-            };
-          });
-
-          // Sort by AvgFinish asc (best first), then player name
-          rows.sort((a, b) => a.avgFinish - b.avgFinish || a.player.localeCompare(b.player));
-
-          finishEl.innerHTML = `
-            <div class="table-responsive">
-              <table class="table table-dark table-hover align-middle mb-0">
-                <thead>
-                  <tr>
-                    <th>Player</th>
-                    <th class="text-end">Weeks</th>
-                    <th class="text-end">Avg Finish</th>
-                    <th>Finishes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${rows.map(r => `
-                    <tr>
-                      <td><span class="text-gold">${r.player}</span></td>
-                      <td class="text-end">${r.weeks}</td>
-                      <td class="text-end">${r.avgFinish.toFixed(2)}</td>
-                      <td>${r.finishes.join(", ")}</td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-            </div>
-          `;
-        } else {
-          finishEl.textContent = "WeeklyPoints not found in JSON.";
-        }
-
-        
-
-      // Survival (sortable) - new export: data.Survival
-      const survivalEl = document.getElementById('survival-body');
-
-      function renderSurvivalTable(rows) {
-        survivalEl.innerHTML = `
-          <div class="table-responsive">
-            <table id="survivalTable" class="table table-dark table-hover align-middle mb-0">
-              <thead>
-                <tr>
-                  <th class="surv-sort" data-key="Player">Player</th>
-                  <th class="surv-sort text-end" data-key="WeeksPlayed">Weeks</th>
-                  <th class="surv-sort text-end" data-key="AvgMinutesSurvived">Avg Minutes</th>
-                  <th class="surv-sort text-end" data-key="AvgSurvivalPercent">Avg Survival %</th>
-                  <th class="surv-sort text-end" data-key="TotalMinutesSurvived">Total Minutes</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${rows.map(s => `
-                  <tr>
-                    <td><span class="text-gold">${s.Player}</span></td>
-                    <td class="text-end">${s.WeeksPlayed}</td>
-                    <td class="text-end">${Number(s.AvgMinutesSurvived).toFixed(1)}</td>
-                    <td class="text-end">${(Number(s.AvgSurvivalPercent) * 100).toFixed(1)}%</td>
-                    <td class="text-end">${Number(s.TotalMinutesSurvived).toFixed(1)}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        `;
-      }
-
-      function sortSurvival(rows, key, dir) {
-        const asc = dir === "asc";
-        const isNumericKey = key !== "Player";
-
-        return [...rows].sort((a, b) => {
-          const av = a[key];
-          const bv = b[key];
-
-          if (isNumericKey) {
-            const an = Number(av);
-            const bn = Number(bv);
-            if (Number.isNaN(an) && Number.isNaN(bn)) return 0;
-            if (Number.isNaN(an)) return 1;
-            if (Number.isNaN(bn)) return -1;
-            return asc ? (an - bn) : (bn - an);
-          } else {
-            const as = String(av ?? "");
-            const bs = String(bv ?? "");
-            return asc ? as.localeCompare(bs) : bs.localeCompare(as);
-          }
-        });
-      }
-
-      if (data.Survival && Array.isArray(data.Survival)) {
-        let rows = data.Survival;
-        let sortKey = "AvgMinutesSurvived";
-        let sortDir = "desc";
-
-        // initial sort
-        rows = sortSurvival(rows, sortKey, sortDir);
-        renderSurvivalTable(rows);
-
-        // click-to-sort
-        survivalEl.addEventListener("click", (e) => {
-          const th = e.target.closest("th.surv-sort");
-          if (!th) return;
-
-          const key = th.dataset.key;
-          if (!key) return;
-
-          if (key === sortKey) {
-            sortDir = (sortDir === "asc") ? "desc" : "asc";
-          } else {
-            sortKey = key;
-            sortDir = (key === "Player") ? "asc" : "desc";
-          }
-
-          rows = sortSurvival(rows, sortKey, sortDir);
-          renderSurvivalTable(rows);
-        });
-
-      } else {
-        survivalEl.textContent = "No survival data found.";
-      }
-
-              } catch (err) {
-                console.error(err);
-              }
-            }
-
-            loadAnalytics();
-  </script>
-
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Shell FIRST (auto-injects using body data-*) -->
+  <script type="module" src="/js/analytics/layout.js"></script>
+
+  <!-- Page code -->
+  <script type="module" src="/js/pages/analytics_hub.js"></script>
 </body>
 </html>

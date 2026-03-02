@@ -12,14 +12,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <!-- Vegas Theme -->
-  <link rel="stylesheet" href="../css/vegas.css" />
+  <link rel="stylesheet" href="/css/vegas.css" />
 </head>
 
 <body class="bg-vegas"
       data-title="Nemesis"
       data-active="nemesis"
-      data-season-controls="true"
-      data-back-to-hub="true">
+      data-season-controls="false"
+      data-back-to-hub="false">
+
+  <!-- Shell mount -->
+  <div id="analytics-header"></div>
 
   <main class="py-4">
     <div class="container">
@@ -27,23 +30,15 @@
     </div>
   </main>
 
+  <!-- Shell mount -->
   <div id="analytics-footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script type="module">
-    import { injectAnalyticsShell } from "../js/analytics/layout.js";
-    injectAnalyticsShell({
-      title: "Nemesis",
-      active: "nemesis",
-      showBackToHub: false,
-      showSeasonControls: false,
-      hubHref: "/analytics/analytics_index.html",
-      homeHref: "index.html"
-    });
-  </script>
+  <!-- Shell FIRST (auto-injects using body data-*) -->
+  <script type="module" src="../js/analytics/layout.js"></script>
 
-  <script type="module" src="/js/analytics/layout.js"></script>
-  <script type="module" src="/js/pages/nemesis.js"></script>
+  <!-- Page code -->
+  <script type="module" src="../js/pages/nemesis.js"></script>
 </body>
 </html>
