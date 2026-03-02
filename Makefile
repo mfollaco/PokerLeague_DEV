@@ -38,8 +38,13 @@ export:
 	$(PY) backend/scripts/export_season_json.py
 
 # ----------------------------
-# Sync JSON to Analytics Lab
+# Sync JSON to Analytics Lab (local only)
 # ----------------------------
 sync_analytics:
-	cp frontend/data/spring_2026.json ../PokerLeague_ANALYTICS_LAB/frontend/data/
-	@echo "✅ Synced spring_2026.json to PokerLeague_ANALYTICS_LAB"
+	@if [ "$$CI" = "true" ]; then \
+		echo "CI=true → skipping local Analytics Lab sync"; \
+	else \
+		mkdir -p ../PokerLeague_ANALYTICS_LAB/frontend/data/; \
+		cp frontend/data/spring_2026.json ../PokerLeague_ANALYTICS_LAB/frontend/data/; \
+		echo "✅ Synced spring_2026.json to PokerLeague_ANALYTICS_LAB"; \
+	fi
