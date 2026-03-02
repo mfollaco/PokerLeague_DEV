@@ -97,3 +97,20 @@ ON weekly_payouts(season_id, week_num);
 
 CREATE INDEX IF NOT EXISTS idx_weekly_payouts_season_player
 ON weekly_payouts(season_id, player_id);
+
+-- Eliminations table
+CREATE TABLE IF NOT EXISTS eliminations (
+    elimination_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tournament_id INTEGER NOT NULL,
+    event_ts TEXT,
+    seq_in_tournament INTEGER NOT NULL,
+    eliminator_player_name TEXT NOT NULL,
+    eliminated_player_name TEXT NOT NULL,
+    raw_event_id INTEGER,
+    source_event_type TEXT,
+    notes TEXT,
+    FOREIGN KEY (tournament_id) REFERENCES tournaments(tournament_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_elims_tournament
+ON eliminations(tournament_id);
