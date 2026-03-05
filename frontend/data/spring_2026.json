@@ -1,6 +1,6 @@
 {
   "season_id": "spring_2026",
-  "build_ts": "Mar 04, 2026 08:22 PM EST",
+  "build_ts": "Mar 05, 2026 09:08 AM EST",
   "SeasonTotals": [
     {
       "Player": "Steve C",
@@ -11,7 +11,7 @@
       "WeeksInSeason": 8,
       "Wins": 3,
       "AvgFinish": 3.375,
-      "MoneyWonTotal": 850.0
+      "MoneyWonTotal": 600.0
     },
     {
       "Player": "Bill B",
@@ -22,7 +22,7 @@
       "WeeksInSeason": 8,
       "Wins": 2,
       "AvgFinish": 4.625,
-      "MoneyWonTotal": 960.0
+      "MoneyWonTotal": 560.0
     },
     {
       "Player": "Todd L",
@@ -33,7 +33,7 @@
       "WeeksInSeason": 8,
       "Wins": 0,
       "AvgFinish": 6.125,
-      "MoneyWonTotal": 310.0
+      "MoneyWonTotal": 160.0
     },
     {
       "Player": "Mike F",
@@ -201,13 +201,13 @@
       "Player": "Steve C",
       "BaseStack": 6500,
       "ChipsFromSeasonPoints": 6450,
-      "TotalEliminations": 19,
-      "ChipsFromTotalElims": 950,
-      "RepeatElimCount": 6,
-      "ChipsFromRepeatElims": 1100,
+      "TotalEliminations": 20,
+      "ChipsFromTotalElims": 1000,
+      "RepeatElimCount": 7,
+      "ChipsFromRepeatElims": 1150,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 15000
+      "TotalStack": 15100
     },
     {
       "Player": "Bill B",
@@ -297,13 +297,13 @@
       "Player": "Josh T",
       "BaseStack": 6500,
       "ChipsFromSeasonPoints": 3900,
-      "TotalEliminations": 6,
-      "ChipsFromTotalElims": 300,
+      "TotalEliminations": 5,
+      "ChipsFromTotalElims": 250,
       "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 300,
+      "ChipsFromRepeatElims": 250,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 11000
+      "TotalStack": 10900
     },
     {
       "Player": "Josh H",
@@ -390,6 +390,8 @@
       "TotalStack": 9850
     }
   ],
+  "ChipAndChairPayouts": [],
+  
   "WeeklyPoints": [
     {
       "Week": 1,
@@ -1935,11 +1937,6 @@
     },
     {
       "Killer": "Josh T",
-      "Victim": "Greg",
-      "Count": 1
-    },
-    {
-      "Killer": "Josh T",
       "Victim": "Phil Z",
       "Count": 1
     },
@@ -2071,7 +2068,7 @@
     {
       "Killer": "Steve C",
       "Victim": "Greg",
-      "Count": 1
+      "Count": 2
     },
     {
       "Killer": "Steve C",

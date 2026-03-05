@@ -69,6 +69,60 @@ function renderKpis(rules, rows, buildTs) {
   );
 }
 
+function renderWeek11Payouts(payouts) {
+  const host = document.getElementById("week11PayoutsBody");
+  const poolText = document.getElementById("week11PrizePoolText");
+
+  if (!host) return;
+
+  const rows = Array.isArray(payouts) ? payouts : [];
+  host.innerHTML = "";
+
+  if (rows.length === 0) {
+    host.innerHTML = `
+      <div class="col-12">
+        <div class="text-muted">
+          <span class="badge bg-secondary me-2">Pending</span>
+          Results will appear automatically after Week 11 payouts are entered.
+        </div>
+    `;
+
+    if (poolText) {
+      poolText.textContent = `Prize Pool: $1120`;
+    }
+
+    return;
+  }
+
+  const places = ["1st Place","2nd Place","3rd Place","4th Place","5th Place","6th Place"];
+
+  rows.forEach((p, i) => {
+    const place = places[i] ?? `${i+1}th Place`;
+    const name = p.Player ?? "";
+    const amt = `$${Number(p.Amount ?? 0).toFixed(0)}`;
+
+    const col = document.createElement("div");
+    col.className = "col-12 col-md-6 col-lg-4";
+
+    col.innerHTML = `
+      <div class="p-3 rounded border border-gold bg-dark h-100">
+        <div class="text-warning fw-semibold mb-1">${place}</div>
+        <div class="fs-5 fw-bold">${name || "—"}</div>
+        <div class="text-muted small mt-1">${amt}</div>
+      </div>
+    `;
+
+    host.appendChild(col);
+  });
+
+  // prize pool (sum of payouts)
+  const pool = rows.reduce((a,b)=>a + Number(b.Amount || 0),0);
+
+  if (poolText) {
+    poolText.textContent = `Prize Pool: $${pool.toFixed(0)}`;
+  }
+}
+
 function renderTable(rows) {
   const tbody = document.getElementById("cac-body");
   if (!tbody) return;
@@ -120,6 +174,9 @@ async function initChipAndChair() {
     const rows = Array.isArray(data.ChipAndChairStacks) ? data.ChipAndChairStacks : [];
     const rules = data.ChipAndChairRules ?? null;
     const buildTs = data.build_ts ?? "";
+
+    const payouts = Array.isArray(data.ChipAndChairPayouts) ? data.ChipAndChairPayouts : [];
+    renderWeek11Payouts(payouts);
 
     cacRows = rows;
 

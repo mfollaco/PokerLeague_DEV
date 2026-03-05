@@ -76,9 +76,7 @@ def main():
         LIMIT 10
     """, (SEASON_ID,)).fetchall()
 
-    print("✅ Top 10 (Drop 2)")
-    for name, drop2, total, played, wks in rows:
-        print(f"{name}\tdrop2={drop2}\ttotal={total}\tplayed={played}/{wks}")
+    print("✅ season_totals rebuilt (Drop-2 scoring)")
 
     conn.close()
 

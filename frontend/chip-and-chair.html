@@ -111,6 +111,44 @@
       <!-- CARD GRID (JS injects player cards here) -->
       <div class="row g-3" id="cac-cards"></div>
 
+      <!-- WEEK 11 PAYOUTS -->
+      <div class="card card-vegas border-gold mt-4" id="week11PayoutsCard">
+        <div class="card-header text-warning fw-semibold d-flex justify-content-between align-items-center">
+          <span>Week 11 Payouts</span>
+          <span class="text-muted small" id="week11PrizePoolText">Prize Pool: —</span>
+        </div>
+
+        <div class="card-body">
+          <!-- Week 11 payout schedule (static) -->
+          <div class="mb-3">
+            <div class="text-muted small mb-2">Payout Schedule</div>
+            <div class="table-responsive">
+              <table class="table table-dark table-striped align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-warning">Place</th>
+                    <th class="text-warning text-end">Payout</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1st</td><td class="text-end">$300</td></tr>
+                  <tr><td>2nd</td><td class="text-end">$260</td></tr>
+                  <tr><td>3rd</td><td class="text-end">$220</td></tr>
+                  <tr><td>4th</td><td class="text-end">$160</td></tr>
+                  <tr><td>5th</td><td class="text-end">$120</td></tr>
+                  <tr><td>6th</td><td class="text-end">$60</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="text-muted small mb-2" id="week11ResultsLabel">Results</div>
+          <div class="row g-3" id="week11PayoutsBody">
+            <!-- payouts render here -->
+          </div>
+        </div>
+      </div>
+
       <!-- DETAILS TABLE -->
       <div class="card card-vegas border-gold mt-4">
         <div class="card-body p-0">

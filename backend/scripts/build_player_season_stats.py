@@ -48,9 +48,7 @@ def main():
     LIMIT 10;
     """, (SEASON_ID,)).fetchall()
 
-    print("✅ player_season_stats updated. Sample:")
-    for r in rows:
-        print(r)
+    print("✅ player_season_stats updated")
 
     con.close()
 

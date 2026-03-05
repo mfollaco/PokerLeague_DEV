@@ -140,6 +140,43 @@ function formatAvg(n) {
   return Number.isInteger(x) ? x.toString() : x.toFixed(1);
 }
 
+function renderSeasonAwards(awards) {
+  const card = document.getElementById("seasonAwardsCard");
+  const host = document.getElementById("seasonAwardsBody");
+  if (!card || !host) return;
+
+  const rows = Array.isArray(awards) ? awards : [];
+  host.innerHTML = "";
+
+  if (rows.length === 0) {
+    card.style.display = "none";
+    return;
+  }
+
+  card.style.display = "";
+
+  const titles = ["1st Place", "2nd Place", "3rd Place"];
+
+  rows.forEach((a, i) => {
+    const title = titles[i] ?? "Season Award";
+    const winner = a.Player ?? "";
+    const amt = (a.Amount != null) ? `$${Number(a.Amount).toFixed(0)}` : "";
+
+    const col = document.createElement("div");
+    col.className = "col-12 col-md-6 col-lg-4";
+
+    col.innerHTML = `
+      <div class="p-3 rounded border border-gold bg-dark h-100">
+        <div class="text-warning fw-semibold mb-1">${title}</div>
+        <div class="fs-5 fw-bold">${winner}</div>
+        ${amt ? `<div class="text-muted small mt-1">${amt}</div>` : ``}
+      </div>
+    `;
+
+    host.appendChild(col);
+  });
+}
+
 function renderTable(rows) {
   const tbody = document.querySelector("#leaderboardTable tbody");
   tbody.innerHTML = "";
@@ -240,6 +277,8 @@ function wireSortHeaders() {
 async function initLeaderboard() {
   const res = await fetch("data/spring_2026.json");
   const data = await res.json();
+
+  renderSeasonAwards(data.SeasonAwards ?? []);
 
 // ---- season summary (drop2/total/weeks/wins/avgfinish) ----
 // Find the first array in the JSON that contains objects with a "Player" field

@@ -38,6 +38,7 @@ def main():
         SELECT player_id, SUM(amount) AS money_total
         FROM weekly_payouts
         WHERE season_id = ?
+        AND NOT (week_num = 10 AND payout_type = 'season_award')
         GROUP BY player_id
     """, (SEASON_ID,)).fetchall()
 
@@ -99,7 +100,7 @@ def main():
         ORDER BY wp.amount DESC
     """, (SEASON_ID,)).fetchall()
 
-    chip_and_chair_rows = [
+    chip_and_chair_payout_rows = [
         {
             "Player": name,
             "PlayerID": int(pid),
@@ -279,7 +280,7 @@ def main():
                 "EliminatorRank": rank_by_player.get(eliminator),
             })
 
-        chip_and_chair_rows = build_chip_and_chair(
+        chip_and_chair_stacks_rows = build_chip_and_chair(
             season_totals=season_totals_rows,
             eliminations=eliminations_rows,
             rules=rules,
@@ -290,7 +291,7 @@ def main():
     # Chip & A Chair (backend truth)
     # ----------------------------
 
-        # ----------------------------
+    # ----------------------------
     # Eliminations Pair Counts (for charts)
     # ----------------------------
     pair_counts = conn.execute("""
@@ -319,7 +320,11 @@ def main():
         "build_ts": build_ts,
         "SeasonTotals": season_totals_rows,
         "SeasonAwards": season_award_rows,
-        "ChipAndChairStacks": chip_and_chair_rows,
+
+        # Chip & Chair
+        "ChipAndChairStacks": chip_and_chair_stacks_rows,
+        "ChipAndChairPayouts": chip_and_chair_payout_rows,
+
         "WeeklyPoints": weekly_rows,
         "Survival": survival_rows,
         "ChipAndChairRules": rules.__dict__,
