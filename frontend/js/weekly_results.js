@@ -110,11 +110,11 @@ function renderWeeklyPoints(weekly) {
             </thead>
             <tbody>
               ${week.results
-                .sort((a, b) => a.Place - b.Place)
+                .sort((a, b) => (a.Place ?? 999) - (b.Place ?? 999))
                 .map(
                   (r) => `
                     <tr>
-                      <td>${r.Place}</td>
+                      <td>${r.Place ?? "DNP"}</td>
                       <td>${r.Player}</td>
                       <td>${r.Points}</td>
                       <td>${formatMoney(r.Payout || 0)}</td>

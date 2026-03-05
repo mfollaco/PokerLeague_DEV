@@ -117,7 +117,7 @@ async function initChipAndChair() {
     const data = await res.json();
 
     // These keys are what your exporter is writing:
-    const rows = Array.isArray(data.ChipAndChair) ? data.ChipAndChair : [];
+    const rows = Array.isArray(data.ChipAndChairStacks) ? data.ChipAndChairStacks : [];
     const rules = data.ChipAndChairRules ?? null;
     const buildTs = data.build_ts ?? "";
 

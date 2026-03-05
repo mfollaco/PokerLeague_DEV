@@ -58,11 +58,62 @@ def main():
         for (name, player_id, total, drop2, played, wks, wins, avg_finish) in season_totals
     ]
 
-        # Weekly payouts (sum per week per player)
+    # ----------------------------
+    # Season Awards (Top 3)
+    # ----------------------------
+    season_awards = cur.execute("""
+        SELECT
+            wp.player_id,
+            p.player_name,
+            wp.amount
+        FROM weekly_payouts wp
+        JOIN players p ON p.player_id = wp.player_id
+        WHERE wp.season_id = ?
+        AND wp.week_num = 10
+        AND wp.payout_type = 'season_award'
+        ORDER BY wp.amount DESC
+    """, (SEASON_ID,)).fetchall()
+
+    season_award_rows = [
+        {
+            "Player": name,
+            "PlayerID": int(pid),
+            "Amount": float(amount)
+        }
+        for (pid, name, amount) in season_awards
+    ]
+
+    # ----------------------------
+    # Chip & A Chair Payouts (Top 6 - Week 11)
+    # ----------------------------
+    chip_and_chair = cur.execute("""
+        SELECT
+            wp.player_id,
+            p.player_name,
+            wp.amount
+        FROM weekly_payouts wp
+        JOIN players p ON p.player_id = wp.player_id
+        WHERE wp.season_id = ?
+        AND wp.week_num = 11
+        AND wp.payout_type = 'chip_and_chair'
+        ORDER BY wp.amount DESC
+    """, (SEASON_ID,)).fetchall()
+
+    chip_and_chair_rows = [
+        {
+            "Player": name,
+            "PlayerID": int(pid),
+            "Amount": float(amount)
+        }
+        for (pid, name, amount) in chip_and_chair
+    ]
+
+    # Weekly payouts (sum per week per player)
     payout_totals = cur.execute("""
         SELECT season_id, week_num, player_id, SUM(amount) AS payout_total
         FROM weekly_payouts
         WHERE season_id = ?
+        AND payout_type IN ('1st','2nd','3rd')
         GROUP BY season_id, week_num, player_id
     """, (SEASON_ID,)).fetchall()
 
@@ -82,6 +133,53 @@ def main():
     WHERE wp.season_id = ?
     ORDER BY wp.week_num ASC, wp.finish_place ASC, p.player_name ASC
 """, (SEASON_ID,)).fetchall()
+    
+    weekly = cur.execute("""
+    SELECT wp.week_num, wp.tournament_date, p.player_name, wp.player_id,
+        wp.finish_place, wp.points
+    FROM weekly_points wp
+    JOIN players p ON p.player_id = wp.player_id
+    WHERE wp.season_id = ?
+    ORDER BY wp.week_num ASC, wp.finish_place ASC, p.player_name ASC
+    """, (SEASON_ID,)).fetchall()
+
+    players = cur.execute("""
+    SELECT player_id, player_name
+    FROM players
+    ORDER BY player_name
+    """).fetchall()
+
+    all_players = [(int(pid), pname) for (pid, pname) in players]
+
+    # Add "did not play" players (missing from weekly_points) to each week with 0 points
+    week_to_date = {}
+    week_to_played_ids = {}
+
+    for (week, tdate, name, player_id, fp, pts) in weekly:
+        w = int(week)
+        week_to_date[w] = tdate
+        week_to_played_ids.setdefault(w, set()).add(int(player_id))
+
+    weekly_extended = list(weekly)
+
+    for w, tdate in week_to_date.items():
+        played_ids = week_to_played_ids.get(w, set())
+        for pid, pname in all_players:
+            if pid in played_ids:
+                continue
+            # tuple shape must match `weekly` query columns
+            weekly_extended.append((w, tdate, pname, pid, None, 0.0))
+
+    # Sort so missing players show at the end for each week
+    weekly = sorted(
+        weekly_extended,
+        key=lambda r: (
+            int(r[0]),                 # week
+            0 if r[4] is not None else 1,  # played first, then did-not-play
+            int(r[4]) if r[4] is not None else 9999,  # finish_place
+            str(r[2])                  # player_name
+        )
+    )
 
     weekly_rows = [
         {
@@ -220,10 +318,11 @@ def main():
         "season_id": SEASON_ID,
         "build_ts": build_ts,
         "SeasonTotals": season_totals_rows,
+        "SeasonAwards": season_award_rows,
+        "ChipAndChairStacks": chip_and_chair_rows,
         "WeeklyPoints": weekly_rows,
         "Survival": survival_rows,
         "ChipAndChairRules": rules.__dict__,
-        "ChipAndChair": chip_and_chair_rows,
         "EliminationsPairCounts": eliminations_pair_counts_rows,
     }
 
