@@ -715,3 +715,67 @@ body.bg-vegas-dark .vegas-card .small,
 body.bg-vegas-dark .vegas-card small {
   color: var(--bs-secondary-color) !important;
 }
+
+/* Bronze badge (3rd place) */
+.bg-orange {
+  background-color: #c46a2e !important;
+  color: #111 !important;
+}
+
+/* -------------------------------------------------
+   Weekly Results: Finish heat-scale badges
+   1–3  : green (paid) with $ indicator
+   4–10 : green -> yellow
+   11–16: yellow -> red
+-------------------------------------------------- */
+
+.finish-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25);
+}
+
+.finish-badge .cash {
+  font-size: 0.85em;
+  opacity: 0.95;
+}
+
+/* Missing week */
+.finish-na {
+  background: rgba(255,255,255,0.10) !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+
+/* Paid (1–3): dark green -> lighter green */
+.finish-1 { background: #0b5d1e !important; color: #eaffef !important; }
+.finish-2 { background: #147a2b !important; color: #eaffef !important; }
+.finish-3 { background: #1e9b3a !important; color: #0b1a10 !important; }
+
+/* 4–10: green -> yellow */
+.finish-4  { background: #38b24a !important; color: #07130b !important; }
+.finish-5  { background: #57c14b !important; color: #07130b !important; }
+.finish-6  { background: #79cf4a !important; color: #07130b !important; }
+.finish-7  { background: #9bdd4a !important; color: #07130b !important; }
+.finish-8  { background: #bddb4a !important; color: #151505 !important; }
+.finish-9  { background: #ddd64a !important; color: #151505 !important; }
+.finish-10 { background: #f1d34a !important; color: #151505 !important; }
+
+/* 11–16: yellow -> dark red */
+.finish-11 { background: #f0b84a !important; color: #1a0f05 !important; }
+.finish-12 { background: #ee9b4a !important; color: #1a0f05 !important; }
+.finish-13 { background: #ea7d4a !important; color: #1a0f05 !important; }
+.finish-14 { background: #e45b4a !important; color: #ffe9e6 !important; }
+.finish-15 { background: #c93a35 !important; color: #ffe9e6 !important; }
+.finish-16 { background: #8f1d1b !important; color: #ffe9e6 !important; }
+
+.player-select button.active {
+  background: #ffc107;
+  color: #000;
+  border-color: #ffc107;
+  box-shadow: 0 0 6px rgba(255,193,7,0.5);
+}

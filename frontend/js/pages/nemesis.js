@@ -218,6 +218,12 @@ function renderDaddyTable(rows) {
   const wrap = document.getElementById("daddyWrap");
   if (!wrap) return;
 
+  // Find the biggest DaddyCount
+  const maxCount = Math.max(
+    ...rows.map(r => Number(r.DaddyCount) || 0),
+    0
+  );
+
   wrap.innerHTML = `
     <div class="table-responsive">
       <table class="table table-dark table-striped table-hover align-middle mb-0">
@@ -229,13 +235,18 @@ function renderDaddyTable(rows) {
           </tr>
         </thead>
         <tbody>
-          ${rows.map(r => `
-            <tr>
-              <td>${esc(r.Player)}</td>
-              <td>${esc(r.Daddy)}</td>
-              <td class="text-end">${r.DaddyCount ? esc(r.DaddyCount) : "—"}</td>
-            </tr>
-          `).join("")}
+          ${rows.map(r => {
+            const count = Number(r.DaddyCount) || 0;
+            const crown = count === maxCount && count > 0 ? " 👑" : "";
+
+            return `
+              <tr>
+                <td>${esc(r.Player)}</td>
+                <td>${esc(r.Daddy)}</td>
+                <td class="text-end">${count ? crown + " " + esc(count) : "—"}</td>
+              </tr>
+            `;
+          }).join("")}
         </tbody>
       </table>
     </div>
@@ -255,23 +266,6 @@ initAnalyticsPage({
       <div id="nemesisKpis" class="d-flex flex-wrap gap-2 mb-3"></div>
 
       <div class="row g-3">
-        <div class="col-12 col-lg-6">
-          <div class="card vegas-card h-100">
-            <div class="card-body">
-              <div class="km-title text-center mb-2">Nemesis</div>
-              <div id="nemesisWrap"><div class="text-muted">Loading…</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="card vegas-card h-100">
-            <div class="card-body">
-              <div class="km-title text-center mb-2">Favorite Victim</div>
-              <div id="victimWrap"><div class="text-muted">Loading…</div></div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-12">
           <div class="card vegas-card">
@@ -284,25 +278,40 @@ initAnalyticsPage({
             </div>
           </div>
         </div>
+
+        <div class="col-12">
+          <div class="card vegas-card">
+            <div class="card-body">
+              <div class="km-title text-center mb-2">Favorite Victim</div>
+              <div id="victimWrap"><div class="text-muted">Loading…</div></div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    `;
+      `;
 
     const pairRows = Array.isArray(data?.EliminationsPairCounts) ? data.EliminationsPairCounts : [];
     if (!pairRows.length) {
       const msg = `<div class="text-muted">No EliminationsPairCounts found for this season.</div>`;
-      ["nemesisWrap", "victimWrap", "daddyWrap"].forEach((id) => {
+
+      // Only the two remaining sections
+      ["victimWrap", "daddyWrap"].forEach((id) => {
         const el = document.getElementById(id);
         if (el) el.innerHTML = msg;
       });
-      renderKpis([]);
+
+      renderKpis([]); // keep KPIs if you still want them
       return;
     }
 
     const { out, incoming, players } = buildMaps(pairRows);
 
+    // Favorite Victim uses the same nemRows model
     const nemRows = buildNemesisRows(players, incoming, out);
     renderKpis(nemRows);
-    renderNemesisTable(nemRows);
+
+    // Render ONLY the remaining tables
     renderVictimTable(nemRows);
 
     const daddyRows = buildDaddyRows(players, incoming);
