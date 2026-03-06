@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQJK6EZ7MW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EQJK6EZ7MW');
+    gtag("js", new Date());
+    gtag("config", "G-EQJK6EZ7MW");
   </script>
 
   <meta charset="UTF-8" />
@@ -16,13 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
 
   <!-- Custom Vegas Theme -->
-  <link rel="stylesheet" href="css/vegas.css">
+  <link rel="stylesheet" href="css/vegas.css" />
 </head>
 
 <body class="bg-vegas text-light home-draft">
@@ -31,33 +36,36 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-vegas-dark border-bottom border-gold">
     <div class="container">
       <a class="navbar-brand neon-gold" href="index.html">♠ Home ♣</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMain"
+        aria-controls="navMain"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <a class="nav-link cac-link"
-            href="leaderboard.html">
-            Leaderboard
-          </a>
-          <a class="nav-link cac-link"
-            href="chip-and-chair.html">
-            Chip & A Chair
-          </a>
-          <a class="nav-link cac-link"
-            href="weekly-results.html">
-            Weekly Results
-          </a>
-          <a class="nav-link cac-link"
-            href="schedule.html">
-            Schedule
-          </a>
-          <a class="nav-link cac-link"
-            href="analytics.html">
-            Analytics
-          </a>
-          
+          <li class="nav-item">
+            <a class="nav-link cac-link" href="leaderboard.html">Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cac-link" href="chip-and-chair.html">Chip &amp; A Chair</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cac-link" href="weekly-results.html">Weekly Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cac-link" href="schedule.html">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cac-link" href="analytics.html">Analytics</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -66,7 +74,6 @@
   <!-- HERO -->
   <header class="vegas-hero d-flex align-items-center">
     <div class="container text-center">
-      
       <p class="lead hero-tagline-vegas mb-4">
         Crushed Dreams. Real bragging rights. Minor yelling.
       </p>
@@ -84,45 +91,83 @@
       <div class="mx-auto home-tiles-wrap">
         <div class="row g-3 home-tiles-row justify-content-center tiles-centered">
 
-        <!-- Next Event -->
-        <div class="col-md-4">
-          <div class="card card-vegas h-100">
-            <div class="card-header border-gold-bottom">
-              <h5 class="mb-0"><i class="bi bi-calendar-event me-2 text-gold"></i>Next Event</h5>
-            </div>
-            <div class="card-body text-center" id="next-event">
-              <p class="text-muted mb-0">Coming Next Season</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Latest Winner -->
-        <div class="col-md-4">
-          <div class="card card-vegas h-100">
-            <div class="card-header border-gold-bottom">
-              <h5 class="mb-0"><i class="bi bi-trophy-fill me-2 text-gold"></i>Latest Winner</h5>
-            </div>
-            <div class="card-body text-center" id="latest-winner">
-              <p class="text-muted mb-0">Loading latest winner…</p>
+          <!-- Next Event -->
+          <div class="col-md-4">
+            <div class="card card-vegas h-100">
+              <div class="card-header border-gold-bottom">
+                <h5 class="mb-0">
+                  <i class="bi bi-calendar-event me-2 text-gold"></i>Next Event
+                </h5>
+              </div>
+              <div class="card-body text-center" id="next-event">
+                <p class="text-muted mb-0">Coming Next Season</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Current Leaders -->
-        <div class="col-md-4">
-          <div class="card card-vegas h-100">
-            <div class="card-header border-gold-bottom">
-              <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill me-2 text-gold"></i>Current Leaders</h5>
-            </div>
-            <div class="card-body text-center" id="current-leaders">
-              <p class="text-muted mb-0">Loading leaderboard…</p>
+          <!-- Latest Winner -->
+          <div class="col-md-4">
+            <div class="card card-vegas h-100">
+              <div class="card-header border-gold-bottom">
+                <h5 class="mb-0">
+                  <i class="bi bi-trophy-fill me-2 text-gold"></i>Latest Winner
+                </h5>
+              </div>
+              <div class="card-body text-center" id="latest-winner">
+                <p class="text-muted mb-0">Loading latest winner…</p>
+              </div>
             </div>
           </div>
-        </div>
 
+          <!-- Current Leaders -->
+          <div class="col-md-4">
+            <div class="card card-vegas h-100">
+              <div class="card-header border-gold-bottom">
+                <h5 class="mb-0">
+                  <i class="bi bi-bar-chart-line-fill me-2 text-gold"></i>Current Leaders
+                </h5>
+              </div>
+              <div class="card-body text-center" id="current-leaders">
+                <p class="text-muted mb-0">Loading leaderboard…</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
 
+      <!-- Recent Updates -->
+      <section class="mt-4">
+        <div class="card card-vegas">
+          <div class="card-header border-gold-bottom text-center">
+            <h5 class="mb-0">
+              <i class="bi bi-stars me-2 text-gold"></i>Recent Updates
+            </h5>
+          </div>
+          <div class="card-body">
+            <ul class="text-white-50 mb-0">
+              <li class="mb-2">
+                <strong class="text-white">Luck vs Skill Analytics</strong> added to the Analytics Hub.
+                Separate underlying performance from short-term variance to see who’s earning it and who may be running hot or cold.
+              </li>
+              <li class="mb-2">
+                <strong class="text-white">Elimination Analytics</strong> expanded with Kill Matrix,
+                repeat eliminations, and net dominance views.
+              </li>
+              <li class="mb-2">
+                <strong class="text-white">Nemesis Dashboard</strong> added to surface top victims,
+                worst matchups, and head-to-head pain.
+              </li>
+              <li class="mb-0">
+                <strong class="text-white">Analytics Hub</strong> expanded to support future player trend,
+                momentum, and form analysis.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commissioner's Notes -->
       <section class="mt-4">
         <div class="card card-vegas">
           <div class="card-header border-gold-bottom text-center">
@@ -135,7 +180,6 @@
           </div>
         </div>
       </section>
-
     </div>
   </main>
 
@@ -150,7 +194,6 @@
   <script>
     async function loadSeasonData() {
       try {
-        // ✅ correct path (your JSON lives in /data/)
         const SEASON_ID = "spring_2026";
         const url = `data/${SEASON_ID}.json`;
 
@@ -159,16 +202,12 @@
 
         const data = await res.json();
 
-        // ----------------------------
-        // Latest winner (derive from WeeklyPoints)
-        // ----------------------------
+        // Latest winner
         const weekly = data.WeeklyPoints || [];
-
-        // find latest week number present
         const latestWeek = weekly.reduce((m, r) => Math.max(m, Number(r.Week || 0)), 0);
+
         loadCommissionerNotes(latestWeek);
 
-        // winner row = FinishPlace 1 in latest week
         const winnerRow = weekly.find(
           (r) => Number(r.Week) === latestWeek && Number(r.FinishPlace) === 1
         );
@@ -180,29 +219,28 @@
             latestEl.innerHTML = `
               <h6 class="text-gold">${winnerRow.Player}</h6>
               <p class="mb-1">Week ${latestWeek}</p>
-              <p class="mb-0"><strong>Cash:</strong> ${cash.toLocaleString(undefined, {
-                style: "currency",
-                currency: "USD",
-                maximumFractionDigits: 0
-              })}</p>
+              <p class="mb-0">
+                <strong>Cash:</strong>
+                ${cash.toLocaleString(undefined, {
+                  style: "currency",
+                  currency: "USD",
+                  maximumFractionDigits: 0
+                })}
+              </p>
             `;
           } else {
             latestEl.innerHTML = `<p class="mb-0 text-muted">No winner found yet.</p>`;
           }
         }
 
-        // ----------------------------
-        // Current leaders (derive from SeasonTotals)
-        // ----------------------------
+        // Current leaders
         const totals = data.SeasonTotals || [];
-
-        // sort by Drop2 points desc
         const leaders = [...totals]
           .sort((a, b) => Number(b.SeasonPointsDrop2 || 0) - Number(a.SeasonPointsDrop2 || 0))
           .slice(0, 5)
           .map((r) => ({
             name: r.Player,
-            points: Number(r.SeasonPointsDrop2 || 0),
+            points: Number(r.SeasonPointsDrop2 || 0)
           }));
 
         const leadersEl = document.getElementById("current-leaders");
@@ -210,85 +248,74 @@
           if (leaders.length) {
             leadersEl.innerHTML = `
               <ol class="mb-0 list-unstyled">
-                ${leaders
-                  .map(
-                    (p) => `
-                      <li class="mb-1">
-                        <span class="text-gold">${p.name}</span>
-                        <span class="text-muted-vegas"> • ${p.points} pts</span>
-                      </li>
-                    `
-                  )
-                  .join("")}
+                ${leaders.map((p) => `
+                  <li class="mb-1">
+                    <span class="text-gold">${p.name}</span>
+                    <span class="text-muted-vegas"> • ${p.points} pts</span>
+                  </li>
+                `).join("")}
               </ol>
             `;
           } else {
             leadersEl.innerHTML = `<p class="mb-0 text-muted">No standings yet.</p>`;
           }
         }
-
       } catch (err) {
         console.error(err);
       }
     }
+  </script>
 
-</script>
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-<!-- Markdown parser (Marked) -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadCommissionerNotes(latestWeek) {
+      const el = document.getElementById("commissioner-notes");
+      if (!el) return;
 
-<script>
-async function loadCommissionerNotes(latestWeek) {
-  const el = document.getElementById("commissioner-notes");
-  if (!el) return;
+      el.innerHTML = `<div class="text-muted">Loading Commissioner’s Notes…</div>`;
 
-  el.innerHTML = `<div class="text-muted">Loading Commissioner’s Notes…</div>`;
-
-  // Safety: if we don't have a week number yet
-  if (!latestWeek || Number(latestWeek) <= 0) {
-    el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
-    return;
-  }
-
-  // Try latestWeek, then walk backward until we find a file
-  let weekToTry = Number(latestWeek);
-
-  while (weekToTry >= 1) {
-    const url = `/data/notes/week-${String(weekToTry).padStart(2, "0")}.md`;
-
-    try {
-      const res = await fetch(url, { cache: "no-store" });
-
-      if (res.ok) {
-        const md = await res.text();
-        if (md.trim()) {
-          const html = marked.parse(md);
-          el.innerHTML = `
-            <div class="notes-markdown">
-              <div class="notes-meta">Showing Week ${weekToTry} notes</div>
-              ${html}
-            </div>
-          `;
-          return; // ✅ stop as soon as we find one
-        }
+      if (!latestWeek || Number(latestWeek) <= 0) {
+        el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
+        return;
       }
-    } catch (err) {
-      // ignore and keep walking back
+
+      let weekToTry = Number(latestWeek);
+
+      while (weekToTry >= 1) {
+        const url = `/data/notes/week-${String(weekToTry).padStart(2, "0")}.md`;
+
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+
+          if (res.ok) {
+            const md = await res.text();
+            if (md.trim()) {
+              const html = marked.parse(md);
+              el.innerHTML = `
+                <div class="notes-markdown">
+                  <div class="notes-meta">Showing Week ${weekToTry} notes</div>
+                  ${html}
+                </div>
+              `;
+              return;
+            }
+          }
+        } catch (err) {
+          // keep walking backward
+        }
+
+        weekToTry -= 1;
+      }
+
+      el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
     }
 
-    weekToTry -= 1;
-  }
+    loadSeasonData();
+  </script>
 
-  // Nothing found at all
-  el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
-}
-
-// Run after your existing loadSeasonData() is defined above
-loadSeasonData();
-</script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

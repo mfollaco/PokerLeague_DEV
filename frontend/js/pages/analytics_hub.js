@@ -143,6 +143,13 @@ function renderTiles(seasonId) {
         desc: "Net results, top victims, and worst matchups."
       })}
 
+      ${tileLive({
+        seasonId,
+        href: "/analytics/luck.html",
+        title: "Luck vs Skill",
+        desc: "Who’s earning it, and who’s getting tucked into bed by the poker gods."
+      })}
+
       ${tileDisabled({
         title: "Player Trends",
         desc: "Form curves, streaks, consistency, and momentum."
