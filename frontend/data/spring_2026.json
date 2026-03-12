@@ -1,12 +1,12 @@
 {
   "season_id": "spring_2026",
-  "build_ts": "Mar 12, 2026 09:02 AM EDT",
+  "build_ts": "Mar 12, 2026 09:51 AM EDT",
   "SeasonTotals": [
     {
       "Player": "Steve C",
       "PlayerID": 15,
-      "SeasonPointsTotal": 53.0,
-      "SeasonPointsDrop2": 47.5,
+      "SeasonPointsTotal": 56.0,
+      "SeasonPointsDrop2": 49.5,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 3,
@@ -16,8 +16,8 @@
     {
       "Player": "Bill B",
       "PlayerID": 1,
-      "SeasonPointsTotal": 51.0,
-      "SeasonPointsDrop2": 47.5,
+      "SeasonPointsTotal": 54.0,
+      "SeasonPointsDrop2": 49.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 2,
@@ -27,8 +27,8 @@
     {
       "Player": "Todd L",
       "PlayerID": 16,
-      "SeasonPointsTotal": 45.5,
-      "SeasonPointsDrop2": 40.5,
+      "SeasonPointsTotal": 48.5,
+      "SeasonPointsDrop2": 43.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -38,8 +38,8 @@
     {
       "Player": "Mike F",
       "PlayerID": 12,
-      "SeasonPointsTotal": 38.0,
-      "SeasonPointsDrop2": 37.5,
+      "SeasonPointsTotal": 40.5,
+      "SeasonPointsDrop2": 39.5,
       "WeeksPlayed": 8,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -49,8 +49,8 @@
     {
       "Player": "Josh T",
       "PlayerID": 11,
-      "SeasonPointsTotal": 38.5,
-      "SeasonPointsDrop2": 34.0,
+      "SeasonPointsTotal": 41.5,
+      "SeasonPointsDrop2": 36.5,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 1,
@@ -60,8 +60,8 @@
     {
       "Player": "Phil Z",
       "PlayerID": 13,
-      "SeasonPointsTotal": 35.5,
-      "SeasonPointsDrop2": 33.0,
+      "SeasonPointsTotal": 38.5,
+      "SeasonPointsDrop2": 35.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 1,
@@ -71,8 +71,8 @@
     {
       "Player": "Joe Ferrigno",
       "PlayerID": 8,
-      "SeasonPointsTotal": 33.0,
-      "SeasonPointsDrop2": 33.0,
+      "SeasonPointsTotal": 35.0,
+      "SeasonPointsDrop2": 35.0,
       "WeeksPlayed": 7,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -82,8 +82,8 @@
     {
       "Player": "Gerry I",
       "PlayerID": 6,
-      "SeasonPointsTotal": 37.0,
-      "SeasonPointsDrop2": 32.5,
+      "SeasonPointsTotal": 40.0,
+      "SeasonPointsDrop2": 34.5,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -93,8 +93,8 @@
     {
       "Player": "Dan T",
       "PlayerID": 4,
-      "SeasonPointsTotal": 33.0,
-      "SeasonPointsDrop2": 32.0,
+      "SeasonPointsTotal": 36.0,
+      "SeasonPointsDrop2": 34.5,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -104,8 +104,8 @@
     {
       "Player": "Dave B",
       "PlayerID": 5,
-      "SeasonPointsTotal": 35.0,
-      "SeasonPointsDrop2": 31.5,
+      "SeasonPointsTotal": 38.0,
+      "SeasonPointsDrop2": 34.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 1,
@@ -115,8 +115,8 @@
     {
       "Player": "Joe Fitz",
       "PlayerID": 9,
-      "SeasonPointsTotal": 31.5,
-      "SeasonPointsDrop2": 30.0,
+      "SeasonPointsTotal": 33.5,
+      "SeasonPointsDrop2": 31.5,
       "WeeksPlayed": 8,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -126,8 +126,8 @@
     {
       "Player": "Russ T",
       "PlayerID": 14,
-      "SeasonPointsTotal": 29.5,
-      "SeasonPointsDrop2": 28.0,
+      "SeasonPointsTotal": 32.5,
+      "SeasonPointsDrop2": 30.5,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -137,8 +137,8 @@
     {
       "Player": "Josh H",
       "PlayerID": 10,
-      "SeasonPointsTotal": 28.0,
-      "SeasonPointsDrop2": 27.5,
+      "SeasonPointsTotal": 30.0,
+      "SeasonPointsDrop2": 29.0,
       "WeeksPlayed": 8,
       "WeeksInSeason": 9,
       "Wins": 1,
@@ -148,8 +148,8 @@
     {
       "Player": "Dan P",
       "PlayerID": 3,
-      "SeasonPointsTotal": 26.0,
-      "SeasonPointsDrop2": 24.5,
+      "SeasonPointsTotal": 29.0,
+      "SeasonPointsDrop2": 27.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -159,8 +159,8 @@
     {
       "Player": "Chris",
       "PlayerID": 2,
-      "SeasonPointsTotal": 25.0,
-      "SeasonPointsDrop2": 24.5,
+      "SeasonPointsTotal": 27.5,
+      "SeasonPointsDrop2": 27.0,
       "WeeksPlayed": 8,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -170,8 +170,8 @@
     {
       "Player": "Greg",
       "PlayerID": 7,
-      "SeasonPointsTotal": 25.0,
-      "SeasonPointsDrop2": 23.5,
+      "SeasonPointsTotal": 28.0,
+      "SeasonPointsDrop2": 26.0,
       "WeeksPlayed": 9,
       "WeeksInSeason": 9,
       "Wins": 0,
@@ -181,13 +181,13 @@
   ],
   "SeasonAwards": [
     {
-      "Player": "Bill B",
-      "PlayerID": 1,
+      "Player": "Steve C",
+      "PlayerID": 15,
       "Amount": 400.0
     },
     {
-      "Player": "Steve C",
-      "PlayerID": 15,
+      "Player": "Bill B",
+      "PlayerID": 1,
       "Amount": 250.0
     },
     {
@@ -200,194 +200,194 @@
     {
       "Player": "Steve C",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 7125,
+      "ChipsFromSeasonPoints": 7425,
       "TotalEliminations": 20,
       "ChipsFromTotalElims": 1000,
       "RepeatElimCount": 7,
       "ChipsFromRepeatElims": 1150,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 15775
+      "TotalStack": 16075
     },
     {
       "Player": "Bill B",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 7125,
+      "ChipsFromSeasonPoints": 7350,
       "TotalEliminations": 10,
       "ChipsFromTotalElims": 500,
       "RepeatElimCount": 2,
       "ChipsFromRepeatElims": 500,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 14625
+      "TotalStack": 14850
     },
     {
       "Player": "Phil Z",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4950,
+      "ChipsFromSeasonPoints": 5250,
       "TotalEliminations": 14,
       "ChipsFromTotalElims": 700,
       "RepeatElimCount": 3,
       "ChipsFromRepeatElims": 700,
-      "HighValueElimCount": 4,
-      "ChipsFromHighValueElims": 1000,
-      "TotalStack": 13850
-    },
-    {
-      "Player": "Mike F",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 5625,
-      "TotalEliminations": 12,
-      "ChipsFromTotalElims": 600,
-      "RepeatElimCount": 5,
-      "ChipsFromRepeatElims": 600,
-      "HighValueElimCount": 0,
-      "ChipsFromHighValueElims": 0,
-      "TotalStack": 13325
+      "HighValueElimCount": 3,
+      "ChipsFromHighValueElims": 750,
+      "TotalStack": 13900
     },
     {
       "Player": "Todd L",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 6075,
+      "ChipsFromSeasonPoints": 6450,
       "TotalEliminations": 7,
       "ChipsFromTotalElims": 350,
       "RepeatElimCount": 1,
       "ChipsFromRepeatElims": 350,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 13275
+      "TotalStack": 13650
     },
     {
-      "Player": "Dave B",
+      "Player": "Mike F",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4725,
-      "TotalEliminations": 10,
-      "ChipsFromTotalElims": 500,
-      "RepeatElimCount": 1,
-      "ChipsFromRepeatElims": 500,
-      "HighValueElimCount": 3,
-      "ChipsFromHighValueElims": 750,
-      "TotalStack": 12975
+      "ChipsFromSeasonPoints": 5925,
+      "TotalEliminations": 12,
+      "ChipsFromTotalElims": 600,
+      "RepeatElimCount": 5,
+      "ChipsFromRepeatElims": 600,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 13625
     },
     {
       "Player": "Dan T",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4800,
+      "ChipsFromSeasonPoints": 5175,
       "TotalEliminations": 11,
       "ChipsFromTotalElims": 550,
       "RepeatElimCount": 2,
       "ChipsFromRepeatElims": 550,
       "HighValueElimCount": 2,
       "ChipsFromHighValueElims": 500,
-      "TotalStack": 12900
+      "TotalStack": 13275
+    },
+    {
+      "Player": "Dave B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 5100,
+      "TotalEliminations": 10,
+      "ChipsFromTotalElims": 500,
+      "RepeatElimCount": 1,
+      "ChipsFromRepeatElims": 500,
+      "HighValueElimCount": 2,
+      "ChipsFromHighValueElims": 500,
+      "TotalStack": 13100
     },
     {
       "Player": "Josh T",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 5100,
+      "ChipsFromSeasonPoints": 5475,
       "TotalEliminations": 8,
       "ChipsFromTotalElims": 400,
       "RepeatElimCount": 2,
       "ChipsFromRepeatElims": 400,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 12400
+      "TotalStack": 12775
     },
     {
       "Player": "Josh H",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4125,
+      "ChipsFromSeasonPoints": 4350,
       "TotalEliminations": 9,
       "ChipsFromTotalElims": 450,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 450,
       "HighValueElimCount": 3,
       "ChipsFromHighValueElims": 750,
-      "TotalStack": 12275
-    },
-    {
-      "Player": "Joe Ferrigno",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4950,
-      "TotalEliminations": 3,
-      "ChipsFromTotalElims": 150,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 150,
-      "HighValueElimCount": 1,
-      "ChipsFromHighValueElims": 250,
-      "TotalStack": 12000
+      "TotalStack": 12500
     },
     {
       "Player": "Gerry I",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4875,
+      "ChipsFromSeasonPoints": 5175,
       "TotalEliminations": 3,
       "ChipsFromTotalElims": 150,
       "RepeatElimCount": 1,
       "ChipsFromRepeatElims": 150,
       "HighValueElimCount": 1,
       "ChipsFromHighValueElims": 250,
-      "TotalStack": 11925
+      "TotalStack": 12225
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 5250,
+      "TotalEliminations": 3,
+      "ChipsFromTotalElims": 150,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 150,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 12050
     },
     {
       "Player": "Greg",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3525,
+      "ChipsFromSeasonPoints": 3900,
       "TotalEliminations": 10,
       "ChipsFromTotalElims": 500,
       "RepeatElimCount": 2,
       "ChipsFromRepeatElims": 500,
       "HighValueElimCount": 2,
       "ChipsFromHighValueElims": 500,
-      "TotalStack": 11525
+      "TotalStack": 11900
     },
     {
       "Player": "Joe Fitz",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4500,
+      "ChipsFromSeasonPoints": 4725,
       "TotalEliminations": 4,
       "ChipsFromTotalElims": 200,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 200,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 11400
+      "TotalStack": 11625
     },
     {
       "Player": "Russ T",
       "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 4200,
-      "TotalEliminations": 2,
-      "ChipsFromTotalElims": 100,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 100,
-      "HighValueElimCount": 1,
-      "ChipsFromHighValueElims": 250,
-      "TotalStack": 11150
-    },
-    {
-      "Player": "Dan P",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3675,
-      "TotalEliminations": 4,
-      "ChipsFromTotalElims": 200,
-      "RepeatElimCount": 0,
-      "ChipsFromRepeatElims": 200,
-      "HighValueElimCount": 1,
-      "ChipsFromHighValueElims": 250,
-      "TotalStack": 10825
-    },
-    {
-      "Player": "Chris",
-      "BaseStack": 6500,
-      "ChipsFromSeasonPoints": 3675,
+      "ChipsFromSeasonPoints": 4575,
       "TotalEliminations": 2,
       "ChipsFromTotalElims": 100,
       "RepeatElimCount": 0,
       "ChipsFromRepeatElims": 100,
       "HighValueElimCount": 0,
       "ChipsFromHighValueElims": 0,
-      "TotalStack": 10375
+      "TotalStack": 11275
+    },
+    {
+      "Player": "Dan P",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 4050,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 200,
+      "HighValueElimCount": 1,
+      "ChipsFromHighValueElims": 250,
+      "TotalStack": 11200
+    },
+    {
+      "Player": "Chris",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 4050,
+      "TotalEliminations": 2,
+      "ChipsFromTotalElims": 100,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 100,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10750
     }
   ],
   "ChipAndChairPayouts": [],
@@ -686,7 +686,7 @@
       "Player": "Steve C",
       "PlayerID": 15,
       "FinishPlace": 1,
-      "Points": 7.5,
+      "Points": 8.0,
       "Payout": 140.0
     },
     {
@@ -695,7 +695,7 @@
       "Player": "Greg",
       "PlayerID": 7,
       "FinishPlace": 2,
-      "Points": 7.0,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
@@ -704,7 +704,7 @@
       "Player": "Todd L",
       "PlayerID": 16,
       "FinishPlace": 3,
-      "Points": 6.5,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
@@ -713,7 +713,7 @@
       "Player": "Bill B",
       "PlayerID": 1,
       "FinishPlace": 4,
-      "Points": 6.0,
+      "Points": 6.5,
       "Payout": 0.0
     },
     {
@@ -722,7 +722,7 @@
       "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 5,
-      "Points": 5.5,
+      "Points": 6.0,
       "Payout": 0.0
     },
     {
@@ -731,7 +731,7 @@
       "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 6,
-      "Points": 5.0,
+      "Points": 5.5,
       "Payout": 0.0
     },
     {
@@ -740,7 +740,7 @@
       "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 7,
-      "Points": 4.5,
+      "Points": 5.0,
       "Payout": 0.0
     },
     {
@@ -749,7 +749,7 @@
       "Player": "Dave B",
       "PlayerID": 5,
       "FinishPlace": 8,
-      "Points": 4.0,
+      "Points": 4.5,
       "Payout": 0.0
     },
     {
@@ -758,7 +758,7 @@
       "Player": "Joe Fitz",
       "PlayerID": 9,
       "FinishPlace": 9,
-      "Points": 3.5,
+      "Points": 4.0,
       "Payout": 0.0
     },
     {
@@ -767,7 +767,7 @@
       "Player": "Josh H",
       "PlayerID": 10,
       "FinishPlace": 10,
-      "Points": 3.0,
+      "Points": 3.5,
       "Payout": 0.0
     },
     {
@@ -776,7 +776,7 @@
       "Player": "Russ T",
       "PlayerID": 14,
       "FinishPlace": 11,
-      "Points": 2.5,
+      "Points": 3.0,
       "Payout": 0.0
     },
     {
@@ -785,7 +785,7 @@
       "Player": "Phil Z",
       "PlayerID": 13,
       "FinishPlace": 12,
-      "Points": 2.0,
+      "Points": 2.5,
       "Payout": 0.0
     },
     {
@@ -794,7 +794,7 @@
       "Player": "Joe Ferrigno",
       "PlayerID": 8,
       "FinishPlace": 13,
-      "Points": 1.5,
+      "Points": 2.0,
       "Payout": 0.0
     },
     {
@@ -803,7 +803,7 @@
       "Player": "Chris",
       "PlayerID": 2,
       "FinishPlace": 14,
-      "Points": 1.0,
+      "Points": 1.5,
       "Payout": 0.0
     },
     {
@@ -812,7 +812,7 @@
       "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 15,
-      "Points": 0.5,
+      "Points": 1.0,
       "Payout": 0.0
     },
     {
@@ -830,7 +830,7 @@
       "Player": "Phil Z",
       "PlayerID": 13,
       "FinishPlace": 1,
-      "Points": 7.5,
+      "Points": 8.0,
       "Payout": 140.0
     },
     {
@@ -839,7 +839,7 @@
       "Player": "Mike F",
       "PlayerID": 12,
       "FinishPlace": 2,
-      "Points": 7.0,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
@@ -848,7 +848,7 @@
       "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 3,
-      "Points": 6.5,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
@@ -857,7 +857,7 @@
       "Player": "Russ T",
       "PlayerID": 14,
       "FinishPlace": 4,
-      "Points": 6.0,
+      "Points": 6.5,
       "Payout": 0.0
     },
     {
@@ -866,7 +866,7 @@
       "Player": "Joe Fitz",
       "PlayerID": 9,
       "FinishPlace": 5,
-      "Points": 5.5,
+      "Points": 6.0,
       "Payout": 0.0
     },
     {
@@ -875,7 +875,7 @@
       "Player": "Chris",
       "PlayerID": 2,
       "FinishPlace": 6,
-      "Points": 5.0,
+      "Points": 5.5,
       "Payout": 0.0
     },
     {
@@ -884,7 +884,7 @@
       "Player": "Steve C",
       "PlayerID": 15,
       "FinishPlace": 7,
-      "Points": 4.5,
+      "Points": 5.0,
       "Payout": 0.0
     },
     {
@@ -893,7 +893,7 @@
       "Player": "Greg",
       "PlayerID": 7,
       "FinishPlace": 8,
-      "Points": 4.0,
+      "Points": 4.5,
       "Payout": 0.0
     },
     {
@@ -902,7 +902,7 @@
       "Player": "Todd L",
       "PlayerID": 16,
       "FinishPlace": 9,
-      "Points": 3.5,
+      "Points": 4.0,
       "Payout": 0.0
     },
     {
@@ -911,7 +911,7 @@
       "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 10,
-      "Points": 3.0,
+      "Points": 3.5,
       "Payout": 0.0
     },
     {
@@ -920,7 +920,7 @@
       "Player": "Bill B",
       "PlayerID": 1,
       "FinishPlace": 11,
-      "Points": 2.5,
+      "Points": 3.0,
       "Payout": 0.0
     },
     {
@@ -929,7 +929,7 @@
       "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 12,
-      "Points": 2.0,
+      "Points": 2.5,
       "Payout": 0.0
     },
     {
@@ -938,7 +938,7 @@
       "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 13,
-      "Points": 1.5,
+      "Points": 2.0,
       "Payout": 0.0
     },
     {
@@ -947,7 +947,7 @@
       "Player": "Dave B",
       "PlayerID": 5,
       "FinishPlace": 14,
-      "Points": 1.0,
+      "Points": 1.5,
       "Payout": 0.0
     },
     {
@@ -956,7 +956,7 @@
       "Player": "Josh H",
       "PlayerID": 10,
       "FinishPlace": 15,
-      "Points": 0.5,
+      "Points": 1.0,
       "Payout": 0.0
     },
     {
@@ -1118,7 +1118,7 @@
       "Player": "Bill B",
       "PlayerID": 1,
       "FinishPlace": 1,
-      "Points": 7.5,
+      "Points": 8.0,
       "Payout": 140.0
     },
     {
@@ -1127,7 +1127,7 @@
       "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 2,
-      "Points": 7.0,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
@@ -1136,7 +1136,7 @@
       "Player": "Russ T",
       "PlayerID": 14,
       "FinishPlace": 3,
-      "Points": 6.5,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
@@ -1145,7 +1145,7 @@
       "Player": "Phil Z",
       "PlayerID": 13,
       "FinishPlace": 4,
-      "Points": 6.0,
+      "Points": 6.5,
       "Payout": 0.0
     },
     {
@@ -1154,7 +1154,7 @@
       "Player": "Steve C",
       "PlayerID": 15,
       "FinishPlace": 5,
-      "Points": 5.5,
+      "Points": 6.0,
       "Payout": 0.0
     },
     {
@@ -1163,7 +1163,7 @@
       "Player": "Dave B",
       "PlayerID": 5,
       "FinishPlace": 6,
-      "Points": 5.0,
+      "Points": 5.5,
       "Payout": 0.0
     },
     {
@@ -1172,7 +1172,7 @@
       "Player": "Todd L",
       "PlayerID": 16,
       "FinishPlace": 7,
-      "Points": 4.5,
+      "Points": 5.0,
       "Payout": 0.0
     },
     {
@@ -1181,7 +1181,7 @@
       "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 8,
-      "Points": 4.0,
+      "Points": 4.5,
       "Payout": 0.0
     },
     {
@@ -1190,7 +1190,7 @@
       "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 9,
-      "Points": 3.5,
+      "Points": 4.0,
       "Payout": 0.0
     },
     {
@@ -1199,7 +1199,7 @@
       "Player": "Joe Ferrigno",
       "PlayerID": 8,
       "FinishPlace": 10,
-      "Points": 3.0,
+      "Points": 3.5,
       "Payout": 0.0
     },
     {
@@ -1208,7 +1208,7 @@
       "Player": "Mike F",
       "PlayerID": 12,
       "FinishPlace": 11,
-      "Points": 2.5,
+      "Points": 3.0,
       "Payout": 0.0
     },
     {
@@ -1217,7 +1217,7 @@
       "Player": "Joe Fitz",
       "PlayerID": 9,
       "FinishPlace": 12,
-      "Points": 2.0,
+      "Points": 2.5,
       "Payout": 0.0
     },
     {
@@ -1226,7 +1226,7 @@
       "Player": "Josh H",
       "PlayerID": 10,
       "FinishPlace": 13,
-      "Points": 1.5,
+      "Points": 2.0,
       "Payout": 0.0
     },
     {
@@ -1235,7 +1235,7 @@
       "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 14,
-      "Points": 1.0,
+      "Points": 1.5,
       "Payout": 0.0
     },
     {
@@ -1244,7 +1244,7 @@
       "Player": "Greg",
       "PlayerID": 7,
       "FinishPlace": 15,
-      "Points": 0.5,
+      "Points": 1.0,
       "Payout": 0.0
     },
     {
@@ -1262,7 +1262,7 @@
       "Player": "Dave B",
       "PlayerID": 5,
       "FinishPlace": 1,
-      "Points": 7.0,
+      "Points": 8.0,
       "Payout": 120.0
     },
     {
@@ -1271,7 +1271,7 @@
       "Player": "Mike F",
       "PlayerID": 12,
       "FinishPlace": 2,
-      "Points": 6.5,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
@@ -1280,7 +1280,7 @@
       "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 3,
-      "Points": 6.0,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
@@ -1289,7 +1289,7 @@
       "Player": "Todd L",
       "PlayerID": 16,
       "FinishPlace": 4,
-      "Points": 5.5,
+      "Points": 6.5,
       "Payout": 0.0
     },
     {
@@ -1298,7 +1298,7 @@
       "Player": "Greg",
       "PlayerID": 7,
       "FinishPlace": 5,
-      "Points": 5.0,
+      "Points": 6.0,
       "Payout": 0.0
     },
     {
@@ -1307,7 +1307,7 @@
       "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 6,
-      "Points": 4.5,
+      "Points": 5.5,
       "Payout": 0.0
     },
     {
@@ -1316,7 +1316,7 @@
       "Player": "Steve C",
       "PlayerID": 15,
       "FinishPlace": 7,
-      "Points": 4.0,
+      "Points": 5.0,
       "Payout": 0.0
     },
     {
@@ -1325,7 +1325,7 @@
       "Player": "Joe Ferrigno",
       "PlayerID": 8,
       "FinishPlace": 8,
-      "Points": 3.5,
+      "Points": 4.5,
       "Payout": 0.0
     },
     {
@@ -1334,7 +1334,7 @@
       "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 9,
-      "Points": 3.0,
+      "Points": 4.0,
       "Payout": 0.0
     },
     {
@@ -1343,7 +1343,7 @@
       "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 10,
-      "Points": 2.5,
+      "Points": 3.5,
       "Payout": 0.0
     },
     {
@@ -1352,7 +1352,7 @@
       "Player": "Russ T",
       "PlayerID": 14,
       "FinishPlace": 11,
-      "Points": 2.0,
+      "Points": 3.0,
       "Payout": 0.0
     },
     {
@@ -1361,7 +1361,7 @@
       "Player": "Chris",
       "PlayerID": 2,
       "FinishPlace": 12,
-      "Points": 1.5,
+      "Points": 2.5,
       "Payout": 0.0
     },
     {
@@ -1370,7 +1370,7 @@
       "Player": "Bill B",
       "PlayerID": 1,
       "FinishPlace": 13,
-      "Points": 1.0,
+      "Points": 2.0,
       "Payout": 0.0
     },
     {
@@ -1379,7 +1379,7 @@
       "Player": "Phil Z",
       "PlayerID": 13,
       "FinishPlace": 14,
-      "Points": 0.5,
+      "Points": 1.5,
       "Payout": 0.0
     },
     {
@@ -1406,7 +1406,7 @@
       "Player": "Steve C",
       "PlayerID": 15,
       "FinishPlace": 1,
-      "Points": 7.5,
+      "Points": 8.0,
       "Payout": 140.0
     },
     {
@@ -1415,7 +1415,7 @@
       "Player": "Todd L",
       "PlayerID": 16,
       "FinishPlace": 2,
-      "Points": 7.0,
+      "Points": 7.5,
       "Payout": 100.0
     },
     {
@@ -1424,7 +1424,7 @@
       "Player": "Bill B",
       "PlayerID": 1,
       "FinishPlace": 3,
-      "Points": 6.5,
+      "Points": 7.0,
       "Payout": 60.0
     },
     {
@@ -1433,7 +1433,7 @@
       "Player": "Chris",
       "PlayerID": 2,
       "FinishPlace": 4,
-      "Points": 6.0,
+      "Points": 6.5,
       "Payout": 0.0
     },
     {
@@ -1442,7 +1442,7 @@
       "Player": "Dan P",
       "PlayerID": 3,
       "FinishPlace": 5,
-      "Points": 5.5,
+      "Points": 6.0,
       "Payout": 0.0
     },
     {
@@ -1451,7 +1451,7 @@
       "Player": "Josh T",
       "PlayerID": 11,
       "FinishPlace": 6,
-      "Points": 5.0,
+      "Points": 5.5,
       "Payout": 0.0
     },
     {
@@ -1460,7 +1460,7 @@
       "Player": "Greg",
       "PlayerID": 7,
       "FinishPlace": 7,
-      "Points": 4.5,
+      "Points": 5.0,
       "Payout": 0.0
     },
     {
@@ -1469,7 +1469,7 @@
       "Player": "Dave B",
       "PlayerID": 5,
       "FinishPlace": 8,
-      "Points": 4.0,
+      "Points": 4.5,
       "Payout": 0.0
     },
     {
@@ -1478,7 +1478,7 @@
       "Player": "Josh H",
       "PlayerID": 10,
       "FinishPlace": 9,
-      "Points": 3.5,
+      "Points": 4.0,
       "Payout": 0.0
     },
     {
@@ -1487,7 +1487,7 @@
       "Player": "Gerry I",
       "PlayerID": 6,
       "FinishPlace": 10,
-      "Points": 3.0,
+      "Points": 3.5,
       "Payout": 0.0
     },
     {
@@ -1496,7 +1496,7 @@
       "Player": "Dan T",
       "PlayerID": 4,
       "FinishPlace": 11,
-      "Points": 2.5,
+      "Points": 3.0,
       "Payout": 0.0
     },
     {
@@ -1505,7 +1505,7 @@
       "Player": "Phil Z",
       "PlayerID": 13,
       "FinishPlace": 12,
-      "Points": 2.0,
+      "Points": 2.5,
       "Payout": 0.0
     },
     {
@@ -1514,7 +1514,7 @@
       "Player": "Joe Fitz",
       "PlayerID": 9,
       "FinishPlace": 13,
-      "Points": 1.5,
+      "Points": 2.0,
       "Payout": 0.0
     },
     {
@@ -1523,7 +1523,7 @@
       "Player": "Russ T",
       "PlayerID": 14,
       "FinishPlace": 14,
-      "Points": 1.0,
+      "Points": 1.5,
       "Payout": 0.0
     },
     {
@@ -1532,7 +1532,7 @@
       "Player": "Mike F",
       "PlayerID": 12,
       "FinishPlace": 15,
-      "Points": 0.5,
+      "Points": 1.0,
       "Payout": 0.0
     },
     {

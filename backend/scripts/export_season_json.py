@@ -60,28 +60,36 @@ def main():
     ]
 
     # ----------------------------
-    # Season Awards (Top 3)
+    # Season Awards (Top 3 - derived from leaderboard truth)
     # ----------------------------
-    season_awards = cur.execute("""
-        SELECT
-            wp.player_id,
-            p.player_name,
-            wp.amount
-        FROM weekly_payouts wp
-        JOIN players p ON p.player_id = wp.player_id
-        WHERE wp.season_id = ?
-        AND wp.week_num = 10
-        AND wp.payout_type = 'season_award'
-        ORDER BY wp.amount DESC
-    """, (SEASON_ID,)).fetchall()
+
+    sorted_totals = sorted(
+        season_totals_rows,
+        key=lambda r: (
+            r["SeasonPointsDrop2"],
+            r["SeasonPointsTotal"],
+            r["Wins"],
+            r["Player"]
+        ),
+        reverse=True
+    )
 
     season_award_rows = [
         {
-            "Player": name,
-            "PlayerID": int(pid),
-            "Amount": float(amount)
+            "Player": sorted_totals[0]["Player"],
+            "PlayerID": sorted_totals[0]["PlayerID"],
+            "Amount": 400.0
+        },
+        {
+            "Player": sorted_totals[1]["Player"],
+            "PlayerID": sorted_totals[1]["PlayerID"],
+            "Amount": 250.0
+        },
+        {
+            "Player": sorted_totals[2]["Player"],
+            "PlayerID": sorted_totals[2]["PlayerID"],
+            "Amount": 150.0
         }
-        for (pid, name, amount) in season_awards
     ]
 
     # ----------------------------
