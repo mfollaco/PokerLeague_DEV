@@ -114,7 +114,7 @@ def main():
         SELECT season_id, week_num, player_id, SUM(amount) AS payout_total
         FROM weekly_payouts
         WHERE season_id = ?
-        AND payout_type IN ('1st','2nd','3rd')
+        AND payout_type != 'season_award'
         GROUP BY season_id, week_num, player_id
     """, (SEASON_ID,)).fetchall()
 
