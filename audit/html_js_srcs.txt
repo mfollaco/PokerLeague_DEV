@@ -1,0 +1,41 @@
+frontend/analytics.html:47:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics.html:50:  <script type="module" src="/js/analytics/layout.js"></script>
+frontend/analytics.html:53:  <script type="module" src="/js/pages/analytics_hub.js"></script>
+frontend/analytics/analytics_index.html:34:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics/analytics_index.html:35:  <script type="module" src="../js/analytics/layout.js"></script>
+frontend/analytics/analytics_index.html:36:  <script type="module" src="../js/pages/analytics_hub.js"></script>
+frontend/analytics/eliminations.html:45:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics/eliminations.html:61:  <script type="module" src="/js/analytics/layout.js"></script>
+frontend/analytics/eliminations.html:62:  <script type="module" src="/js/pages/eliminations.js"></script>
+frontend/analytics/luck.html:83:  <script type="module" src="../js/analytics/luck.js"></script>
+frontend/analytics/nemesis.html:46:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics/nemesis.html:49:  <script type="module" src="../js/analytics/layout.js"></script>
+frontend/analytics/nemesis.html:52:  <script type="module" src="../js/pages/nemesis.js"></script>
+frontend/analytics/survival.html:85:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics/survival.html:91:  <script type="module" src="/js/analytics/layout.js"></script>
+frontend/analytics/survival.html:94:  <script type="module" src="/js/pages/survival_analytics.js"></script>
+frontend/chip-and-chair.html:198:  <script src="js/chip_and_chair.js"></script>
+frontend/chip-and-chair.html:201:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/index-old.html:219:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/index.html:319:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/leaderboard.html:117:  <script src="js/leaderboard.js"></script>
+frontend/leaderboard.html:120:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/schedule.html:76:  <script src="js/schedule.js"></script>
+frontend/schedule.html:77:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/weekly-points.html:85:  <script src="js/weekly_points.js"></script>
+frontend/weekly-results.html:130:  <script src="js/weekly_results.js"></script>
+frontend/weekly-results.html:133:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics.html:47:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/analytics.html:50:  <script type="module" src="/js/analytics/layout.js"></script>
+frontend/analytics.html:53:  <script type="module" src="/js/pages/analytics_hub.js"></script>
+frontend/chip-and-chair.html:198:  <script src="js/chip_and_chair.js"></script>
+frontend/chip-and-chair.html:201:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/index-old.html:219:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/index.html:319:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/leaderboard.html:117:  <script src="js/leaderboard.js"></script>
+frontend/leaderboard.html:120:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/schedule.html:76:  <script src="js/schedule.js"></script>
+frontend/schedule.html:77:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+frontend/weekly-points.html:85:  <script src="js/weekly_points.js"></script>
+frontend/weekly-results.html:130:  <script src="js/weekly_results.js"></script>
+frontend/weekly-results.html:133:  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

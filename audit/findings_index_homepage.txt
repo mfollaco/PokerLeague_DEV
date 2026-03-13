@@ -1,0 +1,15 @@
+INDEX.HTML FINDINGS
+
+1. index.html contains real inline JavaScript, not just Google Analytics.
+2. Inline logic includes:
+   - loadSeasonData()
+   - loadCommissionerNotes()
+   - fetch of season JSON
+   - fetch of markdown notes
+   - DOM rendering for latest winner
+   - DOM rendering for current leaders
+3. The homepage currently hardcodes SEASON_ID = "spring_2026" inside inline script.
+4. This is a likely cleanup/refactor target later:
+   - move homepage logic into a dedicated JS file
+   - centralize season resolution
+   - reduce inline script usage in HTML

@@ -1,0 +1,41 @@
+POKERLEAGUE_DEV ARCHITECTURE SUMMARY
+
+CORE SHARED LAYER
+- frontend/js/core/page_bootstrap.js
+- frontend/js/core/data_loader.js
+- frontend/js/core/season_config.js
+- frontend/js/core/dom_utils.js
+- frontend/js/core/chart_utils.js
+- frontend/js/core/formatters.js
+- frontend/js/core/player_colors.js
+
+CURRENT ANALYTICS PAGE PATTERNS
+
+1. BEST CURRENT PATTERN
+- frontend/js/pages/survival_analytics.js
+- Uses shared core architecture cleanly
+- Good example for future analytics pages
+
+2. MIXED BUT HEALTHY PATTERN
+- frontend/js/pages/eliminations.js
+- frontend/js/pages/nemesis.js
+- Use shared page bootstrap
+- Still inject large page skeletons inline
+- Keep page structure + rendering + model logic in one file
+
+3. LEGACY / SELF-CONTAINED PATTERN
+- frontend/js/analytics/luck.js
+- Functional but owns too many concerns internally
+- Good refactor candidate later
+- Not urgent if stable
+
+KNOWN CLEANUP FINDINGS
+- schedule.html had a stale reference to nonexistent js/schedule.js and it was removed
+- index.html contains meaningful inline JavaScript and is a future refactor target
+- luck.js is the main analytics page that sits outside the newer shared pattern
+
+RECOMMENDED STANDARD GOING FORWARD
+- Future analytics pages should use initAnalyticsPage() from core/page_bootstrap.js
+- Future analytics pages should avoid owning their own season parsing and loading
+- survival_analytics.js should be treated as the strongest current example
+- page structure should gradually become more standardized over time

@@ -1,0 +1,16 @@
+SURVIVAL PAGE FINDINGS
+
+1. frontend/js/pages/survival_analytics.js is a strong example of the cleaner analytics page pattern.
+2. It correctly uses:
+   - initAnalyticsPage() from core/page_bootstrap.js
+   - shared DOM helpers
+   - shared formatter helpers
+   - shared chart helpers
+   - shared player color helpers
+3. It keeps page-specific logic local while relying on shared infrastructure for common concerns.
+4. Strong traits worth reusing in future analytics pages:
+   - one sorted source of truth for table + chart + detail interactions
+   - clean separation between render helpers and page bootstrapping
+   - page-specific render logic without duplicating season loading
+   - shared chart/helper modules instead of page-owned utility duplication
+5. This file is a good candidate to model future analytics pages after.

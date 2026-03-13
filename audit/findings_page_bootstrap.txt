@@ -1,0 +1,16 @@
+PAGE BOOTSTRAP FINDINGS
+
+1. frontend/js/core/page_bootstrap.js is a clean shared analytics page initializer.
+2. It currently standardizes:
+   - season ID resolution
+   - season lookup
+   - season data loading
+   - loading state handling
+   - content visibility toggling
+   - top-level error handling
+3. This file is a strong candidate to serve as the standard foundation for future analytics pages.
+4. New analytics pages should preferably follow this pattern instead of owning their own:
+   - season parsing
+   - season loading
+   - top-level page init
+   - top-level error rendering

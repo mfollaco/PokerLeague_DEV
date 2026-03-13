@@ -1,0 +1,16 @@
+frontend/js/core/data_loader.js:1:import { resolveSeason } from "./season_config.js";
+frontend/js/core/page_bootstrap.js:1:import { byId, setHtml, show, hide, renderAlert } from "./dom_utils.js";
+frontend/js/core/page_bootstrap.js:2:import { getSeasonIdFromUrl, resolveSeason } from "./season_config.js";
+frontend/js/core/page_bootstrap.js:3:import { loadSeasonData } from "./data_loader.js";
+frontend/js/pages/analytics_hub.js:1:import { byId, setHtml, show, hide, renderAlert, escapeHtml } from "../core/dom_utils.js";
+frontend/js/pages/analytics_hub.js:2:import { getSeasonIdFromUrl, resolveSeason, SEASONS } from "../core/season_config.js";
+frontend/js/pages/analytics_hub.js:3:import { loadSeasonData, clearSeasonCache } from "../core/data_loader.js";
+frontend/js/pages/survival_analytics.js:1:import { setHtml, escapeHtml } from "../core/dom_utils.js";
+frontend/js/pages/survival_analytics.js:2:import { formatNumber } from "../core/formatters.js";
+frontend/js/pages/survival_analytics.js:3:import { initAnalyticsPage } from "../core/page_bootstrap.js";
+frontend/js/pages/survival_analytics.js:4:import { createBarChart, setActiveBar } from "../core/chart_utils.js";
+frontend/js/pages/survival_analytics.js:5:import { getPlayerColor } from "../core/player_colors.js";
+frontend/js/pages/eliminations.js:9:import { initAnalyticsPage } from "../core/page_bootstrap.js";
+frontend/js/pages/eliminations.js:10:import { escapeHtml as esc } from "../core/dom_utils.js";
+frontend/js/pages/nemesis.js:4:import { initAnalyticsPage } from "../core/page_bootstrap.js";
+frontend/js/analytics/luck.js:1:import { injectAnalyticsShell } from "./layout.js";

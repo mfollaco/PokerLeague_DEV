@@ -1,93 +1,79 @@
-function formatMoney(x) {
-  const n = Number(x || 0);
-  return n.toLocaleString(undefined, {
+import { getSeasonIdFromUrl } from "./core/season_config.js";
+import { loadSeasonData } from "./core/data_loader.js";
+
+// frontend/js/leaderboard.js
+
+function formatMoney(value) {
+  const amount = Number(value || 0);
+  return amount.toLocaleString(undefined, {
     style: "currency",
     currency: "USD",
     maximumFractionDigits: 0
   });
 }
 
-// frontend/js/leaderboard.js
-
 let playersRaw = [];
-let playersView = []; // what we render (includes trend + computed ranks)
-let currentSort = { key: "Rank", dir: "asc" }; // default display sort
+let playersView = [];
+let currentSort = { key: "Rank", dir: "asc" };
 
 // -------------------------
 // Helpers
 // -------------------------
 
-function sum(arr) {
-  return arr.reduce((a, b) => a + (Number(b) || 0), 0);
+function sum(values) {
+  return values.reduce((total, value) => total + (Number(value) || 0), 0);
 }
 
-// Drop lowest 2 weekly scores (including 0s for absences)
-// If fewer than 2 weeks, drop as many as exist (0..2).
-function computeDrop2Total(weekly) {
-  const clean = weekly.map(v => Number(v) || 0);
-  const total = sum(clean);
-
-  // copy + sort asc to find lowest weeks
-  const sorted = [...clean].sort((a, b) => a - b);
-  const dropCount = Math.min(2, sorted.length);
-  const dropped = sum(sorted.slice(0, dropCount));
-
-  return { drop2: total - dropped, total };
+function getPlayerName(player) {
+  return player.Player ?? player.player_name ?? player.name ?? "Unknown";
 }
 
-// Build weekly array "as of" a given weekIndex (1-based week number).
-// weeklyPoints might be shorter than weekIndex → pad with 0.
+function getPlayerKey(player) {
+  return player.player_id ?? player.PlayerID ?? player.id ?? getPlayerName(player);
+}
+
+function getWeeklyPointsArray(player) {
+  return Array.isArray(player.WeeklyPoints)
+    ? player.WeeklyPoints
+    : Array.isArray(player.weekly_points)
+      ? player.weekly_points
+      : [];
+}
+
+function computeDrop2Total(weeklyPoints) {
+  const cleanPoints = weeklyPoints.map(value => Number(value) || 0);
+  const total = sum(cleanPoints);
+
+  const sortedAscending = [...cleanPoints].sort((a, b) => a - b);
+  const dropCount = Math.min(2, sortedAscending.length);
+  const dropped = sum(sortedAscending.slice(0, dropCount));
+
+  return {
+    total,
+    drop2: total - dropped
+  };
+}
+
 function weeklyAsOf(weeklyPoints, weekIndex) {
-  const wp = Array.isArray(weeklyPoints) ? weeklyPoints : [];
-  const slice = wp.slice(0, weekIndex).map(v => Number(v) || 0);
-  while (slice.length < weekIndex) slice.push(0);
+  const source = Array.isArray(weeklyPoints) ? weeklyPoints : [];
+  const slice = source.slice(0, weekIndex).map(value => Number(value) || 0);
+
+  while (slice.length < weekIndex) {
+    slice.push(0);
+  }
+
   return slice;
 }
 
-// Ranking rules per your definition:
-// 1) Drop2 descending
-// 2) Total descending (tiebreaker)
-// 3) Name ascending (stable deterministic tie-break so ranks are unique)
-function buildRankMap(players, weekIndex) {
-  const scored = players.map(p => {
-    // CHANGE THESE TWO LINES IF YOUR JSON USES DIFFERENT FIELD NAMES:
-    const name = p.Player ?? p.player_name ?? p.name ?? "Unknown";
-    const weeklyPoints = p.WeeklyPoints ?? p.weekly_points ?? [];
-
-    const weekly = weeklyAsOf(weeklyPoints, weekIndex);
-    const { drop2, total } = computeDrop2Total(weekly);
-
-    return {
-      ...p,
-      __name: name,
-      __drop2_asof: drop2,
-      __total_asof: total
-    };
-  });
-
-  scored.sort((a, b) => {
-    if (b.__drop2_asof !== a.__drop2_asof) return b.__drop2_asof - a.__drop2_asof;
-    if (b.__total_asof !== a.__total_asof) return b.__total_asof - a.__total_asof;
-    return a.__name.localeCompare(b.__name);
-  });
-
-  const map = new Map();
-  scored.forEach((p, idx) => {
-    const key = p.player_id ?? p.PlayerID ?? p.id ?? p.__name; // prefer an id, fallback to name
-    map.set(key, idx + 1);
-  });
-
-  return map;
-}
-
 function getLatestWeek(players) {
-  // latest week = max WeeklyPoints length across players
-  let maxLen = 0;
-  for (const p of players) {
-    const wp = p.WeeklyPoints ?? p.weekly_points ?? [];
-    if (Array.isArray(wp)) maxLen = Math.max(maxLen, wp.length);
+  let maxLength = 0;
+
+  for (const player of players) {
+    const weeklyPoints = getWeeklyPointsArray(player);
+    maxLength = Math.max(maxLength, weeklyPoints.length);
   }
-  return maxLen; // can be 0 if empty
+
+  return maxLength;
 }
 
 function trendGlyph(delta) {
@@ -96,8 +82,52 @@ function trendGlyph(delta) {
   return "—";
 }
 
+// Ranking rules:
+// 1. Drop-2 descending
+// 2. Total descending
+// 3. Name ascending
+function buildRankMap(players, weekIndex) {
+  const scoredPlayers = players.map(player => {
+    const name = getPlayerName(player);
+    const weeklyPoints = getWeeklyPointsArray(player);
+    const weekly = weeklyAsOf(weeklyPoints, weekIndex);
+    const { drop2, total } = computeDrop2Total(weekly);
+
+    return {
+      ...player,
+      __name: name,
+      __drop2_asof: drop2,
+      __total_asof: total
+    };
+  });
+
+  scoredPlayers.sort((a, b) => {
+    if (b.__drop2_asof !== a.__drop2_asof) {
+      return b.__drop2_asof - a.__drop2_asof;
+    }
+
+    if (b.__total_asof !== a.__total_asof) {
+      return b.__total_asof - a.__total_asof;
+    }
+
+    return a.__name.localeCompare(b.__name);
+  });
+
+  const rankMap = new Map();
+
+  scoredPlayers.forEach((player, index) => {
+    rankMap.set(getPlayerKey(player), index + 1);
+  });
+
+  return rankMap;
+}
+
+function sortSeasonAwardsRows(rows = []) {
+  return [...rows].sort((a, b) => (Number(b.Amount) || 0) - (Number(a.Amount) || 0));
+}
+
 // -------------------------
-// Core: compute current/prev ranks + trend ONCE
+// Trends / ranks
 // -------------------------
 
 function computeTrendsAndRanks(players) {
@@ -107,20 +137,17 @@ function computeTrendsAndRanks(players) {
   const currentRankMap = buildRankMap(players, latestWeek);
   const prevRankMap = buildRankMap(players, prevWeek);
 
-  const enriched = players.map(p => {
-    const key = p.player_id ?? p.PlayerID ?? p.id ?? (p.Player ?? p.player_name ?? p.name);
-
+  const enriched = players.map(player => {
+    const key = getPlayerKey(player);
     const currentRank = currentRankMap.get(key) ?? null;
     const prevRank = prevRankMap.get(key) ?? null;
-
-    // If prevWeek is 0, prevRank will still exist (all totals=0) — that’s fine.
     const trend = (prevRank && currentRank) ? (prevRank - currentRank) : 0;
 
     return {
-      ...p,
+      ...player,
       Rank: currentRank,
       PrevRank: prevRank,
-      Trend: trend,              // numeric (positive = up)
+      Trend: trend,
       TrendSymbol: trendGlyph(trend),
       TrendAbs: Math.abs(trend),
       __key: key
@@ -134,21 +161,24 @@ function computeTrendsAndRanks(players) {
 // Rendering
 // -------------------------
 
-function formatAvg(n) {
-  const x = Number(n);
-  if (!Number.isFinite(x)) return "—";
-  return Number.isInteger(x) ? x.toString() : x.toFixed(1);
+function formatAvg(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "—";
+  return Number.isInteger(num) ? num.toString() : num.toFixed(1);
 }
 
-function renderSeasonAwards(awards) {
+function renderSeasonAwards(rows) {
   const card = document.getElementById("seasonAwardsCard");
   const host = document.getElementById("seasonAwardsBody");
+
   if (!card || !host) return;
 
-  const rows = Array.isArray(awards) ? awards : [];
   host.innerHTML = "";
 
-  if (rows.length === 0) {
+  const sortedRows = sortSeasonAwardsRows(Array.isArray(rows) ? rows : []);
+  const topThree = sortedRows.slice(0, 3);
+
+  if (topThree.length === 0) {
     card.style.display = "none";
     return;
   }
@@ -156,20 +186,22 @@ function renderSeasonAwards(awards) {
   card.style.display = "";
 
   const titles = ["1st Place", "2nd Place", "3rd Place"];
+  const medals = ["🥇", "🥈", "🥉"];
 
-  rows.forEach((a, i) => {
-    const title = titles[i] ?? "Season Award";
-    const winner = a.Player ?? "";
-    const amt = (a.Amount != null) ? `$${Number(a.Amount).toFixed(0)}` : "";
+  topThree.forEach((row, index) => {
+    const title = titles[index] ?? "Season Award";
+    const medal = medals[index] ?? "🏅";
+    const winner = getPlayerName(row);
+    const amount = row.Amount != null ? `$${Number(row.Amount).toFixed(0)}` : "";
 
     const col = document.createElement("div");
     col.className = "col-12 col-md-6 col-lg-4";
 
     col.innerHTML = `
       <div class="p-3 rounded border border-gold bg-dark h-100">
-        <div class="text-warning fw-semibold mb-1">${title}</div>
+        <div class="text-warning fw-semibold mb-1">${medal} ${title}</div>
         <div class="fs-5 fw-bold">${winner}</div>
-        ${amt ? `<div class="text-muted small mt-1">${amt}</div>` : ``}
+        ${amount ? `<div class="text-muted small mt-1">${amount}</div>` : ""}
       </div>
     `;
 
@@ -179,93 +211,88 @@ function renderSeasonAwards(awards) {
 
 function renderTable(rows) {
   const tbody = document.querySelector("#leaderboardTable tbody");
+  if (!tbody) return;
+
   tbody.innerHTML = "";
 
-  console.log("Leaderboard money check:",
-  rows.slice(0,5).map(r => [r.Player, r.MoneyWonTotal])
-  );
-
-  rows.forEach((p) => {
-    // CHANGE THESE IF YOUR FIELD NAMES DIFFER:
-    const name = p.Player ?? p.player_name ?? p.name ?? "Unknown";
-    const drop2 = p.SeasonPointsDrop2 ?? "";
-    const total = p.SeasonPointsTotal ?? "";
-    const weeks = p.WeeksInSeason ?? "";
-    const wins = p.Wins ?? "";
-    const avg = formatAvg(p.AvgFinish);
-    const money = formatMoney(p.MoneyWonTotal ?? 0);
+  rows.forEach(player => {
+    const name = getPlayerName(player);
+    const drop2 = player.SeasonPointsDrop2 ?? "";
+    const total = player.SeasonPointsTotal ?? "";
+    const weeks = player.WeeksInSeason ?? "";
+    const wins = player.Wins ?? "";
+    const avg = formatAvg(player.AvgFinish);
+    const money = formatMoney(player.MoneyWonTotal ?? 0);
 
     let trendHtml = "—";
     let trendClass = "text-muted";
 
-    if (p.Trend > 0) {
-      trendHtml = `▲${Math.abs(p.Trend)}`;
+    if (player.Trend > 0) {
+      trendHtml = `▲${Math.abs(player.Trend)}`;
       trendClass = "text-success";
-    } else if (p.Trend < 0) {
-      trendHtml = `▼${Math.abs(p.Trend)}`;
+    } else if (player.Trend < 0) {
+      trendHtml = `▼${Math.abs(player.Trend)}`;
       trendClass = "text-danger";
     }
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td>${p.Rank ?? ""}</td>
-        <td class="${trendClass} fw-bold">${trendHtml}</td>
-        <td>${name}</td>
-        <td>${drop2}</td>
-        <td>${total}</td>
-        <td>${money}</td>
-        <td>${weeks}</td>
-        <td>${wins}</td>
-        <td>${avg}</td>
-        `;
+      <td>${player.Rank ?? ""}</td>
+      <td class="${trendClass} fw-bold">${trendHtml}</td>
+      <td>${name}</td>
+      <td>${drop2}</td>
+      <td>${total}</td>
+      <td>${money}</td>
+      <td>${weeks}</td>
+      <td>${wins}</td>
+      <td>${avg}</td>
+    `;
+
     tbody.appendChild(tr);
   });
 }
 
-// Only sorts the already-computed rows. DOES NOT touch Trend.
 function sortRows(rows, key, dir) {
-  const mult = (dir === "asc") ? 1 : -1;
+  const multiplier = dir === "asc" ? 1 : -1;
 
   return [...rows].sort((a, b) => {
-    const av = a[key];
-    const bv = b[key];
+    const aValue = a[key];
+    const bValue = b[key];
 
-    // numeric vs string
-    const aNum = Number(av);
-    const bNum = Number(bv);
+    const aNum = Number(aValue);
+    const bNum = Number(bValue);
 
     if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
-      if (aNum !== bNum) return (aNum - bNum) * mult;
+      if (aNum !== bNum) {
+        return (aNum - bNum) * multiplier;
+      }
     } else {
-      const aStr = String(av ?? "");
-      const bStr = String(bv ?? "");
-      const cmp = aStr.localeCompare(bStr);
-      if (cmp !== 0) return cmp * mult;
+      const aStr = String(aValue ?? "");
+      const bStr = String(bValue ?? "");
+      const compare = aStr.localeCompare(bStr);
+
+      if (compare !== 0) {
+        return compare * multiplier;
+      }
     }
 
-    // stable tiebreak
-    const aName = (a.Player ?? a.player_name ?? a.name ?? "");
-    const bName = (b.Player ?? b.player_name ?? b.name ?? "");
-    return aName.localeCompare(bName);
+    return getPlayerName(a).localeCompare(getPlayerName(b));
   });
 }
 
 function wireSortHeaders() {
-  // Example: <th data-sort="Rank">Rank</th>
-  // Make sure your headers have data-sort attributes matching keys in the row objects.
   document.querySelectorAll("th[data-sort]").forEach(th => {
     th.addEventListener("click", () => {
       const key = th.dataset.sort;
 
       if (currentSort.key === key) {
-        currentSort.dir = (currentSort.dir === "asc") ? "desc" : "asc";
+        currentSort.dir = currentSort.dir === "asc" ? "desc" : "asc";
       } else {
         currentSort.key = key;
         currentSort.dir = "asc";
       }
 
-      const sorted = sortRows(playersView, currentSort.key, currentSort.dir);
-      renderTable(sorted);
+      renderTable(sortRows(playersView, currentSort.key, currentSort.dir));
     });
   });
 }
@@ -275,109 +302,107 @@ function wireSortHeaders() {
 // -------------------------
 
 async function initLeaderboard() {
-  const res = await fetch("data/spring_2026.json");
-  const data = await res.json();
+  try {
+    const seasonId = getSeasonIdFromUrl();
+    const { data, season, source } = await loadSeasonData(seasonId);
 
-  renderSeasonAwards(data.SeasonAwards ?? []);
+    renderSeasonAwards(data.SeasonAwards ?? []);
 
-// ---- season summary (drop2/total/weeks/wins/avgfinish) ----
-// Find the first array in the JSON that contains objects with a "Player" field
-// and at least one of the season summary fields.
-let seasonSummary = null;
+    let seasonSummary = null;
 
-for (const [key, val] of Object.entries(data)) {
-  if (Array.isArray(val) && val.length && typeof val[0] === "object") {
-    const sample = val[0];
-    const hasPlayer = "Player" in sample;
-    const hasSeasonField =
-      ("SeasonPointsDrop2" in sample) ||
-      ("SeasonPointsTotal" in sample) ||
-      ("WeeksInSeason" in sample) ||
-      ("Wins" in sample) ||
-      ("AvgFinish" in sample);
+    for (const [, value] of Object.entries(data)) {
+      if (!Array.isArray(value) || !value.length || typeof value[0] !== "object") {
+        continue;
+      }
 
-    if (hasPlayer && hasSeasonField) {
-      seasonSummary = val;
-      break;
+      const sample = value[0];
+      const hasPlayer = "Player" in sample;
+      const hasSeasonField =
+        "SeasonPointsDrop2" in sample ||
+        "SeasonPointsTotal" in sample ||
+        "WeeksInSeason" in sample ||
+        "Wins" in sample ||
+        "AvgFinish" in sample;
+
+      if (hasPlayer && hasSeasonField) {
+        seasonSummary = value;
+        break;
+      }
+    }
+
+    const seasonByPlayer = new Map(
+      (seasonSummary ?? []).map(player => [player.Player, player])
+    );
+
+    const weeklyFlat = data.WeeklyPoints ?? [];
+    const weeksByPlayer = new Map();
+    const playerMap = new Map();
+
+    weeklyFlat.forEach(row => {
+      const name = row.Player;
+      const week = row.Week;
+      const points = Number(row.Points) || 0;
+
+      if (!weeksByPlayer.has(name)) {
+        weeksByPlayer.set(name, new Set());
+      }
+      weeksByPlayer.get(name).add(week);
+
+      if (!playerMap.has(name)) {
+        const summary = seasonByPlayer.get(name) ?? {};
+
+        playerMap.set(name, {
+          Player: name,
+          WeeklyPoints: [],
+          SeasonPointsDrop2: summary.SeasonPointsDrop2 ?? null,
+          SeasonPointsTotal: summary.SeasonPointsTotal ?? null,
+          WeeksInSeason: summary.WeeksInSeason ?? null,
+          Wins: summary.Wins ?? null,
+          AvgFinish: summary.AvgFinish ?? null,
+          MoneyWonTotal: summary.MoneyWonTotal ?? 0
+        });
+      }
+
+      const player = playerMap.get(name);
+
+      while (player.WeeklyPoints.length < week) {
+        player.WeeklyPoints.push(0);
+      }
+
+      player.WeeklyPoints[week - 1] = points;
+    });
+
+    playersRaw = Array.from(playerMap.values());
+
+    playersRaw.forEach(player => {
+      player.WeeksInSeason = weeksByPlayer.get(player.Player)?.size ?? 0;
+    });
+
+    const { enriched, latestWeek, prevWeek } = computeTrendsAndRanks(playersRaw);
+    playersView = enriched;
+
+    renderTable(sortRows(playersView, "Rank", "asc"));
+    wireSortHeaders();
+
+    const stamp = document.getElementById("asOfWeekStamp");
+    if (stamp) {
+      stamp.textContent = `As of Week ${latestWeek} (prev: Week ${prevWeek})`;
+    }
+  } catch (err) {
+    console.error("Failed to initialize leaderboard:", err);
+
+    const tbody = document.querySelector("#leaderboardTable tbody");
+    if (tbody) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="9" class="text-center text-danger py-4">
+            Failed to load leaderboard.<br>
+            <small>${err?.message || String(err)}</small>
+          </td>
+        </tr>
+      `;
     }
   }
-}
-
-const seasonByPlayer = new Map(
-  (seasonSummary ?? []).map(p => [p.Player, p])
-);
-
-  // CHANGE THIS IF YOUR JSON NESTS PLAYERS DIFFERENTLY:
-  // e.g. data.players or data.leaderboard
-  
-// Build playersRaw from flat WeeklyPoints array
-const weeklyFlat = data.WeeklyPoints ?? [];
-
-// Build distinct weeks played per player from the flat WeeklyPoints list
-const weeksByPlayer = new Map();
-weeklyFlat.forEach(row => {
-  const name = row.Player;
-  const week = row.Week;
-
-  if (!weeksByPlayer.has(name)) weeksByPlayer.set(name, new Set());
-  weeksByPlayer.get(name).add(week);
-});
-
-const playerMap = new Map();
-
-// Group points by player
-weeklyFlat.forEach(row => {
-  const name = row.Player;
-  const week = row.Week;
-  const points = Number(row.Points) || 0;
-
-  if (!playerMap.has(name)) {
-    const summary = seasonByPlayer.get(name) ?? {};
-
-    playerMap.set(name, {
-    Player: name,
-    WeeklyPoints: [],
-
-    // carry season summary fields (these power your table columns)
-    SeasonPointsDrop2: summary.SeasonPointsDrop2 ?? null,
-    SeasonPointsTotal: summary.SeasonPointsTotal ?? null,
-    WeeksInSeason: summary.WeeksInSeason ?? null,
-    Wins: summary.Wins ?? null,
-    AvgFinish: summary.AvgFinish ?? null,
-    MoneyWonTotal: (summary.MoneyWonTotal ?? 0),
-    });
-  }
-
-  const player = playerMap.get(name);
-
-  // Ensure WeeklyPoints array is long enough
-  while (player.WeeklyPoints.length < week) {
-    player.WeeklyPoints.push(0);
-  }
-
-  player.WeeklyPoints[week - 1] = points;
-});
-
-playersRaw = Array.from(playerMap.values());
-
-// Overwrite WeeksInSeason with true Weeks Played (based on actual participation)
-playersRaw.forEach(p => {
-  p.WeeksInSeason = weeksByPlayer.get(p.Player)?.size ?? 0;
-});
-
-  const { enriched, latestWeek, prevWeek } = computeTrendsAndRanks(playersRaw);
-
-  playersView = enriched;
-
-  // default render (Rank asc)
-  const sorted = sortRows(playersView, "Rank", "asc");
-  renderTable(sorted);
-
-  wireSortHeaders();
-
-  // optional: show "as of week" somewhere
-  const stamp = document.getElementById("asOfWeekStamp");
-  if (stamp) stamp.textContent = `As of Week ${latestWeek} (prev: Week ${prevWeek})`;
 }
 
 document.addEventListener("DOMContentLoaded", initLeaderboard);

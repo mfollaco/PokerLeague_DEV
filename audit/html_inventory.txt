@@ -1,0 +1,13 @@
+frontend/analytics.html
+frontend/analytics/analytics_index.html
+frontend/analytics/eliminations.html
+frontend/analytics/luck.html
+frontend/analytics/nemesis.html
+frontend/analytics/survival.html
+frontend/chip-and-chair.html
+frontend/index-old.html
+frontend/index.html
+frontend/leaderboard.html
+frontend/schedule.html
+frontend/weekly-points.html
+frontend/weekly-results.html

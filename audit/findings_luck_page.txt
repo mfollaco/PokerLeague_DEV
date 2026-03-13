@@ -1,0 +1,19 @@
+LUCK PAGE FINDINGS
+
+1. frontend/js/analytics/luck.js is functional but architecturally different from newer analytics pages.
+2. luck.js currently owns:
+   - season ID parsing
+   - season JSON loading
+   - math helpers
+   - page skeleton rendering
+   - chart rendering
+   - table rendering
+   - sorting behavior
+   - error handling
+   - page initialization
+3. This makes luck.js more self-contained and less aligned with the shared core/page_bootstrap pattern used elsewhere.
+4. Recommended classification:
+   - keep as-is for now
+   - refactor later
+   - move shared concerns to core modules over time
+   - keep page-specific luck/skill scoring logic in the page file

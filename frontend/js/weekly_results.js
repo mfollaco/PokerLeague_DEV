@@ -1,3 +1,6 @@
+import { getSeasonIdFromUrl } from "./core/season_config.js";
+import { loadSeasonData } from "./core/data_loader.js";
+
 console.log("Weekly Points JS Loaded");
 
 function formatMoney(x) {
@@ -5,58 +8,38 @@ function formatMoney(x) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }
 
-// Load JSON
-fetch("data/spring_2026.json")
-  .then(response => response.json())
-  .then(data => {
-
-  console.log("DATA LOADED:", data);
-
-  console.log("Week 1 rows from JSON:",
-    data.WeeklyPoints.filter(r => r.Week === 1)
-  );
-
-  const weeklyRows = data.WeeklyPoints;
-
-  initPlayerWeeklyFinishes(data);   // ← NEW
-
-  const weekly = groupWeeklyPoints(weeklyRows);
-
-  renderWeeklyPoints(weekly);
-})
-
-async function loadWeekNotes(weekNumber) {
-  const el = document.getElementById("week-notes");
-  if (!el) return;
-
-  // If nothing selected yet (page load), show default message
-  if (!weekNumber) {
-    el.innerHTML = `<p class="text-muted mb-0">No notes posted for this week.</p>`;
-    return;
-  }
-
-  el.innerHTML = `<p class="text-muted mb-0">Loading Week ${weekNumber} notes…</p>`;
-
-  const file = `data/notes/week-${String(weekNumber).padStart(2, "0")}.md`;
-
+async function initWeeklyResultsPage() {
   try {
-    const res = await fetch(file, { cache: "no-store" });
+    const seasonId = getSeasonIdFromUrl();
+    const { data, season, source } = await loadSeasonData(seasonId);
 
-    // Missing file = strict “no notes”
-    if (!res.ok) throw new Error(`Missing: ${file} (${res.status})`);
+    console.log("Weekly Results loaded for season:", season.id, "source:", source);
+    console.log("DATA LOADED:", data);
+    console.log(
+      "Week 1 rows from JSON:",
+      (data.WeeklyPoints || []).filter(r => r.Week === 1)
+    );
 
-    const md = await res.text();
-    if (!md.trim()) throw new Error(`Empty: ${file}`);
+    const weeklyRows = Array.isArray(data.WeeklyPoints) ? data.WeeklyPoints : [];
 
-    // Render markdown -> HTML
-    const html = marked.parse(md);
-    el.innerHTML = `<div class="notes-markdown">${html}</div>`;
+    initPlayerWeeklyFinishes(data);
+
+    const weekly = groupWeeklyPoints(weeklyRows);
+    renderWeeklyPoints(weekly);
   } catch (err) {
-    el.innerHTML = `<p class="text-muted mb-0">No notes posted for this week.</p>`;
-    console.warn("[WeekNotes]", err);
+    console.error("Failed to initialize weekly results page:", err);
+
+    const container = document.getElementById("weeklyResultsTable");
+    if (container) {
+      container.innerHTML = `
+        <div class="alert alert-danger mb-0">
+          Failed to load weekly results.<br>
+          <small>${err?.message || String(err)}</small>
+        </div>
+      `;
+    }
   }
 }
-
 
 function groupWeeklyPoints(rows) {
   const map = new Map();
@@ -321,3 +304,5 @@ function renderPlayerWeeklyFinishes(player, weekly) {
   html += `</div>`;
   host.innerHTML = html;
 }
+
+initWeeklyResultsPage();

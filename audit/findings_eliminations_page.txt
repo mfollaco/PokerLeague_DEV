@@ -1,0 +1,24 @@
+ELIMINATIONS PAGE FINDINGS
+
+1. frontend/js/pages/eliminations.js uses the shared initAnalyticsPage() pattern, which is good.
+
+2. It avoids duplicating:
+   - season parsing
+   - season data loading
+   - page initialization logic
+
+3. Strengths:
+   - page-specific logic stays in the page file
+   - clear helper separation for rendering and model building
+   - uses a central buildElimModel() function for transformed data
+   - clean filter + drilldown behavior
+
+4. Mixed-pattern concerns:
+   - page skeleton is injected inline with one large root.innerHTML block
+   - generic helpers like setWrap() and badge() could eventually become shared utilities
+   - rendering helpers, page layout, and data model logic all live in one file
+
+5. Recommended classification:
+   - keep as-is for now
+   - mild cleanup candidate later
+   - gradually align toward the cleaner survival_analytics.js structure

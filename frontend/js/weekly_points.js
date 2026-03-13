@@ -1,20 +1,34 @@
+import { getSeasonIdFromUrl } from "./core/season_config.js";
+import { loadSeasonData } from "./core/data_loader.js";
+
 console.log("Weekly Points JS Loaded");
 
-// Load JSON
-fetch("data/spring_2026.json")
-  .then(response => response.json())
-  .then(data => {
+async function initWeeklyPointsPage() {
+  try {
+    const seasonId = getSeasonIdFromUrl();
+    const { data, season, source } = await loadSeasonData(seasonId);
+
+    console.log("Weekly Points loaded for season:", season.id, "source:", source);
     console.log("DATA LOADED:", data);
 
-    const weeklyRows = data.WeeklyPoints;
+    const weeklyRows = Array.isArray(data.WeeklyPoints) ? data.WeeklyPoints : [];
     const weekly = groupWeeklyPoints(weeklyRows);
 
     renderWeeklyPoints(weekly);
-  })
-  .catch(error => {
-    console.error("JSON LOAD ERROR:", error);
-  });
+  } catch (err) {
+    console.error("Failed to initialize weekly points page:", err);
 
+    const container = document.getElementById("weeklyPointsTable");
+    if (container) {
+      container.innerHTML = `
+        <div class="alert alert-danger mb-0">
+          Failed to load weekly points.<br>
+          <small>${err?.message || String(err)}</small>
+        </div>
+      `;
+    }
+  }
+}
 
 function groupWeeklyPoints(rows) {
   // rows: [{Week, TournamentDate, Player, FinishPlace, Points}, ...]
@@ -90,3 +104,5 @@ function renderWeeklyPoints(weekly) {
       container.appendChild(section);
     });
 }
+
+initWeeklyPointsPage();

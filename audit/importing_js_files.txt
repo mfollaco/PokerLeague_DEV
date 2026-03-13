@@ -1,0 +1,7 @@
+frontend/js/analytics/luck.js
+frontend/js/core/data_loader.js
+frontend/js/core/page_bootstrap.js
+frontend/js/pages/analytics_hub.js
+frontend/js/pages/eliminations.js
+frontend/js/pages/nemesis.js
+frontend/js/pages/survival_analytics.js

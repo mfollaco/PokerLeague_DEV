@@ -1,0 +1,24 @@
+NEMESIS PAGE FINDINGS
+
+1. frontend/js/pages/nemesis.js follows the shared analytics architecture using initAnalyticsPage().
+
+2. Strengths:
+   - relies on shared season loading infrastructure
+   - keeps page-specific logic inside the page module
+   - builds a clean internal data model from EliminationsPairCounts
+   - rendering logic is clearly separated into helper functions
+
+3. Similarities with eliminations.js:
+   - page skeleton injected via root.innerHTML
+   - data model logic and rendering helpers live in the same file
+   - small utility helpers (like esc()) duplicated locally
+
+4. Recommended classification:
+   - healthy and functional
+   - architecture consistent with eliminations.js
+   - mild cleanup candidate in the future
+   - not urgent to refactor
+
+5. Long-term direction:
+   - move shared helpers into core modules if reused
+   - align future analytics pages closer to the survival_analytics.js pattern

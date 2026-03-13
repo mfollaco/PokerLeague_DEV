@@ -1,0 +1,125 @@
+.
+./.git
+./.github
+./.github/workflows
+./.github/workflows/build_and_deploy.yml
+./.gitignore
+./02.17.26_log.csv
+./audit
+./audit/file_inventory.txt
+./backend
+./backend/data_processed
+./backend/data_processed/tables
+./backend/data_processed/tables/Buyins.csv
+./backend/data_processed/tables/ChipAndChair.csv
+./backend/data_processed/tables/Eliminations.csv
+./backend/data_processed/tables/FinishPositions.csv
+./backend/data_processed/tables/PlayerWeeklyMetrics.csv
+./backend/data_processed/tables/Raw_LogEvents.csv
+./backend/data_processed/tables/SeasonTotals.csv
+./backend/data_processed/tables/Survival.csv
+./backend/data_processed/tables/TournamentPlayers.csv
+./backend/data_processed/tables/WeeklyPoints.csv
+./backend/data_processed/tables/WeeklySummary.csv
+./backend/data_processed/tables/WeeklyTournaments.csv
+./backend/data_processed/tables/Winners.csv
+./backend/data_raw
+./backend/data_raw/01.13.26 log.csv
+./backend/data_raw/01.20.26 log.csv
+./backend/data_raw/01.27.26 log.csv
+./backend/data_raw/02.03.26 log.csv
+./backend/data_raw/02.10.26 log.csv
+./backend/data_raw/roster.csv
+./backend/db
+./backend/db/pokerleague.sqlite
+./backend/scripts
+./backend/scripts/__pycache__
+./backend/scripts/build_all.py
+./backend/scripts/build_eliminations.py
+./backend/scripts/build_player_season_stats.py
+./backend/scripts/build_players.py
+./backend/scripts/build_season_totals_drop2.py
+./backend/scripts/build_season.py
+./backend/scripts/build_weekly_payouts.py
+./backend/scripts/build_weekly_points.py
+./backend/scripts/chip_and_chair.py
+./backend/scripts/compute_survival.py
+./backend/scripts/export_season_json.py
+./backend/scripts/fill_finish_place_from_elims.py
+./backend/scripts/fill_finish_place.py
+./backend/scripts/fill_points_from_finish.py
+./backend/scripts/ingest_all_csvs.py
+./backend/scripts/ingest_one_csv.py
+./backend/scripts/init_db.py
+./backend/scripts/load_events.py
+./backend/scripts/source_files.py
+./backend/sql
+./backend/sql/schema.sql
+./backend/sql/weekly_payouts.sql
+./data
+./data/incoming
+./data/incoming/01.13.26 log.csv
+./data/incoming/01.20.26 log.csv
+./data/incoming/01.27.26 log.csv
+./data/incoming/02.03.26 log.csv
+./data/incoming/02.10.26 log.csv
+./data/incoming/02.17.26 log.csv
+./data/incoming/02.24.26 log.csv
+./data/incoming/3.3.26 log.csv
+./data/incoming/README.md
+./frontend
+./frontend/analytics
+./frontend/analytics.html
+./frontend/analytics/analytics_index.html
+./frontend/analytics/eliminations.html
+./frontend/analytics/luck.html
+./frontend/analytics/nemesis.html
+./frontend/analytics/survival.html
+./frontend/apple-touch-icon.png
+./frontend/chip-and-chair.html
+./frontend/css
+./frontend/css/vegas.css
+./frontend/data
+./frontend/data/notes
+./frontend/data/notes/HOW_TO_ADD_WEEKLY_RECAPS.md
+./frontend/data/notes/week-06.md
+./frontend/data/notes/week-07.md
+./frontend/data/spring_2026.json
+./frontend/favicon-16x16.png
+./frontend/favicon.png
+./frontend/images
+./frontend/images/og-analytics.png
+./frontend/index-old.html
+./frontend/index.html
+./frontend/js
+./frontend/js/analytics
+./frontend/js/analytics/layout.js
+./frontend/js/analytics/luck.js
+./frontend/js/chip_and_chair.js
+./frontend/js/core
+./frontend/js/core/chart_utils.js
+./frontend/js/core/data_loader.js
+./frontend/js/core/dom_utils.js
+./frontend/js/core/eliminations_engine.js
+./frontend/js/core/formatters.js
+./frontend/js/core/page_bootstrap.js
+./frontend/js/core/player_colors.js
+./frontend/js/core/season_config.js
+./frontend/js/leaderboard.js
+./frontend/js/pages
+./frontend/js/pages/analytics_hub.js
+./frontend/js/pages/eliminations.js
+./frontend/js/pages/nemesis.js
+./frontend/js/pages/survival_analytics.js
+./frontend/js/weekly_points.js
+./frontend/js/weekly_results.js
+./frontend/leaderboard.html
+./frontend/schedule.html
+./frontend/weekly-points.html
+./frontend/weekly-results.html
+./Makefile
+./PATH_TO_DB.sqlite
+./requirements.txt
+./scripts
+./scripts/build_docs.sh
+./venv
