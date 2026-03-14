@@ -5,10 +5,12 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from chip_and_chair import build_chip_and_chair, ChipAndChairRules
 from compute_survival import compute_survival_season, SurvivalConfig
+import os
 
 DB_PATH = Path("backend/db/pokerleague.sqlite")
-OUT_PATH = Path("frontend/data/spring_2026.json")
-SEASON_ID = "spring_2026"
+SEASON_ID = os.environ.get("SEASON_ID", "spring_2026")
+OUT_DIR = Path("frontend/data")
+OUT_PATH = OUT_DIR / f"{SEASON_ID}.json"
 
 def main():
     conn = sqlite3.connect(DB_PATH)

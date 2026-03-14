@@ -6,7 +6,7 @@ function getSeasonIdFromUrl() {
 }
 
 function withSeason(href) {
-  const season = getSeasonIdFromUrl();
+  const seasonId = getSeasonIdFromUrl() || "spring_2026";
   if (!season) return href;
 
   const url = new URL(href, window.location.origin);

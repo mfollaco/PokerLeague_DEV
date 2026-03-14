@@ -20,15 +20,20 @@ At the end of every session:
 	3.	Set the exact next starting step
 	4.	Update the date above
 
+
+GitHub Actions maintenance
+- Update workflow actions to Node 24-compatible versions before June 2, 2026
+- Review checkout, configure-pages, deploy-pages, setup-python, and upload-artifact versions
+
 ⸻
 
 Current Focus
 
 Primary Goal: Re-architect PokerLeague_DEV to support multiple seasons cleanly and prepare for cross-season trend analytics.
 
-Current Phase: Phase 2 - Audit hardcoded season assumptions
+Current Phase: Phase 3 – Multi-season architecture preparation
 
-Current Next Step: Search the codebase for all hardcoded spring_2026 references and classify them.
+Current Next Step: Add seasons table and begin multi-season data model
 
 ⸻
 
@@ -412,3 +417,9 @@ Next starting step
 Finish replacing remaining hardcoded JSON fetches with shared loader:
 - chip_and_chair.js
 - weekly_points.js
+
+2026-03-13
+- Removed remaining hardcoded spring_2026 references
+- Backend scripts now use SEASON_ID environment variable
+- build_all.py output path now dynamic
+- Makefile sync_analytics now copies using season variable

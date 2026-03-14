@@ -303,7 +303,7 @@ function wireSortHeaders() {
 
 async function initLeaderboard() {
   try {
-    const seasonId = getSeasonIdFromUrl();
+    const seasonId = getSeasonIdFromUrl() || "spring_2026";
     const { data, season, source } = await loadSeasonData(seasonId);
 
     renderSeasonAwards(data.SeasonAwards ?? []);

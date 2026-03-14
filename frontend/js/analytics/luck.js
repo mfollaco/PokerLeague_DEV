@@ -421,7 +421,7 @@ async function init() {
   mountPageSkeleton();
 
   try {
-    const seasonId = getSeasonIdFromUrl();
+    const seasonId = getSeasonIdFromUrl() || "spring_2026";
     const seasonData = await loadSeasonData(seasonId);
 
     let rows = buildLuckSkillRows(seasonData);

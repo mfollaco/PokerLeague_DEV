@@ -1,7 +1,11 @@
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS seasons (
-  season_id TEXT PRIMARY KEY
+  season_id   TEXT PRIMARY KEY,
+  season_name TEXT NOT NULL,
+  start_date  TEXT,
+  end_date    TEXT,
+  is_active   INTEGER DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS players (

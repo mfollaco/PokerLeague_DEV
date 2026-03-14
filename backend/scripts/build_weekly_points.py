@@ -1,8 +1,10 @@
+import os
 import sqlite3
 from pathlib import Path
 
 DB_PATH = Path("backend/db/pokerleague.sqlite")
-SEASON_ID = "spring_2026"
+
+SEASON_ID = os.environ.get("SEASON_ID", "spring_2026")
 
 def main():
     conn = sqlite3.connect(DB_PATH)

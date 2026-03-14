@@ -10,7 +10,7 @@ function formatMoney(x) {
 
 async function initWeeklyResultsPage() {
   try {
-    const seasonId = getSeasonIdFromUrl();
+    const seasonId = getSeasonIdFromUrl() || "spring_2026";
     const { data, season, source } = await loadSeasonData(seasonId);
 
     console.log("Weekly Results loaded for season:", season.id, "source:", source);

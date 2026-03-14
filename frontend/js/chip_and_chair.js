@@ -1,7 +1,7 @@
 // frontend/js/chip-and-chair.js
 
 let cacRows = [];
-let cacSort = { key: "TotalStack", dir: "desc" }; // default sort
+let cacSort = { key: "TotalStack", dir: "desc" };
 
 function fmtInt(n) {
   const x = Number(n) || 0;
@@ -30,34 +30,33 @@ function sortRows(rows, key, dir) {
       if (cmp !== 0) return cmp * mult;
     }
 
-    // stable tiebreak
     return String(a?.Player ?? "").localeCompare(String(b?.Player ?? ""));
   });
 }
 
 function renderKpis(rules, rows, buildTs) {
-  // Update "As of"
   const asofEl = document.getElementById("cac-asof");
-  if (asofEl) asofEl.textContent = buildTs ? `As of ${buildTs}` : "—";
+  if (asofEl) {
+    asofEl.textContent = buildTs ? `As of ${buildTs}` : "—";
+  }
 
-  // Rules with defaults
   const base = rules?.base_stack ?? 6500;
   const mult = rules?.season_points_chip_multiplier ?? 150;
 
-  // Totals + leader
-  const totalChips = (rows || []).reduce((sum, r) => sum + (Number(r.TotalStack) || 0), 0);
+  const totalChips = (rows || []).reduce(
+    (sum, r) => sum + (Number(r.TotalStack) || 0),
+    0
+  );
 
   const leader = [...(rows || [])].sort(
     (a, b) => (Number(b.TotalStack) || 0) - (Number(a.TotalStack) || 0)
   )[0];
 
-  // Helper to safely set text
   const setText = (id, val) => {
     const el = document.getElementById(id);
     if (el) el.textContent = val;
   };
 
-  // Write into your STATIC KPI HTML ids
   setText("kpi-base-stack", fmtInt(base));
   setText("kpi-points-rate", fmtInt(mult));
   setText("kpi-total-chips", fmtInt(totalChips));
@@ -85,19 +84,27 @@ function renderWeek11Payouts(payouts) {
           <span class="badge bg-secondary me-2">Pending</span>
           Results will appear automatically after Week 11 payouts are entered.
         </div>
+      </div>
     `;
 
     if (poolText) {
-      poolText.textContent = `Prize Pool: $1120`;
+      poolText.textContent = "Prize Pool: $1120";
     }
 
     return;
   }
 
-  const places = ["1st Place","2nd Place","3rd Place","4th Place","5th Place","6th Place"];
+  const places = [
+    "1st Place",
+    "2nd Place",
+    "3rd Place",
+    "4th Place",
+    "5th Place",
+    "6th Place"
+  ];
 
   rows.forEach((p, i) => {
-    const place = places[i] ?? `${i+1}th Place`;
+    const place = places[i] ?? `${i + 1}th Place`;
     const name = p.Player ?? "";
     const amt = `$${Number(p.Amount ?? 0).toFixed(0)}`;
 
@@ -115,8 +122,7 @@ function renderWeek11Payouts(payouts) {
     host.appendChild(col);
   });
 
-  // prize pool (sum of payouts)
-  const pool = rows.reduce((a,b)=>a + Number(b.Amount || 0),0);
+  const pool = rows.reduce((sum, row) => sum + Number(row.Amount || 0), 0);
 
   if (poolText) {
     poolText.textContent = `Prize Pool: $${pool.toFixed(0)}`;
@@ -167,29 +173,59 @@ function wireSortHeaders() {
 
 async function initChipAndChair() {
   try {
-    const res = await fetch("data/spring_2026.json");
-    const data = await res.json();
+    if (typeof getSeasonIdFromUrl !== "function") {
+      throw new Error("getSeasonIdFromUrl() is not available.");
+    }
 
-    // These keys are what your exporter is writing:
-    const rows = Array.isArray(data.ChipAndChairStacks) ? data.ChipAndChairStacks : [];
-    const rules = data.ChipAndChairRules ?? null;
-    const buildTs = data.build_ts ?? "";
+    if (typeof loadSeasonData !== "function") {
+      throw new Error("loadSeasonData() is not available.");
+    }
 
-    const payouts = Array.isArray(data.ChipAndChairPayouts) ? data.ChipAndChairPayouts : [];
+    const seasonId = getSeasonIdFromUrl() || "spring_2026";
+    const data = await loadSeasonData(seasonId);
+
+    const rows = Array.isArray(data?.ChipAndChairStacks)
+      ? data.ChipAndChairStacks
+      : [];
+
+    const rules = data?.ChipAndChairRules ?? null;
+    const buildTs = data?.build_ts ?? "";
+
+    const payouts = Array.isArray(data?.ChipAndChairPayouts)
+      ? data.ChipAndChairPayouts
+      : [];
+
     renderWeek11Payouts(payouts);
 
     cacRows = rows;
-
     renderKpis(rules, rows, buildTs);
 
     const sorted = sortRows(rows, cacSort.key, cacSort.dir);
     renderTable(sorted);
     wireSortHeaders();
   } catch (err) {
-    console.error(err);
+    console.error("Chip & Chair load failed:", err);
+
     const tbody = document.getElementById("cac-body");
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="10" class="text-center text-danger">Failed to load Chip &amp; Chair data.</td></tr>`;
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="10" class="text-center text-danger">
+            Failed to load Chip &amp; Chair data.
+          </td>
+        </tr>
+      `;
+    }
+
+    const host = document.getElementById("week11PayoutsBody");
+    if (host) {
+      host.innerHTML = `
+        <div class="col-12">
+          <div class="text-danger">
+            Failed to load payout data.
+          </div>
+        </div>
+      `;
     }
   }
 }

@@ -3,11 +3,13 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 import json
 import math
-
+import os
 import pandas as pd
 
 from source_files import latest_log_filename
 
+SEASON_ID = os.environ.get("SEASON_ID", "spring_2026")
+SEASON_NAME = os.environ.get("SEASON_NAME", "Spring Season 2026")
 
 def payouts_multiple_of_20(pot: float, percents: list[float], increment: int = 20) -> list[int]:
     raw_amounts = [pot * p for p in percents]
@@ -55,7 +57,7 @@ TABLES_DIR = PROCESSED_DIR / "tables"
 
 FRONTEND_DATA_DIR = PROJECT_ROOT / "frontend" / "data"
 FRONTEND_DATA_DIR.mkdir(parents=True, exist_ok=True)
-JSON_OUTPUT_PATH = FRONTEND_DATA_DIR / "spring_2026.json"
+JSON_OUTPUT_PATH = FRONTEND_DATA_DIR / f"{SEASON_ID}.json"
 
 BUILD_TS_EST = datetime.now(ZoneInfo("America/New_York")).strftime("%b %d, %Y %I:%M %p %Z")
 def format_int_cols_for_html(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame:
@@ -821,8 +823,8 @@ def write_season_json(tables: dict, out_path: Path):
 
     # --- Final JSON structure ---
     out = {
-        "season_id": "spring_2026",
-        "season_name": "Spring Season 2026",
+        "season_id": SEASON_ID,
+        "season_name": SEASON_NAME,
         "last_updated": BUILD_TS_EST,
         "latest_source_file": LAST_SOURCE_FILE,
         "events": events,

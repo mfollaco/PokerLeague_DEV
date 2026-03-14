@@ -248,7 +248,7 @@ async function init() {
   const root = document.getElementById("page-root");
   if (!root) return;
 
-  const seasonIdFromUrl = getSeasonIdFromUrl();
+  const seasonId = getSeasonIdFromUrl() || "spring_2026";
   const season = resolveSeason(seasonIdFromUrl);
 
   renderHubScaffold(root);

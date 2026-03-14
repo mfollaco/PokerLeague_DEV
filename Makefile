@@ -45,6 +45,6 @@ sync_analytics:
 		echo "CI=true → skipping local Analytics Lab sync"; \
 	else \
 		mkdir -p ../PokerLeague_ANALYTICS_LAB/frontend/data/; \
-		cp frontend/data/spring_2026.json ../PokerLeague_ANALYTICS_LAB/frontend/data/; \
-		echo "✅ Synced spring_2026.json to PokerLeague_ANALYTICS_LAB"; \
+		cp frontend/data/*.json ../PokerLeague_ANALYTICS_LAB/frontend/data/; \
+		echo "✅ Synced season JSON to PokerLeague_ANALYTICS_LAB"; \
 	fi

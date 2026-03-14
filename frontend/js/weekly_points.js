@@ -5,7 +5,7 @@ console.log("Weekly Points JS Loaded");
 
 async function initWeeklyPointsPage() {
   try {
-    const seasonId = getSeasonIdFromUrl();
+    const seasonId = getSeasonIdFromUrl() || "spring_2026";
     const { data, season, source } = await loadSeasonData(seasonId);
 
     console.log("Weekly Points loaded for season:", season.id, "source:", source);

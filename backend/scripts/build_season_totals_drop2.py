@@ -4,7 +4,8 @@ from pathlib import Path
 
 DB_PATH = Path(os.environ.get("POKERLEAGUE_DB", "backend/db/pokerleague.sqlite"))
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-SEASON_ID = "spring_2026"
+
+SEASON_ID = os.environ.get("SEASON_ID", "spring_2026")
 DROPS = 2
 
 def main():
