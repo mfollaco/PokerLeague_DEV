@@ -1,7 +1,17 @@
+import re
+import sys
 import csv
 import sqlite3
 from pathlib import Path
 from datetime import datetime
+
+FILENAME_PATTERN = re.compile(r"^\d{2}\.\d{2}\.\d{2} log\.csv$")
+
+def validate_csv_filename(filename):
+    if not FILENAME_PATTERN.match(filename):
+        print(f"❌ Invalid CSV filename: {filename}")
+        print("Expected format: mm.dd.yy log.csv (example: 03.14.26 log.csv)")
+        sys.exit(1)
 
 DB_PATH = Path("backend/db/pokerleague.sqlite")
 DATA_DIR = Path("data/incoming")
@@ -79,9 +89,12 @@ def main():
     if not DATA_DIR.exists():
         raise SystemExit(f"Data dir not found: {DATA_DIR}")
 
-    csv_files = sorted([p for p in DATA_DIR.glob("*.csv") if "log.csv" in p.name])
+    csv_files = sorted(DATA_DIR.glob("*.csv"))
     if not csv_files:
         raise SystemExit(f"No log CSV files found in {DATA_DIR}")
+
+    for p in csv_files:
+        validate_csv_filename(p.name)
 
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
