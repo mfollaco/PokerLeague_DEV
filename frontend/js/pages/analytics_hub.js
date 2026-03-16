@@ -1,6 +1,10 @@
 import { byId, setHtml, show, hide, renderAlert, escapeHtml } from "../core/dom_utils.js";
-import { getSeasonIdFromUrl, resolveSeason, SEASONS } from "../core/season_config.js";
-import { loadSeasonData, clearSeasonCache } from "../core/data_loader.js";
+import {
+  getSeasonIdFromUrl,
+  resolveSeason,
+  SEASONS
+} from "../core/season_config.js";
+import { clearSeasonCache } from "../core/data_loader.js";
 
 /* -----------------------------
    Season helpers
@@ -11,7 +15,9 @@ function buildSeasonOptions(currentId) {
     .map((id) => {
       const s = SEASONS[id];
       const selected = id === currentId ? "selected" : "";
-      return `<option value="${escapeHtml(s.id)}" ${selected}>${escapeHtml(s.name)}</option>`;
+      const label = s.shortLabel || s.displayLabel || s.id;
+
+      return `<option value="${escapeHtml(s.id)}" ${selected}>${escapeHtml(label)}</option>`;
     })
     .join("");
 }
@@ -23,11 +29,11 @@ function navigateWithSeason(seasonId) {
 }
 
 function getWeekCount(data) {
-  // Prefer a real "weeks" list if you ever add one in your JSON
   const explicit =
     Array.isArray(data?.Weeks) ? data.Weeks.length :
     Array.isArray(data?.WeekList) ? data.WeekList.length :
     null;
+
   if (explicit != null) return explicit;
 
   // Try WeeklyPoints: count distinct week keys if present
@@ -249,7 +255,7 @@ async function init() {
   if (!root) return;
 
   const seasonId = getSeasonIdFromUrl() || "spring_2026";
-  const season = resolveSeason(seasonIdFromUrl);
+  const season = resolveSeason(seasonId);
 
   renderHubScaffold(root);
 
@@ -259,6 +265,7 @@ async function init() {
 
   if (seasonSelect) {
     setHtml(seasonSelect, buildSeasonOptions(season.id));
+    seasonSelect.value = season.id;
     seasonSelect.addEventListener("change", (e) => navigateWithSeason(e.target.value));
   }
 
@@ -278,7 +285,13 @@ async function init() {
   hide(contentRow);
 
   try {
-    const { data } = await loadSeasonData(season.id);
+    const response = await fetch(season.dataPath, { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`Failed to load ${season.dataPath}. HTTP ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
 
     const weeks = getWeekCount(data);
     const players = getPlayerCount(data);

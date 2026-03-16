@@ -7,10 +7,10 @@ function getSeasonIdFromUrl() {
 
 function withSeason(href) {
   const seasonId = getSeasonIdFromUrl() || "spring_2026";
-  if (!season) return href;
+  if (!seasonId) return href;
 
   const url = new URL(href, window.location.origin);
-  url.searchParams.set("season", season);
+  url.searchParams.set("season", seasonId);
   return url.pathname + url.search + url.hash;
 }
 
@@ -90,6 +90,30 @@ export function injectAnalyticsShell(options = {}) {
   }
 }
 
+function initSeasonSelector() {
+  const selector = document.getElementById("season-select");
+  if (!selector) return;
+
+  const currentSeason = getSeasonIdFromUrl() || "spring_2026";
+
+  const seasons = [
+    { id: "spring_2026", label: "Spring 2026" }
+  ];
+
+  selector.innerHTML = seasons
+    .map(s => `<option value="${s.id}">${s.label}</option>`)
+    .join("");
+
+  selector.value = currentSeason;
+
+  selector.addEventListener("change", () => {
+    const season = selector.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set("season", season);
+    window.location.href = url.toString();
+  });
+}
+
 // ---------------------------------------------
 // Auto-shell (optional): inject automatically
 // if the host elements exist on the page.
@@ -116,4 +140,6 @@ export function injectAnalyticsShell(options = {}) {
     showSeasonControls,
     showBackToHub
   });
+
+  initSeasonSelector();
 })();

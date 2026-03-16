@@ -66,7 +66,15 @@
   <!-- MAIN -->
   <main class="py-5">
     <div class="container">
-      <h1 class="neon-subtitle mb-4">Spring Season 2026 Leaderboard</h1>
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 id="leaderboardTitle" class="neon-subtitle mb-0">Leaderboard</h1>
+
+        <div style="min-width:180px;">
+          <label for="seasonSelector" class="form-label text-warning small mb-1">Season</label>
+          <select id="seasonSelector" class="form-select form-select-sm bg-dark text-light border-warning"></select>
+        </div>
+      </div>
 
       <!-- SEASON AWARDS -->
       <div class="card card-vegas border-gold mb-4" id="seasonAwardsCard" style="display:none;">

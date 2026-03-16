@@ -1,4 +1,4 @@
-// frontend/js/chip-and-chair.js
+import { loadSeason } from "./core/season.js";
 
 let cacRows = [];
 let cacSort = { key: "TotalStack", dir: "desc" };
@@ -173,16 +173,12 @@ function wireSortHeaders() {
 
 async function initChipAndChair() {
   try {
-    if (typeof getSeasonIdFromUrl !== "function") {
-      throw new Error("getSeasonIdFromUrl() is not available.");
-    }
+    const { seasonId, seasonLabel, data } = await loadSeason();
 
-    if (typeof loadSeasonData !== "function") {
-      throw new Error("loadSeasonData() is not available.");
+    const title = document.getElementById("chipAndChairTitle");
+    if (title) {
+      title.textContent = `${seasonLabel} Chip & A Chair`;
     }
-
-    const seasonId = getSeasonIdFromUrl() || "spring_2026";
-    const data = await loadSeasonData(seasonId);
 
     const rows = Array.isArray(data?.ChipAndChairStacks)
       ? data.ChipAndChairStacks
@@ -194,6 +190,8 @@ async function initChipAndChair() {
     const payouts = Array.isArray(data?.ChipAndChairPayouts)
       ? data.ChipAndChairPayouts
       : [];
+
+    console.log("Chip & Chair loaded for season:", seasonId);
 
     renderWeek11Payouts(payouts);
 
@@ -211,7 +209,8 @@ async function initChipAndChair() {
       tbody.innerHTML = `
         <tr>
           <td colspan="10" class="text-center text-danger">
-            Failed to load Chip &amp; Chair data.
+            Failed to load Chip &amp; Chair data.<br>
+            <small>${err?.message || String(err)}</small>
           </td>
         </tr>
       `;

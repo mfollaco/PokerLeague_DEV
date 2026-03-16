@@ -1,5 +1,4 @@
-import { getSeasonIdFromUrl } from "./core/season_config.js";
-import { loadSeasonData } from "./core/data_loader.js";
+import { loadSeason, initSeasonSelector } from "./core/season.js";
 
 // frontend/js/leaderboard.js
 
@@ -303,8 +302,14 @@ function wireSortHeaders() {
 
 async function initLeaderboard() {
   try {
-    const seasonId = getSeasonIdFromUrl() || "spring_2026";
-    const { data, season, source } = await loadSeasonData(seasonId);
+    initSeasonSelector();
+
+    const { seasonId, seasonLabel, data } = await loadSeason();
+
+    const title = document.getElementById("leaderboardTitle");
+    if (title) {
+      title.textContent = `${seasonLabel} Leaderboard`;
+    }
 
     renderSeasonAwards(data.SeasonAwards ?? []);
 
