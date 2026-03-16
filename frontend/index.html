@@ -28,6 +28,9 @@
 
   <!-- Custom Vegas Theme -->
   <link rel="stylesheet" href="css/vegas.css" />
+
+  <script type="module" src="js/core/season.js"></script>
+
 </head>
 
 <body class="bg-vegas text-light home-draft">
@@ -191,19 +194,14 @@
   </footer>
 
   <!-- DATA LOADER -->
-  <script>
+  <script type="module">
+  import { loadSeason } from "./js/core/season.js";
     async function loadSeasonData() {
       try {
-        const SEASON_ID = "spring_2026";
-        const url = `data/${SEASON_ID}.json`;
-
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
-
-        const data = await res.json();
+        const { seasonId, data: seasonData } = await loadSeason();
 
         // Latest winner
-        const weekly = data.WeeklyPoints || [];
+        const weekly = seasonData.WeeklyPoints || [];
         const latestWeek = weekly.reduce((m, r) => Math.max(m, Number(r.Week || 0)), 0);
 
         loadCommissionerNotes(latestWeek);
@@ -234,7 +232,7 @@
         }
 
         // Current leaders
-        const totals = data.SeasonTotals || [];
+        const totals = seasonData.SeasonTotals || [];
         const leaders = [...totals]
           .sort((a, b) => Number(b.SeasonPointsDrop2 || 0) - Number(a.SeasonPointsDrop2 || 0))
           .slice(0, 5)
@@ -264,6 +262,7 @@
         console.error(err);
       }
     }
+    loadSeasonData();
   </script>
 
   <!-- Markdown parser -->
@@ -311,8 +310,6 @@
 
       el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
     }
-
-    loadSeasonData();
   </script>
 
   <!-- Bootstrap JS -->
