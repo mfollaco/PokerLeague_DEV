@@ -134,7 +134,6 @@ Completed this session:
 - Confirmed no remaining references to deleted weekly points page/files
 
 Still remaining in this phase:
-- Refactor homepage inline season-loading JS
 - Refactor or retire core/page_bootstrap.js
 - Decide whether core/data_loader.js is still needed after remaining migrations
 - Make weekly notes paths season-aware instead of using a single shared notes folder
@@ -350,6 +349,8 @@ Completed
 - Season dropdown groundwork is now in place
 - Confirmed local testing with no console errors on key migrated pages
 - Migrated luck.js to the shared season loader system
+- Migrated luck.js to the shared season loader
+- Refactored homepage to use shared season loader instead of hardcoded spring_2026
 
 Discovered Issues
 - Legacy compatibility shims were needed because old files still imported `resolveSeason` and `getSeasonIdFromUrl`
@@ -359,6 +360,6 @@ Discovered Issues
 - remaining legacy season-loading code still exists in `luck.js`, homepage inline JS, and `page_bootstrap.js`
 
 Next starting step
-- Inspect homepage inline season-loading code
-- Then decide whether core/page_bootstrap.js and core/data_loader.js should be refactored, compatibility-only, or removed
+- Decide whether core/page_bootstrap.js and core/data_loader.js should be refactored, compatibility-only, or removed
 - Then make weekly notes paths season-aware
+- Then evaluate whether the season selector should move into the shared layout
