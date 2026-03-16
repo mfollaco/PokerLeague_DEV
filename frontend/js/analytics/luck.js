@@ -1,13 +1,9 @@
 import { injectAnalyticsShell } from "./layout.js";
+import { loadSeason } from "../core/season.js";
 
 let currentSortKey = "LRI";
 let currentSortDir = "desc";
 let luckSkillChart = null;
-
-function getSeasonIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("season") || "spring_2026";
-}
 
 function mean(values) {
   if (!values.length) return 0;
@@ -71,14 +67,6 @@ function getSignalFromPressure(z) {
   if (z > -0.75) return "Stable";
   if (z > -1.5) return "Cooling Down";
   return "❄ Ice Cold";
-}
-
-async function loadSeasonData(seasonId) {
-  const response = await fetch(`../data/${seasonId}.json`);
-  if (!response.ok) {
-    throw new Error(`Failed to load season data for ${seasonId}`);
-  }
-  return response.json();
 }
 
 function buildEliminationTotals(pairCounts) {
@@ -421,8 +409,7 @@ async function init() {
   mountPageSkeleton();
 
   try {
-    const seasonId = getSeasonIdFromUrl() || "spring_2026";
-    const seasonData = await loadSeasonData(seasonId);
+    const { seasonId, data: seasonData } = await loadSeason();
 
     let rows = buildLuckSkillRows(seasonData);
 
