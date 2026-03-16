@@ -134,10 +134,9 @@ Completed this session:
 - Confirmed no remaining references to deleted weekly points page/files
 
 Still remaining in this phase:
-- Migrate `frontend/js/analytics/luck.js`
 - Refactor homepage inline season-loading JS
-- Refactor or retire `core/page_bootstrap.js`
-- Decide whether `core/data_loader.js` is still needed after remaining migrations
+- Refactor or retire core/page_bootstrap.js
+- Decide whether core/data_loader.js is still needed after remaining migrations
 - Make weekly notes paths season-aware instead of using a single shared notes folder
 - Move season selector into broader shared site layout if justified
 
@@ -350,6 +349,7 @@ Completed
 - Weekly Points page was removed after confirming Weekly Results is the correct unified page
 - Season dropdown groundwork is now in place
 - Confirmed local testing with no console errors on key migrated pages
+- Migrated luck.js to the shared season loader system
 
 Discovered Issues
 - Legacy compatibility shims were needed because old files still imported `resolveSeason` and `getSeasonIdFromUrl`
@@ -359,6 +359,6 @@ Discovered Issues
 - remaining legacy season-loading code still exists in `luck.js`, homepage inline JS, and `page_bootstrap.js`
 
 Next starting step
-- Migrate `frontend/js/analytics/luck.js` to the shared season system
-- Then inspect homepage inline season-loading code
-- Then decide whether `core/page_bootstrap.js` and `core/data_loader.js` should be refactored, compatibility-only, or removed
+- Inspect homepage inline season-loading code
+- Then decide whether core/page_bootstrap.js and core/data_loader.js should be refactored, compatibility-only, or removed
+- Then make weekly notes paths season-aware
