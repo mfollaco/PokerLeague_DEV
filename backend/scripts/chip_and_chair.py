@@ -122,17 +122,13 @@ def build_chip_and_chair(
         if repeat_occurrences:
             repeat_count_by_elim[elim_player] = repeat_count_by_elim.get(elim_player, 0) + repeat_occurrences
 
-        # tiered capped chips per pair
-        if cnt <= 0:
-            pair_bonus = 0
-        elif cnt == 1:
-            pair_bonus = tier1
-        elif cnt == 2:
-            pair_bonus = tier2
-        else:
-            pair_bonus = tier3
+            # tiered capped repeat bonus per pair
+            if cnt == 2:
+                pair_bonus = tier2
+            else:
+                pair_bonus = tier3
 
-        repeat_chips_by_elim[elim_player] = repeat_chips_by_elim.get(elim_player, 0) + pair_bonus
+            repeat_chips_by_elim[elim_player] = repeat_chips_by_elim.get(elim_player, 0) + pair_bonus
 
     # write into by_player
     for elim_player in set(repeat_count_by_elim.keys()) | set(repeat_chips_by_elim.keys()):
