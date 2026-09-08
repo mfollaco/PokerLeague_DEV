@@ -1,12 +1,21 @@
-export const DEFAULT_SEASON_ID = "spring_2026";
+export const DEFAULT_SEASON_ID = "fall_2026";
 
 export const SEASONS = {
+  fall_2026: {
+    id: "fall_2026",
+    displayLabel: "Fall Season 2026",
+    shortLabel: "Fall 2026",
+    sortOrder: 202602,
+    status: "active",
+    dataPath: "/data/fall_2026.json"
+  },
   spring_2026: {
     id: "spring_2026",
     displayLabel: "Spring Season 2026",
     shortLabel: "Spring 2026",
     sortOrder: 202601,
-    status: "active"
+    status: "archived",
+    dataPath: "/data/spring_2026.json"
   }
 };
 
@@ -44,7 +53,7 @@ export function resolveSeasonConfig(seasonId = null) {
   if (season) {
     return {
       ...season,
-      dataPath: buildSeasonDataPath(season.id)
+      dataPath: season.dataPath || buildSeasonDataPath(season.id)
     };
   }
 
@@ -52,7 +61,7 @@ export function resolveSeasonConfig(seasonId = null) {
 
   return {
     ...fallbackSeason,
-    dataPath: buildSeasonDataPath(fallbackSeason.id)
+    dataPath: fallbackSeason.dataPath || buildSeasonDataPath(fallbackSeason.id)
   };
 }
 

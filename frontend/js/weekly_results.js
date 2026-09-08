@@ -1,6 +1,8 @@
-import { loadSeason } from "./core/season.js";
+import { loadSeason, initSeasonSelector } from "./core/season.js";
 
 console.log("Weekly Results JS Loaded");
+
+let currentSeasonId = null;
 
 function formatMoney(x) {
   const n = Number(x || 0);
@@ -13,7 +15,12 @@ function formatMoney(x) {
 
 async function initWeeklyResultsPage() {
   try {
+    initSeasonSelector();
     const { seasonId, seasonLabel, data } = await loadSeason();
+    currentSeasonId = seasonId;
+
+    const title = document.getElementById("weeklyResultsTitle");
+    if (title) title.textContent = `${seasonLabel} Weekly Results`;
 
     console.log("Weekly Results loaded for season:", seasonId);
     console.log("Season label:", seasonLabel);
@@ -75,6 +82,12 @@ function renderWeeklyPoints(weekly) {
   if (!container) return;
 
   container.innerHTML = "";
+
+  if (weekly.length === 0) {
+    container.innerHTML = `<p class="text-center text-muted mb-0">No weekly results yet.</p>`;
+    loadWeekNotes(null);
+    return;
+  }
 
   weekly.forEach((week) => {
     const weekLabel = new Date(week.date).toLocaleDateString();
@@ -145,6 +158,11 @@ function renderWeeklyPoints(weekly) {
 async function loadWeekNotes(weekNumber) {
   const el = document.getElementById("week-notes");
   if (!el) return;
+
+  if (currentSeasonId !== "spring_2026") {
+    el.innerHTML = `<p class="text-muted mb-0">Week notes are not available for this season yet.</p>`;
+    return;
+  }
 
   if (!weekNumber) {
     el.innerHTML = `<p class="text-muted mb-0">Select a week to view notes.</p>`;

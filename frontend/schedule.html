@@ -50,15 +50,21 @@
   <!-- MAIN -->
   <main class="py-5 flex-fill">
     <div class="container">
-      <h1 class="neon-subtitle mb-4">Season Schedule</h1>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 id="scheduleTitle" class="neon-subtitle mb-0">Season Schedule</h1>
+        <div style="min-width:180px;">
+          <label for="seasonSelector" class="form-label text-warning small mb-1">Season</label>
+          <select id="seasonSelector" class="form-select form-select-sm bg-dark text-light border-warning"></select>
+        </div>
+      </div>
 
       <div class="card card-vegas p-5 text-center">
         <div class="mb-3">
           <i class="bi bi-calendar-event text-gold" style="font-size: 2rem;"></i>
         </div>
-        <h3 class="text-gold mb-2">Coming Next Season</h3>
-        <p class="text-muted-vegas mb-0">
-          The full tournament schedule will be published when the next season is finalized.
+        <h3 id="scheduleStatusTitle" class="text-gold mb-2">Schedule Not Published</h3>
+        <p id="scheduleStatusText" class="text-muted-vegas mb-0">
+          Season schedule information is not currently published.
         </p>
       </div>
 
@@ -72,8 +78,18 @@
     </div>
   </footer>
 
-  <!-- Keep this so future schedule logic can plug back in -->
- 
+  <script type="module">
+    import { initSeasonSelector } from "./js/core/season.js";
+    import { resolveSeasonConfig } from "./js/core/season_config.js";
+
+    const season = resolveSeasonConfig();
+    initSeasonSelector();
+
+    document.getElementById("scheduleTitle").textContent = `${season.displayLabel} Schedule`;
+    document.getElementById("scheduleStatusText").textContent =
+      `${season.displayLabel} schedule is not yet published or configured.`;
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

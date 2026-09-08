@@ -46,3 +46,29 @@ export function initSeasonSelector() {
     window.location.href = url.toString();
   });
 }
+
+export function preserveSeasonInNavigation(root = document) {
+  const seasonId = resolveSeasonIdFromUrl();
+
+  root.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#") || href.startsWith("mailto:")) return;
+
+    const url = new URL(href, window.location.href);
+    if (url.origin !== window.location.origin) return;
+    if (!url.pathname.endsWith(".html") && !url.pathname.endsWith("/")) return;
+
+    url.searchParams.set("season", seasonId);
+    link.setAttribute("href", `${url.pathname}${url.search}${url.hash}`);
+  });
+}
+
+function initSeasonNavigation() {
+  preserveSeasonInNavigation();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSeasonNavigation);
+} else {
+  initSeasonNavigation();
+}

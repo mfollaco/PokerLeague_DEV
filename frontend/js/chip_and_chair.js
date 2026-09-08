@@ -1,4 +1,4 @@
-import { loadSeason } from "./core/season.js";
+import { loadSeason, initSeasonSelector } from "./core/season.js";
 
 let cacRows = [];
 let cacSort = { key: "TotalStack", dir: "desc" };
@@ -40,8 +40,8 @@ function renderKpis(rules, rows, buildTs) {
     asofEl.textContent = buildTs ? `As of ${buildTs}` : "—";
   }
 
-  const base = rules?.base_stack ?? 6500;
-  const mult = rules?.season_points_chip_multiplier ?? 150;
+  const base = rules?.base_stack;
+  const mult = rules?.season_points_chip_multiplier;
 
   const totalChips = (rows || []).reduce(
     (sum, r) => sum + (Number(r.TotalStack) || 0),
@@ -57,8 +57,8 @@ function renderKpis(rules, rows, buildTs) {
     if (el) el.textContent = val;
   };
 
-  setText("kpi-base-stack", fmtInt(base));
-  setText("kpi-points-rate", fmtInt(mult));
+  setText("kpi-base-stack", base == null ? "—" : fmtInt(base));
+  setText("kpi-points-rate", mult == null ? "—" : fmtInt(mult));
   setText("kpi-total-chips", fmtInt(totalChips));
 
   setText("kpi-leader-name", leader?.Player ?? "—");
@@ -173,6 +173,7 @@ function wireSortHeaders() {
 
 async function initChipAndChair() {
   try {
+    initSeasonSelector();
     const { seasonId, seasonLabel, data } = await loadSeason();
 
     const title = document.getElementById("chipAndChairTitle");
@@ -193,7 +194,18 @@ async function initChipAndChair() {
 
     console.log("Chip & Chair loaded for season:", seasonId);
 
-    renderWeek11Payouts(payouts);
+    const unavailable = document.getElementById("cacUnavailable");
+    const configuredContent = document.getElementById("cacConfiguredContent");
+    const isConfigured = Object.keys(rules || {}).length > 0;
+
+    unavailable?.classList.toggle("d-none", isConfigured);
+    configuredContent?.classList.toggle("d-none", !isConfigured);
+
+    if (!isConfigured) return;
+
+    if (seasonId === "spring_2026") {
+      renderWeek11Payouts(payouts);
+    }
 
     cacRows = rows;
     renderKpis(rules, rows, buildTs);

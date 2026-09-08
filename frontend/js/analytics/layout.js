@@ -1,13 +1,12 @@
 // frontend/js/analytics/layout.js
 
-function getSeasonIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("season");
-}
+import {
+  getAllSeasons,
+  resolveSeasonIdFromUrl
+} from "../core/season_config.js";
 
 function withSeason(href) {
-  const seasonId = getSeasonIdFromUrl() || "spring_2026";
-  if (!seasonId) return href;
+  const seasonId = resolveSeasonIdFromUrl();
 
   const url = new URL(href, window.location.origin);
   url.searchParams.set("season", seasonId);
@@ -53,7 +52,7 @@ export function injectAnalyticsShell(options = {}) {
     headerHost.innerHTML = [
       `<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-warning-subtle mb-4" style="background: rgba(0,0,0,0.35);">`,
       `  <div class="container">`,
-      `    <a class="navbar-brand text-warning fw-bold" href="${homeHref}">Home</a>`,
+      `    <a class="navbar-brand text-warning fw-bold" href="${withSeason(homeHref)}">Home</a>`,
       `    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#analyticsNav" aria-controls="analyticsNav" aria-expanded="false" aria-label="Toggle navigation">`,
       `      <span class="navbar-toggler-icon"></span>`,
       `    </button>`,
@@ -94,14 +93,11 @@ function initSeasonSelector() {
   const selector = document.getElementById("season-select");
   if (!selector) return;
 
-  const currentSeason = getSeasonIdFromUrl() || "spring_2026";
-
-  const seasons = [
-    { id: "spring_2026", label: "Spring 2026" }
-  ];
+  const currentSeason = resolveSeasonIdFromUrl();
+  const seasons = getAllSeasons();
 
   selector.innerHTML = seasons
-    .map(s => `<option value="${s.id}">${s.label}</option>`)
+    .map(s => `<option value="${s.id}">${s.shortLabel}</option>`)
     .join("");
 
   selector.value = currentSeason;

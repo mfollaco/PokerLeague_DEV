@@ -165,7 +165,7 @@ function renderTiles(seasonId) {
   `;
 }
 
-function renderHubScaffold(root) {
+function renderHubScaffold(root, seasonLabel) {
   root.innerHTML = `
     <div id="data-status" class="mb-3"></div>
 
@@ -189,7 +189,7 @@ function renderHubScaffold(root) {
         <div class="page-subtitle mb-3">Season snapshot and analytics modules.</div>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <span class="badge badge-vegas-gold fs-6">Spring Season 2026</span>
+          <span class="badge badge-vegas-gold fs-6">${escapeHtml(seasonLabel)}</span>
           <span class="badge badge-vegas-outline fs-6">Analytics Lab</span>
         </div>
       </div>
@@ -254,10 +254,10 @@ async function init() {
   const root = document.getElementById("page-root");
   if (!root) return;
 
-  const seasonId = getSeasonIdFromUrl() || "spring_2026";
+  const seasonId = getSeasonIdFromUrl();
   const season = resolveSeason(seasonId);
 
-  renderHubScaffold(root);
+  renderHubScaffold(root, season.displayLabel);
 
   // Season controls (shell may hide them; harmless if missing)
   const seasonSelect = byId("season-select");

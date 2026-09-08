@@ -1,0 +1,189 @@
+{
+  "season_id": "fall_2026",
+  "build_ts": "Sep 08, 2026 11:17 AM EDT",
+  "SeasonTotals": [
+    {
+      "Player": "Bill B",
+      "PlayerID": 2,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Chris",
+      "PlayerID": 16,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan P",
+      "PlayerID": 13,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan T",
+      "PlayerID": 10,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dave B",
+      "PlayerID": 4,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Gerry I",
+      "PlayerID": 8,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Greg",
+      "PlayerID": 14,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "PlayerID": 6,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Joe Fitz",
+      "PlayerID": 15,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Josh H",
+      "PlayerID": 12,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Mike F",
+      "PlayerID": 5,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Phil Z",
+      "PlayerID": 9,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Russ T",
+      "PlayerID": 11,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Sean N",
+      "PlayerID": 7,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Steve C",
+      "PlayerID": 1,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Todd L",
+      "PlayerID": 3,
+      "SeasonPointsTotal": 0.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 0,
+      "WeeksInSeason": 0,
+      "Wins": 0,
+      "AvgFinish": null,
+      "MoneyWonTotal": 0.0
+    }
+  ],
+  "SeasonAwards": [],
+  "ChipAndChairStacks": [],
+  "ChipAndChairPayouts": [],
+  "WeeklyPoints": [],
+  "Survival": [],
+  "ChipAndChairRules": {},
+  "EliminationsPairCounts": []
+}

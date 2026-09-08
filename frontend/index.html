@@ -82,7 +82,7 @@
       </p>
       <h1 class="display-3 neon-title mb-3">Chip &amp; A Chair Poker League</h1>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <span class="badge badge-vegas-gold fs-6">Spring Season 2026</span>
+        <span id="home-season-label" class="badge badge-vegas-gold fs-6">Loading season…</span>
         <span class="badge badge-vegas-outline fs-6">"C U Next Tuesday!"</span>
       </div>
     </div>
@@ -189,7 +189,7 @@
   <!-- FOOTER -->
   <footer class="py-4 border-top border-gold mt-auto bg-vegas-dark">
     <div class="container text-center small text-muted-vegas">
-      ♠ ♥ ♦ ♣ Chip &amp; A Chair Poker League • Rochester, NY • Spring Season 2026 ♣ ♦ ♥ ♠
+      ♠ ♥ ♦ ♣ Chip &amp; A Chair Poker League • Rochester, NY • <span id="home-footer-season">Season</span> ♣ ♦ ♥ ♠
     </div>
   </footer>
 
@@ -198,13 +198,20 @@
   import { loadSeason } from "./js/core/season.js";
     async function loadSeasonData() {
       try {
-        const { seasonId, data: seasonData } = await loadSeason();
+        const { seasonId, seasonLabel, data: seasonData } = await loadSeason();
+
+        document.getElementById("home-season-label").textContent = seasonLabel;
+        document.getElementById("home-footer-season").textContent = seasonLabel;
+        const nextEvent = document.getElementById("next-event");
+        if (nextEvent) {
+          nextEvent.innerHTML = `<p class="text-muted mb-0">${seasonLabel} schedule is not yet published.</p>`;
+        }
 
         // Latest winner
         const weekly = seasonData.WeeklyPoints || [];
         const latestWeek = weekly.reduce((m, r) => Math.max(m, Number(r.Week || 0)), 0);
 
-        loadCommissionerNotes(latestWeek);
+        loadCommissionerNotes(seasonId, latestWeek);
 
         const winnerRow = weekly.find(
           (r) => Number(r.Week) === latestWeek && Number(r.FinishPlace) === 1
@@ -269,13 +276,13 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <script>
-    async function loadCommissionerNotes(latestWeek) {
+    async function loadCommissionerNotes(seasonId, latestWeek) {
       const el = document.getElementById("commissioner-notes");
       if (!el) return;
 
       el.innerHTML = `<div class="text-muted">Loading Commissioner’s Notes…</div>`;
 
-      if (!latestWeek || Number(latestWeek) <= 0) {
+      if (seasonId !== "spring_2026" || !latestWeek || Number(latestWeek) <= 0) {
         el.innerHTML = `<div class="text-muted">Commissioner’s Notes are not available yet.</div>`;
         return;
       }

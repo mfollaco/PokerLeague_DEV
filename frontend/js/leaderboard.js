@@ -214,6 +214,15 @@ function renderTable(rows) {
 
   tbody.innerHTML = "";
 
+  if (rows.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="9" class="text-center text-muted py-4">No standings yet.</td>
+      </tr>
+    `;
+    return;
+  }
+
   rows.forEach(player => {
     const name = getPlayerName(player);
     const drop2 = player.SeasonPointsDrop2 ?? "";
