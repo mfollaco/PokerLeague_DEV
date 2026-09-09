@@ -13,6 +13,14 @@ function formatMoney(x) {
   });
 }
 
+function formatTournamentDate(value) {
+  const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return "Date unavailable";
+
+  const [, year, month, day] = match;
+  return new Date(Number(year), Number(month) - 1, Number(day)).toLocaleDateString();
+}
+
 async function initWeeklyResultsPage() {
   try {
     initSeasonSelector();
@@ -90,7 +98,7 @@ function renderWeeklyPoints(weekly) {
   }
 
   weekly.forEach((week) => {
-    const weekLabel = new Date(week.date).toLocaleDateString();
+    const weekLabel = formatTournamentDate(week.date);
 
     const section = document.createElement("details");
     section.id = `week${week.week}`;
