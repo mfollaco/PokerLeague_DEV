@@ -1,115 +1,170 @@
 {
   "season_id": "fall_2026",
-  "build_ts": "Sep 16, 2026 09:16 AM EDT",
+  "build_ts": "Sep 16, 2026 09:45 AM EDT",
   "SeasonTotals": [
     {
       "Player": "Dan P",
       "PlayerID": 3,
-      "SeasonPointsTotal": 8.0,
+      "SeasonPointsTotal": 15.5,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 2,
       "AvgFinish": 1.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Phil Z",
-      "PlayerID": 12,
-      "SeasonPointsTotal": 7.5,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 2.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Chris",
-      "PlayerID": 2,
-      "SeasonPointsTotal": 7.0,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 3.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Greg",
-      "PlayerID": 7,
-      "SeasonPointsTotal": 6.5,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 4.0,
       "MoneyWonTotal": 0.0
     },
     {
       "Player": "Steve C",
       "PlayerID": 15,
-      "SeasonPointsTotal": 6.0,
+      "SeasonPointsTotal": 11.5,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 5.0,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Todd L",
-      "PlayerID": 16,
-      "SeasonPointsTotal": 5.5,
+      "Player": "Dave B",
+      "PlayerID": 5,
+      "SeasonPointsTotal": 10.0,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
-      "AvgFinish": 6.0,
+      "AvgFinish": 6.5,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Josh H",
-      "PlayerID": 10,
-      "SeasonPointsTotal": 5.0,
+      "Player": "Todd L",
+      "PlayerID": 16,
+      "SeasonPointsTotal": 10.0,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 6.5,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Greg",
+      "PlayerID": 7,
+      "SeasonPointsTotal": 9.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 7.0,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Joe Ferrigno",
-      "PlayerID": 8,
-      "SeasonPointsTotal": 4.5,
+      "Player": "Chris",
+      "PlayerID": 2,
+      "SeasonPointsTotal": 8.5,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 8.0,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Dan T",
-      "PlayerID": 4,
-      "SeasonPointsTotal": 4.0,
+      "Player": "Phil Z",
+      "PlayerID": 12,
+      "SeasonPointsTotal": 8.0,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 8.5,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Josh H",
+      "PlayerID": 10,
+      "SeasonPointsTotal": 7.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 9.0,
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Dave B",
-      "PlayerID": 5,
-      "SeasonPointsTotal": 3.5,
+      "Player": "Mike F",
+      "PlayerID": 11,
+      "SeasonPointsTotal": 7.5,
       "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 9.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Bill B",
+      "PlayerID": 1,
+      "SeasonPointsTotal": 7.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 9.5,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
+      "SeasonPointsTotal": 6.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 10.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Russ T",
+      "PlayerID": 13,
+      "SeasonPointsTotal": 6.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 10.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Sean",
+      "PlayerID": 14,
+      "SeasonPointsTotal": 6.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 10.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Gerry I",
+      "PlayerID": 6,
+      "SeasonPointsTotal": 5.5,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 11.0,
+      "MoneyWonTotal": 0.0
+    },
+    {
+      "Player": "Dan T",
+      "PlayerID": 4,
+      "SeasonPointsTotal": 5.0,
+      "SeasonPointsDrop2": 0.0,
+      "WeeksPlayed": 2,
+      "WeeksInSeason": 2,
+      "Wins": 0,
+      "AvgFinish": 11.5,
       "MoneyWonTotal": 0.0
     },
     {
@@ -118,64 +173,9 @@
       "SeasonPointsTotal": 3.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
+      "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 11.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Russ T",
-      "PlayerID": 13,
-      "SeasonPointsTotal": 2.5,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 12.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Gerry I",
-      "PlayerID": 6,
-      "SeasonPointsTotal": 2.0,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 13.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Sean",
-      "PlayerID": 14,
-      "SeasonPointsTotal": 1.5,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 14.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Bill B",
-      "PlayerID": 1,
-      "SeasonPointsTotal": 1.0,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 15.0,
-      "MoneyWonTotal": 0.0
-    },
-    {
-      "Player": "Mike F",
-      "PlayerID": 11,
-      "SeasonPointsTotal": 0.5,
-      "SeasonPointsDrop2": 0.0,
-      "WeeksPlayed": 1,
-      "WeeksInSeason": 1,
-      "Wins": 0,
-      "AvgFinish": 16.0,
       "MoneyWonTotal": 0.0
     }
   ],
@@ -326,78 +326,257 @@
       "FinishPlace": 16,
       "Points": 0.5,
       "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Dan P",
+      "PlayerID": 3,
+      "FinishPlace": 1,
+      "Points": 7.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Mike F",
+      "PlayerID": 11,
+      "FinishPlace": 2,
+      "Points": 7.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Dave B",
+      "PlayerID": 5,
+      "FinishPlace": 3,
+      "Points": 6.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Bill B",
+      "PlayerID": 1,
+      "FinishPlace": 4,
+      "Points": 6.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Steve C",
+      "PlayerID": 15,
+      "FinishPlace": 5,
+      "Points": 5.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Sean",
+      "PlayerID": 14,
+      "FinishPlace": 6,
+      "Points": 5.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Todd L",
+      "PlayerID": 16,
+      "FinishPlace": 7,
+      "Points": 4.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Russ T",
+      "PlayerID": 13,
+      "FinishPlace": 8,
+      "Points": 4.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Gerry I",
+      "PlayerID": 6,
+      "FinishPlace": 9,
+      "Points": 3.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Greg",
+      "PlayerID": 7,
+      "FinishPlace": 10,
+      "Points": 3.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Josh H",
+      "PlayerID": 10,
+      "FinishPlace": 11,
+      "Points": 2.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Joe Ferrigno",
+      "PlayerID": 8,
+      "FinishPlace": 12,
+      "Points": 2.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Chris",
+      "PlayerID": 2,
+      "FinishPlace": 13,
+      "Points": 1.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Dan T",
+      "PlayerID": 4,
+      "FinishPlace": 14,
+      "Points": 1.0,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Phil Z",
+      "PlayerID": 12,
+      "FinishPlace": 15,
+      "Points": 0.5,
+      "Payout": 0.0
+    },
+    {
+      "Week": 2,
+      "TournamentDate": "2026-09-15",
+      "Player": "Joe Fitz",
+      "PlayerID": 9,
+      "FinishPlace": null,
+      "Points": 0.0,
+      "Payout": 0.0
     }
   ],
   "Survival": [
     {
       "Player": "Dan P",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 175.0,
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 192.5,
       "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 175.0
-    },
-    {
-      "Player": "Phil Z",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 175.0,
-      "AvgSurvivalPercent": 1.0,
-      "TotalMinutesSurvived": 175.0
-    },
-    {
-      "Player": "Chris",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 168.0,
-      "AvgSurvivalPercent": 0.96,
-      "TotalMinutesSurvived": 168.0
-    },
-    {
-      "Player": "Greg",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 167.0,
-      "AvgSurvivalPercent": 0.954,
-      "TotalMinutesSurvived": 167.0
+      "TotalMinutesSurvived": 385.0
     },
     {
       "Player": "Steve C",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 167.0,
-      "AvgSurvivalPercent": 0.954,
-      "TotalMinutesSurvived": 167.0
-    },
-    {
-      "Player": "Todd L",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 135.0,
-      "AvgSurvivalPercent": 0.771,
-      "TotalMinutesSurvived": 135.0
-    },
-    {
-      "Player": "Josh H",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 130.0,
-      "AvgSurvivalPercent": 0.743,
-      "TotalMinutesSurvived": 130.0
-    },
-    {
-      "Player": "Joe Ferrigno",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 118.0,
-      "AvgSurvivalPercent": 0.674,
-      "TotalMinutesSurvived": 118.0
-    },
-    {
-      "Player": "Dan T",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 116.0,
-      "AvgSurvivalPercent": 0.663,
-      "TotalMinutesSurvived": 116.0
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 170.5,
+      "AvgSurvivalPercent": 0.892,
+      "TotalMinutesSurvived": 341.0
     },
     {
       "Player": "Dave B",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 114.0,
-      "AvgSurvivalPercent": 0.651,
-      "TotalMinutesSurvived": 114.0
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 153.0,
+      "AvgSurvivalPercent": 0.782,
+      "TotalMinutesSurvived": 306.0
+    },
+    {
+      "Player": "Greg",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 140.0,
+      "AvgSurvivalPercent": 0.746,
+      "TotalMinutesSurvived": 280.0
+    },
+    {
+      "Player": "Todd L",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 137.0,
+      "AvgSurvivalPercent": 0.716,
+      "TotalMinutesSurvived": 274.0
+    },
+    {
+      "Player": "Chris",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 127.0,
+      "AvgSurvivalPercent": 0.685,
+      "TotalMinutesSurvived": 254.0
+    },
+    {
+      "Player": "Mike F",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 127.0,
+      "AvgSurvivalPercent": 0.626,
+      "TotalMinutesSurvived": 254.0
+    },
+    {
+      "Player": "Sean",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 120.5,
+      "AvgSurvivalPercent": 0.609,
+      "TotalMinutesSurvived": 241.0
+    },
+    {
+      "Player": "Josh H",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 117.0,
+      "AvgSurvivalPercent": 0.619,
+      "TotalMinutesSurvived": 234.0
+    },
+    {
+      "Player": "Bill B",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 115.0,
+      "AvgSurvivalPercent": 0.571,
+      "TotalMinutesSurvived": 230.0
+    },
+    {
+      "Player": "Phil Z",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 108.5,
+      "AvgSurvivalPercent": 0.6,
+      "TotalMinutesSurvived": 217.0
+    },
+    {
+      "Player": "Russ T",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 104.5,
+      "AvgSurvivalPercent": 0.534,
+      "TotalMinutesSurvived": 209.0
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 102.0,
+      "AvgSurvivalPercent": 0.542,
+      "TotalMinutesSurvived": 204.0
+    },
+    {
+      "Player": "Dan T",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 101.0,
+      "AvgSurvivalPercent": 0.536,
+      "TotalMinutesSurvived": 202.0
+    },
+    {
+      "Player": "Gerry I",
+      "WeeksPlayed": 2,
+      "AvgMinutesSurvived": 99.5,
+      "AvgSurvivalPercent": 0.509,
+      "TotalMinutesSurvived": 199.0
     },
     {
       "Player": "Joe Fitz",
@@ -405,41 +584,6 @@
       "AvgMinutesSurvived": 98.0,
       "AvgSurvivalPercent": 0.56,
       "TotalMinutesSurvived": 98.0
-    },
-    {
-      "Player": "Russ T",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 75.0,
-      "AvgSurvivalPercent": 0.429,
-      "TotalMinutesSurvived": 75.0
-    },
-    {
-      "Player": "Gerry I",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 74.0,
-      "AvgSurvivalPercent": 0.423,
-      "TotalMinutesSurvived": 74.0
-    },
-    {
-      "Player": "Sean",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 74.0,
-      "AvgSurvivalPercent": 0.423,
-      "TotalMinutesSurvived": 74.0
-    },
-    {
-      "Player": "Bill B",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 49.0,
-      "AvgSurvivalPercent": 0.28,
-      "TotalMinutesSurvived": 49.0
-    },
-    {
-      "Player": "Mike F",
-      "WeeksPlayed": 1,
-      "AvgMinutesSurvived": 44.0,
-      "AvgSurvivalPercent": 0.251,
-      "TotalMinutesSurvived": 44.0
     }
   ],
   "ChipAndChairRules": {},
@@ -476,7 +620,37 @@
     },
     {
       "Killer": "Dan P",
+      "Victim": "Dave B",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
+      "Victim": "Mike F",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
       "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Dan P",
+      "Victim": "Steve C",
+      "Count": 1
+    },
+    {
+      "Killer": "Dave B",
+      "Victim": "Dan T",
+      "Count": 1
+    },
+    {
+      "Killer": "Dave B",
+      "Victim": "Phil Z",
+      "Count": 1
+    },
+    {
+      "Killer": "Dave B",
+      "Victim": "Todd L",
       "Count": 1
     },
     {
@@ -492,6 +666,41 @@
     {
       "Killer": "Joe Ferrigno",
       "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Bill B",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Chris",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Greg",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Joe Ferrigno",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Josh H",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Russ T",
+      "Count": 1
+    },
+    {
+      "Killer": "Mike F",
+      "Victim": "Sean",
       "Count": 1
     },
     {
@@ -517,7 +726,7 @@
     {
       "Killer": "Todd L",
       "Victim": "Gerry I",
-      "Count": 1
+      "Count": 2
     }
   ]
 }
