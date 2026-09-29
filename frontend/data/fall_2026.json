@@ -1,21 +1,21 @@
 {
   "season_id": "fall_2026",
-  "build_ts": "Sep 16, 2026 09:45 AM EDT",
+  "build_ts": "Sep 29, 2026 12:00 PM EDT",
   "SeasonTotals": [
     {
       "Player": "Dan P",
-      "PlayerID": 3,
+      "PlayerID": 13,
       "SeasonPointsTotal": 15.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
       "WeeksInSeason": 2,
       "Wins": 2,
       "AvgFinish": 1.0,
-      "MoneyWonTotal": 0.0
+      "MoneyWonTotal": 300.0
     },
     {
       "Player": "Steve C",
-      "PlayerID": 15,
+      "PlayerID": 1,
       "SeasonPointsTotal": 11.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -26,18 +26,18 @@
     },
     {
       "Player": "Dave B",
-      "PlayerID": 5,
+      "PlayerID": 4,
       "SeasonPointsTotal": 10.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
       "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 6.5,
-      "MoneyWonTotal": 0.0
+      "MoneyWonTotal": 60.0
     },
     {
       "Player": "Todd L",
-      "PlayerID": 16,
+      "PlayerID": 3,
       "SeasonPointsTotal": 10.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -48,7 +48,7 @@
     },
     {
       "Player": "Greg",
-      "PlayerID": 7,
+      "PlayerID": 14,
       "SeasonPointsTotal": 9.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -59,29 +59,29 @@
     },
     {
       "Player": "Chris",
-      "PlayerID": 2,
+      "PlayerID": 16,
       "SeasonPointsTotal": 8.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
       "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 8.0,
-      "MoneyWonTotal": 0.0
+      "MoneyWonTotal": 60.0
     },
     {
       "Player": "Phil Z",
-      "PlayerID": 12,
+      "PlayerID": 9,
       "SeasonPointsTotal": 8.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
       "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 8.5,
-      "MoneyWonTotal": 0.0
+      "MoneyWonTotal": 100.0
     },
     {
       "Player": "Josh H",
-      "PlayerID": 10,
+      "PlayerID": 12,
       "SeasonPointsTotal": 7.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -92,18 +92,18 @@
     },
     {
       "Player": "Mike F",
-      "PlayerID": 11,
+      "PlayerID": 5,
       "SeasonPointsTotal": 7.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
       "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 9.0,
-      "MoneyWonTotal": 0.0
+      "MoneyWonTotal": 100.0
     },
     {
       "Player": "Bill B",
-      "PlayerID": 1,
+      "PlayerID": 2,
       "SeasonPointsTotal": 7.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -114,7 +114,7 @@
     },
     {
       "Player": "Joe Ferrigno",
-      "PlayerID": 8,
+      "PlayerID": 6,
       "SeasonPointsTotal": 6.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -125,7 +125,7 @@
     },
     {
       "Player": "Russ T",
-      "PlayerID": 13,
+      "PlayerID": 11,
       "SeasonPointsTotal": 6.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -135,8 +135,8 @@
       "MoneyWonTotal": 0.0
     },
     {
-      "Player": "Sean",
-      "PlayerID": 14,
+      "Player": "Sean N",
+      "PlayerID": 7,
       "SeasonPointsTotal": 6.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -147,7 +147,7 @@
     },
     {
       "Player": "Gerry I",
-      "PlayerID": 6,
+      "PlayerID": 8,
       "SeasonPointsTotal": 5.5,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -158,7 +158,7 @@
     },
     {
       "Player": "Dan T",
-      "PlayerID": 4,
+      "PlayerID": 10,
       "SeasonPointsTotal": 5.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 2,
@@ -169,7 +169,7 @@
     },
     {
       "Player": "Joe Fitz",
-      "PlayerID": 9,
+      "PlayerID": 15,
       "SeasonPointsTotal": 3.0,
       "SeasonPointsDrop2": 0.0,
       "WeeksPlayed": 1,
@@ -187,34 +187,34 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Dan P",
-      "PlayerID": 3,
+      "PlayerID": 13,
       "FinishPlace": 1,
       "Points": 8.0,
-      "Payout": 0.0
+      "Payout": 160.0
     },
     {
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Phil Z",
-      "PlayerID": 12,
+      "PlayerID": 9,
       "FinishPlace": 2,
       "Points": 7.5,
-      "Payout": 0.0
+      "Payout": 100.0
     },
     {
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Chris",
-      "PlayerID": 2,
+      "PlayerID": 16,
       "FinishPlace": 3,
       "Points": 7.0,
-      "Payout": 0.0
+      "Payout": 60.0
     },
     {
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Greg",
-      "PlayerID": 7,
+      "PlayerID": 14,
       "FinishPlace": 4,
       "Points": 6.5,
       "Payout": 0.0
@@ -223,7 +223,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Steve C",
-      "PlayerID": 15,
+      "PlayerID": 1,
       "FinishPlace": 5,
       "Points": 6.0,
       "Payout": 0.0
@@ -232,7 +232,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Todd L",
-      "PlayerID": 16,
+      "PlayerID": 3,
       "FinishPlace": 6,
       "Points": 5.5,
       "Payout": 0.0
@@ -241,7 +241,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Josh H",
-      "PlayerID": 10,
+      "PlayerID": 12,
       "FinishPlace": 7,
       "Points": 5.0,
       "Payout": 0.0
@@ -250,7 +250,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Joe Ferrigno",
-      "PlayerID": 8,
+      "PlayerID": 6,
       "FinishPlace": 8,
       "Points": 4.5,
       "Payout": 0.0
@@ -259,7 +259,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Dan T",
-      "PlayerID": 4,
+      "PlayerID": 10,
       "FinishPlace": 9,
       "Points": 4.0,
       "Payout": 0.0
@@ -268,7 +268,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Dave B",
-      "PlayerID": 5,
+      "PlayerID": 4,
       "FinishPlace": 10,
       "Points": 3.5,
       "Payout": 0.0
@@ -277,7 +277,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Joe Fitz",
-      "PlayerID": 9,
+      "PlayerID": 15,
       "FinishPlace": 11,
       "Points": 3.0,
       "Payout": 0.0
@@ -286,7 +286,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Russ T",
-      "PlayerID": 13,
+      "PlayerID": 11,
       "FinishPlace": 12,
       "Points": 2.5,
       "Payout": 0.0
@@ -295,7 +295,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Gerry I",
-      "PlayerID": 6,
+      "PlayerID": 8,
       "FinishPlace": 13,
       "Points": 2.0,
       "Payout": 0.0
@@ -303,8 +303,8 @@
     {
       "Week": 1,
       "TournamentDate": "2026-09-08",
-      "Player": "Sean",
-      "PlayerID": 14,
+      "Player": "Sean N",
+      "PlayerID": 7,
       "FinishPlace": 14,
       "Points": 1.5,
       "Payout": 0.0
@@ -313,7 +313,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Bill B",
-      "PlayerID": 1,
+      "PlayerID": 2,
       "FinishPlace": 15,
       "Points": 1.0,
       "Payout": 0.0
@@ -322,7 +322,7 @@
       "Week": 1,
       "TournamentDate": "2026-09-08",
       "Player": "Mike F",
-      "PlayerID": 11,
+      "PlayerID": 5,
       "FinishPlace": 16,
       "Points": 0.5,
       "Payout": 0.0
@@ -331,34 +331,34 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Dan P",
-      "PlayerID": 3,
+      "PlayerID": 13,
       "FinishPlace": 1,
       "Points": 7.5,
-      "Payout": 0.0
+      "Payout": 140.0
     },
     {
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Mike F",
-      "PlayerID": 11,
+      "PlayerID": 5,
       "FinishPlace": 2,
       "Points": 7.0,
-      "Payout": 0.0
+      "Payout": 100.0
     },
     {
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Dave B",
-      "PlayerID": 5,
+      "PlayerID": 4,
       "FinishPlace": 3,
       "Points": 6.5,
-      "Payout": 0.0
+      "Payout": 60.0
     },
     {
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Bill B",
-      "PlayerID": 1,
+      "PlayerID": 2,
       "FinishPlace": 4,
       "Points": 6.0,
       "Payout": 0.0
@@ -367,7 +367,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Steve C",
-      "PlayerID": 15,
+      "PlayerID": 1,
       "FinishPlace": 5,
       "Points": 5.5,
       "Payout": 0.0
@@ -375,8 +375,8 @@
     {
       "Week": 2,
       "TournamentDate": "2026-09-15",
-      "Player": "Sean",
-      "PlayerID": 14,
+      "Player": "Sean N",
+      "PlayerID": 7,
       "FinishPlace": 6,
       "Points": 5.0,
       "Payout": 0.0
@@ -385,7 +385,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Todd L",
-      "PlayerID": 16,
+      "PlayerID": 3,
       "FinishPlace": 7,
       "Points": 4.5,
       "Payout": 0.0
@@ -394,7 +394,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Russ T",
-      "PlayerID": 13,
+      "PlayerID": 11,
       "FinishPlace": 8,
       "Points": 4.0,
       "Payout": 0.0
@@ -403,7 +403,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Gerry I",
-      "PlayerID": 6,
+      "PlayerID": 8,
       "FinishPlace": 9,
       "Points": 3.5,
       "Payout": 0.0
@@ -412,7 +412,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Greg",
-      "PlayerID": 7,
+      "PlayerID": 14,
       "FinishPlace": 10,
       "Points": 3.0,
       "Payout": 0.0
@@ -421,7 +421,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Josh H",
-      "PlayerID": 10,
+      "PlayerID": 12,
       "FinishPlace": 11,
       "Points": 2.5,
       "Payout": 0.0
@@ -430,7 +430,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Joe Ferrigno",
-      "PlayerID": 8,
+      "PlayerID": 6,
       "FinishPlace": 12,
       "Points": 2.0,
       "Payout": 0.0
@@ -439,7 +439,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Chris",
-      "PlayerID": 2,
+      "PlayerID": 16,
       "FinishPlace": 13,
       "Points": 1.5,
       "Payout": 0.0
@@ -448,7 +448,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Dan T",
-      "PlayerID": 4,
+      "PlayerID": 10,
       "FinishPlace": 14,
       "Points": 1.0,
       "Payout": 0.0
@@ -457,7 +457,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Phil Z",
-      "PlayerID": 12,
+      "PlayerID": 9,
       "FinishPlace": 15,
       "Points": 0.5,
       "Payout": 0.0
@@ -466,7 +466,7 @@
       "Week": 2,
       "TournamentDate": "2026-09-15",
       "Player": "Joe Fitz",
-      "PlayerID": 9,
+      "PlayerID": 15,
       "FinishPlace": null,
       "Points": 0.0,
       "Payout": 0.0
@@ -523,7 +523,7 @@
       "TotalMinutesSurvived": 254.0
     },
     {
-      "Player": "Sean",
+      "Player": "Sean N",
       "WeeksPlayed": 2,
       "AvgMinutesSurvived": 120.5,
       "AvgSurvivalPercent": 0.609,
@@ -605,7 +605,7 @@
     },
     {
       "Killer": "Chris",
-      "Victim": "Sean",
+      "Victim": "Sean N",
       "Count": 1
     },
     {
@@ -700,7 +700,7 @@
     },
     {
       "Killer": "Mike F",
-      "Victim": "Sean",
+      "Victim": "Sean N",
       "Count": 1
     },
     {
