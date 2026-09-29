@@ -1,6 +1,6 @@
 {
   "season_id": "fall_2026",
-  "build_ts": "Sep 29, 2026 12:00 PM EDT",
+  "build_ts": "Sep 29, 2026 12:30 PM EDT",
   "SeasonTotals": [
     {
       "Player": "Dan P",
@@ -11,7 +11,7 @@
       "WeeksInSeason": 2,
       "Wins": 2,
       "AvgFinish": 1.0,
-      "MoneyWonTotal": 300.0
+      "MoneyWonTotal": 280.0
     },
     {
       "Player": "Steve C",
@@ -99,7 +99,7 @@
       "WeeksInSeason": 2,
       "Wins": 0,
       "AvgFinish": 9.0,
-      "MoneyWonTotal": 100.0
+      "MoneyWonTotal": 120.0
     },
     {
       "Player": "Bill B",
@@ -334,7 +334,7 @@
       "PlayerID": 13,
       "FinishPlace": 1,
       "Points": 7.5,
-      "Payout": 140.0
+      "Payout": 120.0
     },
     {
       "Week": 2,
@@ -343,7 +343,7 @@
       "PlayerID": 5,
       "FinishPlace": 2,
       "Points": 7.0,
-      "Payout": 100.0
+      "Payout": 120.0
     },
     {
       "Week": 2,
