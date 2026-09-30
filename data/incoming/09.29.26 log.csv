@@ -1,0 +1,82 @@
+Time,Event,Level,Players,Eliminated by,Chips,Amount,Table,Seat
+7:02:36 PM,Buy-in,,Greg,,6.5K,$20 ,,
+7:02:59 PM,Seating,,Greg,,,,2,3
+7:03:31 PM,Buy-in,,Russ T,,6.5K,$20 ,,
+7:03:39 PM,Seating,,Russ T,,,,1,1
+7:03:50 PM,Buy-in,,Dave B,,6.5K,$20 ,,
+7:03:57 PM,Seating,,Dave B,,,,1,7
+7:04:03 PM,Buy-in,,Gerry I,,6.5K,$20 ,,
+7:04:10 PM,Seating,,Gerry I,,,,1,6
+7:04:17 PM,Buy-in,,Todd L,,6.5K,$20 ,,
+7:04:26 PM,Seating,,Todd L,,,,1,8
+7:04:39 PM,Buy-in,,Mike F,,6.5K,$20 ,,
+7:04:47 PM,Seating,,Mike F,,,,2,1
+7:04:51 PM,Buy-in,,Dan P,,6.5K,$20 ,,
+7:05:00 PM,Seating,,Dan P,,,,2,2
+7:05:07 PM,Buy-in,,Phil Z,,6.5K,$20 ,,
+7:05:14 PM,Seating,,Phil Z,,,,2,4
+7:05:29 PM,Buy-in,,Bill B,,6.5K,$20 ,,
+7:05:38 PM,Seating,,Bill B,,,,2,6
+7:05:50 PM,Buy-in,,Chris,,6.5K,$20 ,,
+7:05:56 PM,Seating,,Chris,,,,2,7
+7:06:06 PM,Buy-in,,Joe Fitz,,6.5K,$20 ,,
+7:06:11 PM,Seating,,Joe Fitz,,,,2,8
+7:06:20 PM,Buy-in,,Josh H,,6.5K,$20 ,,
+7:06:26 PM,Seating,,Josh H,,,,2,5
+7:06:35 PM,Buy-in,,Dan T,,6.5K,$20 ,,
+7:06:42 PM,Seating,,Dan T,,,,1,5
+7:06:52 PM,Buy-in,,Steve C,,6.5K,$20 ,,
+7:07:00 PM,Seating,,Steve C,,,,1,4
+7:07:07 PM,Buy-in,,Sean,,6.5K,$20 ,,
+7:07:14 PM,Seating,,Sean,,,,1,3
+7:07:17 PM,Buy-in,,Joe Ferrigno,,6.5K,$20 ,,
+7:07:22 PM,Seating,,Joe Ferrigno,,,,1,2
+7:09:11 PM,Break,"Break, 1 min.",,,,,,
+7:09:11 PM,Timer started,,,,,,,
+7:10:11 PM,Blinds,"1: 25/50, 15 min.",,,,,,
+7:25:11 PM,Blinds,"2: 50/100, 15 min.",,,,,,
+7:40:11 PM,Blinds,"3: 75/150, 15 min.",,,,,,
+7:55:11 PM,Blinds,"4: 100/200, 15 min.",,,,,,
+7:59:08 PM,Knockout,,Bill B,Dan P,,,,
+8:01:50 PM,Knockout,,Greg,Josh H,,,,
+8:02:45 PM,Timer paused,,,,,,,
+8:04:43 PM,Timer started,,,,,,,
+8:12:09 PM,Break,"Break, 5 min.",,,,,,
+8:17:09 PM,Blinds,"5: 200/400, 15 min.",,,,,,
+8:20:08 PM,Seating,,Steve C,,,,2,6
+8:20:37 PM,Knockout,,Mike F,Steve C,,,,
+8:23:28 PM,Knockout,,Dave B,Sean,,,,
+8:27:24 PM,Knockout,,Dan T,Sean,,,,
+8:32:09 PM,Blinds,"6: 300/600, 15 min.",,,,,,
+8:37:26 PM,Knockout,,Joe Fitz,Phil Z,,,,
+8:39:59 PM,Timer paused,,,,,,,
+8:41:57 PM,Knockout,,Gerry I,Sean,,,,
+8:44:05 PM,Seating,,Todd L,,,,3,1
+8:44:15 PM,Seating,,Sean,,,,3,2
+8:44:45 PM,Seating,,Joe Ferrigno,,,,3,3
+8:45:01 PM,Seating,,Chris,,,,3,4
+8:45:14 PM,Seating,,Russ T,,,,3,5
+8:45:28 PM,Seating,,Dan P,,,,3,6
+8:45:39 PM,Seating,,Phil Z,,,,3,7
+8:45:56 PM,Seating,,Josh H,,,,3,8
+8:46:02 PM,Seating,,Steve C,,,,3,9
+8:48:37 PM,Timer started,,,,,,,
+8:55:47 PM,Blinds,"7: 500/1K, 15 min.",,,,,,
+9:01:33 PM,Knockout,,Josh H,Sean,,,,
+9:10:47 PM,Blinds,"8: 700/1.4K, 15 min.",,,,,,
+9:23:20 PM,Knockout,,Todd L,Chris,,,,
+9:25:47 PM,Blinds,"9: 1K/2K, 15 min.",,,,,,
+9:40:47 PM,Blinds,"10: 1.5K/3K, 15 min.",,,,,,
+9:45:26 PM,Knockout,,Phil Z,Sean,,,,
+9:48:06 PM,Knockout,,Joe Ferrigno,Chris,,,,
+9:55:47 PM,Break,"Break, 5 min.",,,,,,
+10:00:47 PM,Blinds,"11: 3K/6K, 10 min.",,,,,,
+10:00:50 PM,Timer paused,,,,,,,
+10:01:34 PM,Timer started,,,,,,,
+10:09:23 PM,Knockout,,Dan P,Chris,,,,
+10:11:31 PM,Blinds,"12: 4K/8K, 10 min.",,,,,,
+10:17:38 PM,Knockout,,Steve C,Russ T,,,,
+10:20:58 PM,Knockout,,Russ T,Sean,,,,
+10:21:31 PM,Blinds,"13: 6K/12K, 10 min.",,,,,,
+10:26:43 PM,Knockout,,Sean,Chris,,,,
+10:26:43 PM,Timer paused,,,,,,,
