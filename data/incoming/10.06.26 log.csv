@@ -1,0 +1,76 @@
+Time,Event,Level,Players,Eliminated by,Chips,Amount,Table,Seat
+Oct 6 6:53:05 PM,Buy-in,,Phil Z,,6.5K,$20,,
+Oct 6 6:53:15 PM,Seating,,Phil Z,,,,2,7
+Oct 6 6:53:27 PM,Buy-in,,Greg,,6.5K,$20,,
+Oct 6 6:53:35 PM,Seating,,Greg,,,,2,1
+Oct 6 6:53:42 PM,Buy-in,,Josh H,,6.5K,$20,,
+Oct 6 6:53:49 PM,Seating,,Josh H,,,,2,5
+Oct 6 6:54:00 PM,Buy-in,,Joe Ferrigno,,6.5K,$20,,
+Oct 6 6:54:34 PM,Buy-in,,Joe Fitz,,6.5K,$20,,
+Oct 6 6:54:42 PM,Seating,,Joe Fitz,,,,2,6
+Oct 6 6:55:00 PM,Seating,,Joe Ferrigno,,,,2,4
+Oct 6 6:55:20 PM,Buy-in,,Gerry I,,6.5K,$20,,
+Oct 6 6:55:32 PM,Seating,,Gerry I,,,,1,8
+Oct 6 6:55:39 PM,Buy-in,,Dan P,,6.5K,$20,,
+Oct 6 6:55:47 PM,Seating,,Dan P,,,,1,1
+Oct 6 6:55:56 PM,Buy-in,,Todd L,,6.5K,$20,,
+Oct 6 6:56:03 PM,Seating,,Todd L,,,,1,2
+Oct 6 6:56:31 PM,Buy-in,,Russ T,,6.5K,$20,,
+Oct 6 6:56:37 PM,Seating,,Russ T,,,,1,6
+Oct 6 6:57:00 PM,Buy-in,,Steve C,,6.5K,$20,,
+Oct 6 6:57:20 PM,Seating,,Steve C,,,,1,5
+Oct 6 6:57:43 PM,Buy-in,,Bill B,,6.5K,$20,,
+Oct 6 6:57:50 PM,Seating,,Bill B,,,,1,4
+Oct 6 6:57:55 PM,Buy-in,,Dave B,,6.5K,$20,,
+Oct 6 6:58:01 PM,Seating,,Dave B,,,,1,3
+Oct 6 6:58:18 PM,Buy-in,,Sean,,6.5K,$20,,
+Oct 6 6:58:35 PM,Seating,,Sean,,,,2,2
+Oct 6 6:58:44 PM,Buy-in,,Chris,,6.5K,$20,,
+Oct 6 6:58:52 PM,Seating,,Chris,,,,2,3
+Oct 6 6:59:04 PM,Buy-in,,Mike F,,6.5K,$20,,
+Oct 6 6:59:09 PM,Seating,,Mike F,,,,1,7
+Oct 6 7:02:20 PM,Timer started,,,,,,,
+Oct 6 7:02:20 PM,Break,"Break, 1 min.",,,,,,
+Oct 6 7:03:20 PM,Blinds,"1: 25/50, 15 min.",,,,,,
+Oct 6 7:18:20 PM,Blinds,"2: 50/100, 15 min.",,,,,,
+Oct 6 7:33:20 PM,Blinds,"3: 75/150, 15 min.",,,,,,
+Oct 6 7:48:20 PM,Blinds,"4: 100/200, 15 min.",,,,,,
+Oct 6 8:03:20 PM,Break,"Break, 5 min.",,,,,,
+Oct 6 8:08:20 PM,Blinds,"5: 200/400, 15 min.",,,,,,
+Oct 6 8:18:53 PM,Knockout,,Bill B,Todd L,,,,
+Oct 6 8:19:11 PM,Knockout,,Phil Z,Josh H,,,,
+Oct 6 8:23:20 PM,Blinds,"6: 300/600, 15 min.",,,,,,
+Oct 6 8:23:42 PM,Knockout,,Sean,Greg,,,,
+Oct 6 8:30:09 PM,Knockout,,Dave B,Todd L,,,,
+Oct 6 8:30:17 PM,Knockout,,Joe Fitz,Josh H,,,,
+Oct 6 8:30:53 PM,Seating,,Gerry I,,,,2,2
+Oct 6 8:38:20 PM,Blinds,"7: 500/1K, 15 min.",,,,,,
+Oct 6 8:40:28 PM,Timer paused,,,,,,,
+Oct 6 8:41:01 PM,Knockout,,Mike F,Dan P,,,,
+Oct 6 8:41:17 PM,Knockout,,Gerry I,Chris,,,,
+Oct 6 8:45:12 PM,Seating,,Chris,,,,3,1
+Oct 6 8:45:27 PM,Seating,,Steve C,,,,3,2
+Oct 6 8:45:44 PM,Seating,,Todd L,,,,3,3
+Oct 6 8:46:05 PM,Seating,,Dan P,,,,3,4
+Oct 6 8:46:42 PM,Seating,,Russ T,,,,3,5
+Oct 6 8:46:59 PM,Seating,,Greg,,,,3,6
+Oct 6 8:47:18 PM,Seating,,Joe Ferrigno,,,,3,7
+Oct 6 8:47:25 PM,Seating,,Josh H,,,,3,8
+Oct 6 8:47:40 PM,Timer started,,,,,,,
+Oct 6 8:57:22 PM,Knockout,,Greg,Chris,,,,
+Oct 6 9:00:32 PM,Blinds,"8: 700/1.4K, 15 min.",,,,,,
+Oct 6 9:15:32 PM,Blinds,"9: 1K/2K, 15 min.",,,,,,
+Oct 6 9:20:34 PM,Knockout,,Steve C,Josh H,,,,
+Oct 6 9:30:32 PM,Blinds,"10: 1.5K/3K, 15 min.",,,,,,
+Oct 6 9:35:14 PM,Knockout,,Russ T,Chris,,,,
+Oct 6 9:40:35 PM,Knockout,,Joe Ferrigno,Josh H,,,,
+Oct 6 9:45:32 PM,Break,"Break, 5 min.",,,,,,
+Oct 6 9:45:53 PM,Knockout,,Chris,Josh H,,,,
+Oct 6 9:50:32 PM,Blinds,"11: 3K/6K, 10 min.",,,,,,
+Oct 6 9:51:16 PM,Timer paused,,,,,,,
+Oct 6 9:52:45 PM,Timer started,,,,,,,
+Oct 6 9:54:44 PM,Knockout,,Todd L,Josh H,,,,
+Oct 6 10:02:01 PM,Blinds,"12: 4K/8K, 10 min.",,,,,,
+Oct 6 10:12:01 PM,Blinds,"13: 6K/12K, 10 min.",,,,,,
+Oct 6 10:13:01 PM,Knockout,,Dan P,Josh H,,,,
+Oct 6 10:13:01 PM,Timer paused,,,,,,,
