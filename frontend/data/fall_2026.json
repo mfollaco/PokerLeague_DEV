@@ -1,6 +1,6 @@
 {
   "season_id": "fall_2026",
-  "build_ts": "Oct 08, 2026 01:39 PM EDT",
+  "build_ts": "Oct 08, 2026 02:55 PM EDT",
   "SeasonTotals": [
     {
       "Player": "Dan P",
@@ -180,7 +180,200 @@
     }
   ],
   "SeasonAwards": [],
-  "ChipAndChairStacks": [],
+  "ChipAndChairStacks": [
+    {
+      "Player": "Chris",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 3375,
+      "TotalEliminations": 12,
+      "ChipsFromTotalElims": 600,
+      "RepeatElimCount": 3,
+      "ChipsFromRepeatElims": 300,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10775
+    },
+    {
+      "Player": "Dan P",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 3525,
+      "TotalEliminations": 7,
+      "ChipsFromTotalElims": 350,
+      "RepeatElimCount": 1,
+      "ChipsFromRepeatElims": 100,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10475
+    },
+    {
+      "Player": "Josh H",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2925,
+      "TotalEliminations": 11,
+      "ChipsFromTotalElims": 550,
+      "RepeatElimCount": 1,
+      "ChipsFromRepeatElims": 100,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 10075
+    },
+    {
+      "Player": "Sean N",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2700,
+      "TotalEliminations": 6,
+      "ChipsFromTotalElims": 300,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 2,
+      "ChipsFromHighValueElims": 500,
+      "TotalStack": 10000
+    },
+    {
+      "Player": "Phil Z",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2925,
+      "TotalEliminations": 7,
+      "ChipsFromTotalElims": 350,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9775
+    },
+    {
+      "Player": "Joe Fitz",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2100,
+      "TotalEliminations": 5,
+      "ChipsFromTotalElims": 250,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 3,
+      "ChipsFromHighValueElims": 750,
+      "TotalStack": 9600
+    },
+    {
+      "Player": "Todd L",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2700,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 1,
+      "ChipsFromRepeatElims": 100,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9500
+    },
+    {
+      "Player": "Mike F",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2025,
+      "TotalEliminations": 8,
+      "ChipsFromTotalElims": 400,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 2,
+      "ChipsFromHighValueElims": 500,
+      "TotalStack": 9425
+    },
+    {
+      "Player": "Steve C",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2775,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9325
+    },
+    {
+      "Player": "Russ T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2550,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9100
+    },
+    {
+      "Player": "Greg",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2325,
+      "TotalEliminations": 4,
+      "ChipsFromTotalElims": 200,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9025
+    },
+    {
+      "Player": "Joe Ferrigno",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 2400,
+      "TotalEliminations": 2,
+      "ChipsFromTotalElims": 100,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 9000
+    },
+    {
+      "Player": "Dave B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1950,
+      "TotalEliminations": 3,
+      "ChipsFromTotalElims": 150,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 1,
+      "ChipsFromHighValueElims": 250,
+      "TotalStack": 8850
+    },
+    {
+      "Player": "Dan T",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1875,
+      "TotalEliminations": 1,
+      "ChipsFromTotalElims": 50,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8425
+    },
+    {
+      "Player": "Gerry I",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1800,
+      "TotalEliminations": 0,
+      "ChipsFromTotalElims": 0,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 8300
+    },
+    {
+      "Player": "Bill B",
+      "BaseStack": 6500,
+      "ChipsFromSeasonPoints": 1425,
+      "TotalEliminations": 0,
+      "ChipsFromTotalElims": 0,
+      "RepeatElimCount": 0,
+      "ChipsFromRepeatElims": 0,
+      "HighValueElimCount": 0,
+      "ChipsFromHighValueElims": 0,
+      "TotalStack": 7925
+    }
+  ],
   "ChipAndChairPayouts": [],
   "WeeklyPoints": [
     {
@@ -1018,7 +1211,15 @@
       "TotalMinutesSurvived": 415.1
     }
   ],
-  "ChipAndChairRules": {},
+  "ChipAndChairRules": {
+    "base_stack": 6500,
+    "season_points_chip_multiplier": 150,
+    "chip_per_total_elim": 50,
+    "chip_per_repeat_elim": 100,
+    "chip_per_hv_elim": 250,
+    "hv_victim_rank_max": 3,
+    "hv_eliminator_rank_min": 4
+  },
   "EliminationsPairCounts": [
     {
       "Killer": "Chris",
