@@ -1,6 +1,6 @@
 {
   "season_id": "fall_2026",
-  "build_ts": "Nov 11, 2026 06:42 AM EST",
+  "build_ts": "Nov 11, 2026 06:54 AM EST",
   "SeasonTotals": [
     {
       "Player": "Josh H",
@@ -11,7 +11,7 @@
       "WeeksInSeason": 10,
       "Wins": 2,
       "AvgFinish": 5.0,
-      "MoneyWonTotal": 360.0
+      "MoneyWonTotal": 380.0
     },
     {
       "Player": "Chris",
@@ -88,7 +88,7 @@
       "WeeksInSeason": 10,
       "Wins": 2,
       "AvgFinish": 6.875,
-      "MoneyWonTotal": 420.0
+      "MoneyWonTotal": 400.0
     },
     {
       "Player": "Greg",
@@ -1679,7 +1679,7 @@
       "PlayerID": 10,
       "FinishPlace": 1,
       "Points": 8.0,
-      "Payout": 160.0
+      "Payout": 140.0
     },
     {
       "Week": 10,
@@ -1688,7 +1688,7 @@
       "PlayerID": 12,
       "FinishPlace": 2,
       "Points": 7.5,
-      "Payout": 100.0
+      "Payout": 120.0
     },
     {
       "Week": 10,
