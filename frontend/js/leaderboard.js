@@ -192,6 +192,7 @@ function renderSeasonAwards(rows) {
     const medal = medals[index] ?? "🏅";
     const winner = getPlayerName(row);
     const amount = row.Amount != null ? `$${Number(row.Amount).toFixed(0)}` : "";
+    const points = row.Points != null ? `${Number(row.Points).toFixed(1)} points` : "";
 
     const col = document.createElement("div");
     col.className = "col-12 col-md-6 col-lg-4";
@@ -200,7 +201,7 @@ function renderSeasonAwards(rows) {
       <div class="p-3 rounded border border-gold bg-dark h-100">
         <div class="text-warning fw-semibold mb-1">${medal} ${title}</div>
         <div class="fs-5 fw-bold">${winner}</div>
-        ${amount ? `<div class="text-muted small mt-1">${amount}</div>` : ""}
+        ${amount || points ? `<div class="text-muted small mt-1">${[amount, points].filter(Boolean).join(" · ")}</div>` : ""}
       </div>
     `;
 

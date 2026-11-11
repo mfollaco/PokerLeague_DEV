@@ -179,7 +179,26 @@
       "MoneyWonTotal": 120.0
     }
   ],
-  "SeasonAwards": [],
+  "SeasonAwards": [
+    {
+      "Player": "Josh H",
+      "PlayerID": 12,
+      "Amount": 400.0,
+      "Points": 53.0
+    },
+    {
+      "Player": "Chris",
+      "PlayerID": 16,
+      "Amount": 250.0,
+      "Points": 52.5
+    },
+    {
+      "Player": "Dan P",
+      "PlayerID": 13,
+      "Amount": 150.0,
+      "Points": 51.0
+    }
+  ],
   "ChipAndChairStacks": [
     {
       "Player": "Josh H",
